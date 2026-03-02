@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Zap, Compass } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 const WAREHOUSE_IMG =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuAjnGNobQjAB5xo3-fWhhiMNiPi1TSDWDlM6NVAtI2DmQ2FTYsgts_aAcxhXCC43B9uQyhCk3TRGNMHDlAxx-zd3gYzJ9FTB9TxCb05D43Tk4CI9Hr86gac7l9bdroNk0VqFH2M2YbU0r2zHirMS_6AYStrU7XE6gXCz4-HLRZKlYFd_74ttQlODYxNkzIv3xzf5pu9RJgWAgo2dYQPHESXi4gbhoQGDnvwKNYYelBV0QD4iOyaQl2PkQ4bCpCGLkN_tVQF-PxO_N8y';
@@ -25,20 +25,20 @@ export default function WhyUs() {
               id="why-us-heading"
               className="text-4xl md:text-5xl font-display font-bold mb-8 leading-tight text-secondary"
             >
-              AMPM Spedition to <br />
-              <span className="text-primary">Napęd dla Biznesu.</span>
+              AM PM Sp. z o.o. to <br />
+              <span className="text-primary">Twój partner w logistyce.</span>
             </h2>
 
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-2 text-secondary">
-                  <Zap className="text-primary" size={24} aria-hidden="true" />
-                  Szybki Transport Drogowy
+                  <ShieldCheck className="text-primary" size={24} aria-hidden="true" />
+                  Terminowość i bezpieczeństwo
                 </h3>
                 <p className="text-gray-600 leading-relaxed max-w-md">
-                  Priorytetowo traktujemy Twoje ładunki, zapewniając ekspresowe
-                  dostawy dzięki flocie pojazdów do 3.5t oraz zestawów
-                  ciężarowych.
+                  Gwarantujemy terminową realizację zleceń oraz najwyższy poziom
+                  bezpieczeństwa ładunków dzięki stałemu monitoringowi, sprawdzonym
+                  przewoźnikom i dedykowanemu spedytorowi na każdym etapie.
                 </p>
               </div>
 
@@ -46,7 +46,7 @@ export default function WhyUs() {
                 href="/kontakt"
                 className="inline-block px-8 py-3 border-2 border-secondary rounded-full font-medium hover:bg-secondary hover:text-white transition text-secondary"
               >
-                Umów Konsultację
+                Skontaktuj się z nami
               </Link>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function WhyUs() {
             <div className="col-span-1 row-span-2 relative group overflow-hidden rounded-3xl h-[400px]">
               <Image
                 src={WAREHOUSE_IMG}
-                alt="Wnętrze nowoczesnego magazynu logistycznego AMPM Spedition"
+                alt="Transport krajowy i międzynarodowy – AMPM Sp. z o.o."
                 fill
                 className="object-cover transition duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 25vw"
@@ -66,19 +66,19 @@ export default function WhyUs() {
               />
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="text-xs font-bold text-primary uppercase mb-1 block">
-                  Magazynowanie
+                  Spedycja
                 </span>
                 <h4 className="text-white font-bold text-xl">
-                  Inteligentne Magazyny
+                  Organizacja Transportu
                 </h4>
-                <p className="text-white/70 text-sm mt-1">Monitoring 24/7</p>
+                <p className="text-white/70 text-sm mt-1">FTL i LTL</p>
               </div>
             </div>
 
             <div className="col-span-1 h-[190px] relative group overflow-hidden rounded-3xl">
               <Image
                 src={TRUCK_IMG}
-                alt="Ciężarówka AMPM Spedition w trasie – transport krajowy"
+                alt="Ciężarówka AMPM w trasie – transport krajowy i międzynarodowy"
                 fill
                 className="object-cover transition duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 20vw"
@@ -89,7 +89,7 @@ export default function WhyUs() {
               />
               <div className="absolute bottom-5 left-6">
                 <h4 className="text-white font-bold text-lg">
-                  Transport Krajowy
+                  Transport Międzynarodowy
                 </h4>
               </div>
             </div>
@@ -98,11 +98,11 @@ export default function WhyUs() {
               <div className="text-center p-6">
                 <span
                   className="text-4xl font-bold text-primary block mb-2"
-                  aria-label="Ponad 25 krajów Europy"
+                  aria-label="Cała Unia Europejska"
                 >
-                  25+
+                  UE
                 </span>
-                <span className="text-sm text-gray-300">Krajów Europy</span>
+                <span className="text-sm text-gray-300">Zasięg operacyjny</span>
               </div>
             </div>
           </div>

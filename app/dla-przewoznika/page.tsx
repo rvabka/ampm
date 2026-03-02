@@ -5,6 +5,7 @@ import ScrollToTop from '@/components/shared/ScrollToTop';
 import CarrierHero from '@/components/carrier/CarrierHero';
 import CarrierBenefits from '@/components/carrier/CarrierBenefits';
 import CarrierFleet from '@/components/carrier/CarrierFleet';
+import CarrierProcess from '@/components/carrier/CarrierProcess';
 import CarrierStats from '@/components/carrier/CarrierStats';
 import CarrierContact from '@/components/carrier/CarrierContact';
 
@@ -90,6 +91,7 @@ export default function CarrierPage() {
         <CarrierHero />
         <CarrierBenefits />
         <CarrierFleet />
+        <CarrierProcess />
         <CarrierStats />
         <CarrierContact />
       </main>

@@ -24,21 +24,24 @@ export default function AboutMission() {
           <div className="w-full lg:w-1/2 lg:-mr-12 z-20 mt-8 lg:mt-0">
             <div className="bg-white p-8 lg:p-12 shadow-xl border-t-4 border-primary rounded-2xl">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs mb-4 block">
-                Nasza Misja
+                Czym się zajmujemy
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary leading-tight mb-6">
-                Technologia i Ludzie
+                Transport drogowy FTL i LTL po całej Europie
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Misją AMPM Spedition jest dostarczanie niezawodnych rozwiązań
-                transportowych, które pomagają naszym klientom rosnąć. Wierzymy
-                w transparentność, punktualność i bezpieczeństwo.
+                Specjalizujemy się w organizacji przewozów całopojazdowych (FTL)
+                i częściowych (LTL). Obsługujemy transport krajowy po Polsce oraz
+                przewozy międzynarodowe do wszystkich krajów Unii Europejskiej.
+                Nasze główne kierunki to Niemcy, Francja, Benelux, kraje
+                skandynawskie oraz Europa Środkowa i Wschodnia.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Stale inwestujemy w nowoczesną flotę spełniającą normy EURO 6
-                oraz w systemy telematyczne, które pozwalają na śledzenie
-                ładunku w czasie rzeczywistym (GPS). Dzięki temu Ty śpisz
-                spokojnie, a my jesteśmy w drodze.
+                Obsługujemy szeroki zakres ładunków – od palet i kartonów, przez
+                towary przemysłowe i chemiczne, aż po ładunki wymagające
+                kontrolowanej temperatury. Każdemu klientowi przydzielamy
+                dedykowanego spedytora, który dba o sprawną organizację zleceń
+                bez zbędnego pośrednictwa.
               </p>
             </div>
           </div>

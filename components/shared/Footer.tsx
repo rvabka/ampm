@@ -31,14 +31,14 @@ const menuCol1 = [
   { href: '/', label: 'Strona Główna' },
   { href: '/o-nas', label: 'O nas' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/dla-klienta', label: 'Dla Klienta' },
+  { href: '/wycena', label: 'Wycena' },
   { href: '/dla-przewoznika', label: 'Dla Przewoźnika' }
 ];
 
 const menuCol2 = [
-  { href: '/wycena', label: 'Wycena' },
   { href: '/dokumenty', label: 'Dokumenty' },
   { href: '/blog', label: 'Blog' },
+  { href: '/kariera', label: 'Kariera' },
   { href: '/kontakt', label: 'Kontakt' }
 ];
 
@@ -68,7 +68,7 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
+
           <div className="col-span-1 md:col-span-2">
             <Link
               href="/"
@@ -84,10 +84,25 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Dostarczamy doskonałość w logistyce drogowej. Twoje ładunki zawsze
-              na czas, bezpiecznie i profesjonalnie.
+            <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">
+              Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa
+              i terminowości.
             </p>
+            <address className="not-italic text-gray-400 text-sm leading-relaxed mb-6 space-y-1">
+              <p>ul. Zemborzycka 53B, 20-445 Lublin</p>
+              <p>
+                <a href="tel:+48570112512" className="hover:text-primary transition">+48 570 112 512</a>
+              </p>
+              <p>
+                <a href="mailto:biuro@ampm.com.pl" className="hover:text-primary transition">biuro@ampm.com.pl</a>
+              </p>
+              <p>
+                <a href="mailto:spedycja@ampm.com.pl" className="hover:text-primary transition">spedycja@ampm.com.pl</a>
+              </p>
+              <p className="pt-1 text-gray-500 text-xs">
+                NIP: PL9462695455 &nbsp;·&nbsp; REGON: 385570176 &nbsp;·&nbsp; KRS: 0000828304
+              </p>
+            </address>
 
             <div className="flex gap-4" aria-label="Media społecznościowe">
               {socialLinks.map(s => (
@@ -105,7 +120,7 @@ export default function Footer() {
             </div>
           </div>
 
-          
+
           <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-8">
             <nav aria-label="Menu główne – kolumna 1">
               <h2 className="font-bold mb-6 text-white text-sm">Menu</h2>
@@ -146,10 +161,10 @@ export default function Footer() {
           </div>
         </div>
 
-        
+
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} AMPM Full Time Spedition. Wszelkie
+            &copy; {new Date().getFullYear()} AM PM Sp. z o.o. Transport i Spedycja. Wszelkie
             prawa zastrzeżone.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">

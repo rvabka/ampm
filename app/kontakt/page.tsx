@@ -10,10 +10,10 @@ import ContactMap from '@/components/contact/ContactMap';
 export const metadata: Metadata = {
   title: 'Kontakt – Napisz lub Zadzwoń do AMPM Spedition',
   description:
-    'Skontaktuj się z AMPM Spedition. Biuro w Warszawie, telefon 24/7, e-mail dla zapytań i rekrutacji. Odpowiadamy w ciągu 24 godzin.',
+    'Skontaktuj się z AMPM Spedition. Biuro w Lublinie, telefon 24/7, e-mail dla zapytań i rekrutacji. Odpowiadamy w ciągu 24 godzin.',
   keywords: [
     'kontakt AMPM Spedition',
-    'biuro spedycja Warszawa',
+    'biuro spedycja Lublin',
     'telefon transport drogowy',
     'zapytanie ofertowe transport',
     'email spedycja',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kontakt – AMPM Spedition',
     description:
-      'Biuro w Warszawie, serwis telefoniczny 24/7, formularz kontaktowy. Skontaktuj się z naszym zespołem logistycznym.',
+      'Biuro w Lublinie, serwis telefoniczny 24/7, formularz kontaktowy. Skontaktuj się z naszym zespołem logistycznym.',
     url: '/kontakt',
   },
 };
@@ -59,19 +59,19 @@ const localBusinessJsonLd = {
     'Profesjonalny transport drogowy ciężarowy i dostawczy na terenie całej Europy.',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'ul. Logistyczna 12/4',
-    addressLocality: 'Warszawa',
-    postalCode: '00-001',
+    streetAddress: 'ul. Zemborzycka 53b',
+    addressLocality: 'Lublin',
+    postalCode: '20-445',
     addressCountry: 'PL',
   },
-  telephone: '+48123456789',
-  email: 'office@ampmspedition.pl',
+  telephone: '+48570112512',
+  email: 'biuro@ampm.com.pl',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '18:00',
+      opens: '07:00',
+      closes: '17:00',
     },
   ],
   sameAs: [

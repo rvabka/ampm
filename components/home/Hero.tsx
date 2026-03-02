@@ -116,12 +116,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col justify-end h-full pb-16 text-center md:text-left">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
           Transport
-          <br className="hidden md:block" /> Drogowy
+          <br className="hidden md:block" /> i Spedycja
         </h1>
         <p className="text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto md:mx-0">
-          Specjalizujemy się w transporcie drogowym ciężarowym i dostawczym.
-          Niezawodne rozwiązania logistyczne dla Twojego biznesu na terenie
-          całej Europy.
+          Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa
+          i terminowości. Twój ładunek w pewnych rękach.
         </p>
 
         

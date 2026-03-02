@@ -24,23 +24,24 @@ export default function AboutHistory() {
           <div className="w-full lg:w-1/2 lg:-ml-12 z-20 mt-8 lg:mt-0">
             <div className="bg-white p-8 lg:p-12 shadow-xl border-t-4 border-secondary rounded-2xl">
               <span className="text-primary font-bold tracking-wider uppercase text-xs mb-4 block">
-                Nasza Historia
+                Kim jesteśmy
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary leading-tight mb-6">
-                Doświadczenie, na którym możesz polegać
+                Spedycja to nasza pasja i zobowiązanie
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Od ponad dekady AMPM Spedition wyznacza standardy w transporcie
-                drogowym na terenie całej Europy. Nasza podróż rozpoczęła się od
-                jednego zestawu ciężarowego i wizji stworzenia firmy
-                spedycyjnej, która stawia na relacje równie mocno, co na
-                logistykę.
+                Jesteśmy zespołem specjalistów, dla których transport i spedycja
+                to nie tylko branża – to codzienna pasja i zobowiązanie wobec
+                klientów i partnerów. AMPM Sp. z o.o. to firma spedycyjna
+                specjalizująca się w transporcie drogowym na terenie Polski i
+                całej Unii Europejskiej.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Dziś jesteśmy dumni, że możemy obsługiwać setki klientów,
-                dostarczając tysiące ładunków miesięcznie. Nie jesteśmy tylko
-                przewoźnikiem; jesteśmy strategicznym partnerem, który dba o
-                płynność Twojego łańcucha dostaw.
+                Działamy jako firma spedycyjna i realizujemy transporty przy
+                współpracy z siecią sprawdzonych podwykonawców – przewoźników
+                drogowych. Dzięki temu jesteśmy elastyczni, szybko reagujemy na
+                zmieniające się potrzeby i obsługujemy zlecenia o różnym
+                charakterze i skali.
               </p>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import WhyUs from "@/components/home/WhyUs";
 import Services from "@/components/home/Services";
 import Fleet from "@/components/home/Fleet";
+import AboutMap from "@/components/about/AboutMap";
 import Testimonials from "@/components/home/Testimonials";
 import BlogSection from "@/components/home/BlogSection";
 import Footer from "@/components/shared/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
         <Hero />
         <WhyUs />
         <Services />
+        <AboutMap />
         <Fleet />
         <Testimonials />
         <BlogSection />

@@ -32,8 +32,8 @@ const contactBlocks = [
     title: 'Nasze Biuro',
     content: (
       <address className="not-italic text-gray-500 text-lg leading-relaxed">
-        ul. Logistyczna 12/4<br />
-        00-001 Warszawa<br />
+        ul. Zemborzycka 53b<br />
+        20-445 Lublin<br />
         Polska
       </address>
     ),
@@ -44,22 +44,17 @@ const contactBlocks = [
     content: (
       <div className="space-y-4">
         <div>
-          <span className="text-xs font-bold text-primary uppercase block mb-1">Serwis 24/7</span>
+          <span className="text-xs font-bold text-primary uppercase block mb-1">Biuro</span>
           <a
-            href="tel:+48123456789"
+            href="tel:+48570112512"
             className="text-xl font-semibold text-secondary hover:text-primary transition-colors"
           >
-            +48 123 456 789
+            +48 570 112 512
           </a>
         </div>
         <div>
-          <span className="text-xs font-bold text-gray-400 uppercase block mb-1">Biuro główne</span>
-          <a
-            href="tel:+48229876543"
-            className="text-xl font-semibold text-secondary hover:text-primary transition-colors"
-          >
-            +48 22 987 65 43
-          </a>
+          <span className="text-xs font-bold text-gray-400 uppercase block mb-1">Godziny pracy</span>
+          <span className="text-base text-gray-500">Pon – Pt: 07:00–15:00</span>
         </div>
       </div>
     ),
@@ -70,21 +65,12 @@ const contactBlocks = [
     content: (
       <div className="space-y-4">
         <div>
-          <span className="text-xs font-bold text-gray-400 uppercase block mb-1">Zapytania ogólne</span>
+          <span className="text-xs font-bold text-gray-400 uppercase block mb-1">E-mail</span>
           <a
-            href="mailto:office@ampmspedition.pl"
+            href="mailto:biuro@ampm.com.pl"
             className="text-lg font-semibold text-secondary hover:text-primary transition-colors break-all"
           >
-            office@ampmspedition.pl
-          </a>
-        </div>
-        <div>
-          <span className="text-xs font-bold text-gray-400 uppercase block mb-1">Rekrutacja</span>
-          <a
-            href="mailto:rekrutacja@ampmspedition.pl"
-            className="text-lg font-semibold text-secondary hover:text-primary transition-colors break-all"
-          >
-            rekrutacja@ampmspedition.pl
+            biuro@ampm.com.pl
           </a>
         </div>
       </div>

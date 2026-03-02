@@ -1,55 +1,68 @@
-import { Shield, Eye, Satellite, Leaf } from 'lucide-react';
+import { Clock, ShieldCheck, FileText, Headphones, Zap } from 'lucide-react';
 import { type LucideIcon } from 'lucide-react';
 import FeatureCard from '@/components/shared/FeatureCard';
 
-interface Standard {
+interface Priority {
   icon: LucideIcon;
   title: string;
   description: string;
 }
 
-const standards: Standard[] = [
+const priorities: Priority[] = [
   {
-    icon: Shield,
-    title: 'Ubezpieczenie OCP',
+    icon: Clock,
+    title: 'Terminowa realizacja zleceń',
     description:
-      'Pełna ochrona przewożonego towaru dzięki rozszerzonemu pakietowi ubezpieczeń OCP na każdy transport.',
+      'Dotrzymywanie uzgodnionych terminów to fundament naszej pracy. Spedytor monitoruje każde zlecenie i niezwłocznie reaguje w przypadku nieprzewidzianych sytuacji.',
   },
   {
-    icon: Eye,
-    title: 'Monitoring 24/7',
+    icon: ShieldCheck,
+    title: 'Bezpieczeństwo przewożonych towarów',
     description:
-      'Ciągły nadzór nad realizacją zleceń przez nasz dział operacyjny, dostępny dla Ciebie całą dobę.',
+      'Każdy transport objęty jest ubezpieczeniem OCP. Współpracujemy wyłącznie ze sprawdzonymi podwykonawcami, którzy spełniają aktualne normy techniczne i posiadają ważne dokumenty.',
   },
   {
-    icon: Satellite,
-    title: 'System GPS',
+    icon: FileText,
+    title: 'Przejrzyste warunki współpracy',
     description:
-      'Zaawansowana telematyka pozwalająca na precyzyjne śledzenie każdej ciężarówki w czasie rzeczywistym.',
+      'Każdą współpracę formalizujemy umową jasno określającą warunki zleceń, zasady rozliczeń i terminy płatności. Żadnych ukrytych kosztów ani niejasnych zapisów.',
   },
   {
-    icon: Leaf,
-    title: 'Norma Euro 6',
+    icon: Headphones,
+    title: 'Szybka i sprawna komunikacja',
     description:
-      'Dbamy o środowisko, korzystając wyłącznie z najnowocześniejszych pojazdów spełniających rygorystyczne normy emisji.',
+      'Każdy klient i przewoźnik ma przydzielonego dedykowanego spedytora – główny punkt kontaktu dostępny w godzinach pracy biura (Pon–Pt, 07:00–15:00).',
+  },
+  {
+    icon: Zap,
+    title: 'Elastyczność w działaniu',
+    description:
+      'Realizujemy zarówno regularne zlecenia cykliczne, jak i transporty ekspresowe. Szybko organizujemy przewóz nawet w trybie natychmiastowym dzięki sieci sprawdzonych partnerów.',
   },
 ];
 
 export default function AboutStandards() {
   return (
-    <section className="py-24 px-8 bg-background-light">
+    <section className="py-24 px-8 bg-background-light" aria-labelledby="priorities-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-wider uppercase text-xs mb-2 block">
-            Gwarancja Jakości
+            Co nas wyróżnia
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">
-            Bezpieczeństwo i Standardy
+          <h2
+            id="priorities-heading"
+            className="text-3xl md:text-4xl font-display font-bold text-secondary"
+          >
+            Naszym priorytetem jest
           </h2>
+          <p className="text-gray-500 mt-4 max-w-xl mx-auto">
+            Każde zlecenie realizujemy z myślą o tych pięciu wartościach, które
+            stanowią podstawę każdej współpracy z AMPM.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {standards.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {priorities.map((item) => (
             <FeatureCard
               key={item.title}
               icon={item.icon}

@@ -13,24 +13,24 @@ const fleetItems: {
 }[] = [
   {
     icon: Truck,
-    title: "Naczepy Plandekowe (TIR)",
-    description: "Standardowe naczepy 13.6m do ładunków ogólnych.",
-    specs: ["Ładowność: 24,000 kg", "Obj: 90 m³"],
+    title: "Zestawy 13,6 m (firanka/plandeka)",
+    description: "Standardowe naczepy do ładunków ogólnych na trasach krajowych i europejskich.",
+    specs: ["Ładowność: do 24 000 kg", "Obj: 90 m³"],
     featured: true,
   },
   {
     icon: Bus,
-    title: "Busy do 3.5t",
+    title: "Busy do 3,5 t",
     description:
-      "Szybkie pojazdy dostawcze na potrzeby transportu ekspresowego (8–10 palet).",
-    specs: ["Ładowność: do 1200 kg"],
+      "Szybkie pojazdy dostawcze na potrzeby transportu ekspresowego – idealne dla mniejszych przesyłek.",
+    specs: ["Ładowność: do 1 200 kg"],
     featured: false,
   },
   {
     icon: Snowflake,
-    title: "Chłodnie (Reefer)",
-    description: "Jednostki o kontrolowanej temperaturze dla towarów psujących się.",
-    specs: ["Zakres: -25°C do +25°C"],
+    title: "Chłodnie",
+    description: "Pojazdy z kontrolowaną temperaturą do przewozu towarów wrażliwych na zmiany termiczne.",
+    specs: ["Kontrolowana temperatura"],
     featured: false,
   },
 ];
@@ -53,12 +53,12 @@ export default function Fleet() {
             id="fleet-heading"
             className="text-4xl font-display font-bold text-text-light mb-4"
           >
-            Nasza Flota Drogowa
+            Jakich pojazdów szukamy?
           </h2>
           <p className="text-gray-600 max-w-2xl">
-            Utrzymywana w najwyższych standardach bezpieczeństwa i
-            niezawodności. Oferujemy szeroki wybór pojazdów od busów po zestawy
-            ciężarowe.
+            Zapraszamy do współpracy przewoźników posiadających różne typy pojazdów —
+            od busów po zestawy ciężarowe i chłodnie. Dopasowujemy flotę do specyfiki
+            każdego zlecenia.
           </p>
         </div>
 
@@ -77,9 +77,9 @@ export default function Fleet() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-white">
-                    Ciągniki Siodłowe
+                    Zestawy Ciężarowe
                   </h3>
-                  <p className="text-white/70">Klasa EURO 6</p>
+                  <p className="text-white/70">Transport krajowy i UE</p>
                 </div>
                 <button
                   className="bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition text-white"

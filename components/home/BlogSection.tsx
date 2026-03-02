@@ -57,7 +57,7 @@ export default function BlogSection() {
               id="blog-heading"
               className="text-4xl font-display font-bold text-secondary"
             >
-              Aktualności
+              Aktualności i Blog
             </h2>
           </div>
           <Link

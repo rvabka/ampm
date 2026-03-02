@@ -3,8 +3,10 @@ import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 import QuoteHero from '@/components/quote/QuoteHero';
+import QuoteInfo from '@/components/quote/QuoteInfo';
 import QuoteForm from '@/components/quote/QuoteForm';
 import QuoteSidebar from '@/components/quote/QuoteSidebar';
+import QuoteCta from '@/components/quote/QuoteCta';
 
 export const metadata: Metadata = {
   title: 'Wycena Transportu – Bezpłatne Zapytanie Ofertowe',
@@ -83,8 +85,10 @@ export default function QuotePage() {
       <Navbar />
       <main id="main-content">
         <QuoteHero />
+        <QuoteInfo />
 
         <section
+          id="formularz"
           className="py-20 px-6 lg:px-8 bg-background-light"
           aria-labelledby="quote-section-heading"
         >
@@ -98,6 +102,8 @@ export default function QuotePage() {
             <QuoteSidebar />
           </div>
         </section>
+
+        <QuoteCta />
       </main>
       <Footer />
       <ScrollToTop />

@@ -10,10 +10,10 @@ const navLinks = [
   { href: '/', label: 'Strona Główna' },
   { href: '/o-nas', label: 'O nas' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/dla-klienta', label: 'Dla Klienta' },
   { href: '/dla-przewoznika', label: 'Dla Przewoźnika' },
   { href: '/dokumenty', label: 'Dokumenty' },
   { href: '/blog', label: 'Blog' },
+  { href: '/kariera', label: 'Kariera' },
   { href: '/kontakt', label: 'Kontakt' }
 ];
 

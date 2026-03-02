@@ -62,18 +62,18 @@ export default function QuoteSidebar() {
               aria-hidden="true"
             />
             <h3 className="text-white font-bold text-lg mb-1">
-              Wolisz zadzwonić?
+              Wolisz kontakt bezpośredni?
             </h3>
-            <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-              Nasi spedytorzy są dostępni w dni robocze od 8:00 do 18:00.
-              Chętnie odpowiemy na pytania przed wysłaniem zapytania.
+            <p className="text-gray-400 text-sm mb-2 leading-relaxed">
+              Zadzwoń do nas — chętnie odpowiemy na wszystkie pytania.
             </p>
+            <p className="text-gray-500 text-xs mb-5">Pon – Pt: 07:00–15:00</p>
             <a
-              href="tel:+48123456789"
+              href="tel:+48570112512"
               className="inline-flex items-center gap-2 text-primary hover:text-white text-xl font-black transition-colors"
-              aria-label="Zadzwoń do AMPM Spedition: +48 123 456 789"
+              aria-label="Skontaktuj się z AMPM: +48 570 112 512"
             >
-              +48 123 456 789
+              +48 570 112 512
             </a>
           </div>
         </div>

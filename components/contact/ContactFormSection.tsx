@@ -36,6 +36,7 @@ const fields: FormField[] = [
 export default function ContactFormSection() {
   return (
     <section
+      id="formularz"
       className="py-24 px-6 lg:px-8 bg-background-light border-t border-gray-100"
       aria-labelledby="contact-form-heading"
     >
@@ -51,20 +52,23 @@ export default function ContactFormSection() {
             Wyślij nam wiadomość
           </h2>
           <p className="text-gray-500 mt-4 max-w-lg mx-auto">
-            Masz pytanie, ofertę lub chcesz nawiązać współpracę? Napisz do nas
-            — odpowiemy w ciągu 24 godzin.
+            Opisz krótko, czego dotyczy zapytanie, a my skontaktujemy się z Tobą
+            tak szybko, jak to możliwe. Postaw na sprawną komunikację i partnerskie
+            podejście — czekamy na Twój kontakt.
           </p>
         </div>
 
         <ContactForm fields={fields} submitLabel="Wyślij wiadomość" />
 
-        <p className="text-xs text-gray-400 text-center mt-4">
-          Wysyłając formularz akceptujesz naszą{' '}
+        <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
+          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
+          z{' '}
           <a
             href="/polityka-prywatnosci"
             className="hover:text-primary underline underline-offset-2 transition-colors"
           >
-            politykę prywatności
+            polityką prywatności
           </a>
           .
         </p>

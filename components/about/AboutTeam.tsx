@@ -6,7 +6,6 @@ interface TeamDept {
   name: string;
   role: string;
   description: string;
-  count: string;
 }
 
 const departments: TeamDept[] = [
@@ -16,7 +15,6 @@ const departments: TeamDept[] = [
     role: 'Strategia i Rozwój',
     description:
       'Doświadczony zarząd z ponad 15-letnim stażem w branży TSL, odpowiedzialny za wyznaczanie kierunków rozwoju firmy i budowanie relacji z kluczowymi partnerami.',
-    count: '3 osoby'
   },
   {
     icon: Headphones,
@@ -24,7 +22,6 @@ const departments: TeamDept[] = [
     role: 'Koordynacja Transportów',
     description:
       'Wykwalifikowani spedytorzy, którzy każdego dnia koordynują setki zleceń. Znajomość rynków europejskich i języków obcych to nasz standard.',
-    count: '12 osób'
   },
   {
     icon: Truck,
@@ -32,7 +29,6 @@ const departments: TeamDept[] = [
     role: 'Logistyka i Flota',
     description:
       'Specjaliści odpowiedzialni za zarządzanie flotą, planowanie tras i monitorowanie realizacji zleceń w czasie rzeczywistym.',
-    count: '8 osób'
   },
   {
     icon: Users,
@@ -40,7 +36,6 @@ const departments: TeamDept[] = [
     role: 'Relacje i Wsparcie',
     description:
       'Dedykowany zespół dbający o każdego klienta. Szybka komunikacja, proaktywne rozwiązywanie problemów i indywidualne podejście.',
-    count: '6 osób'
   }
 ];
 
@@ -80,9 +75,6 @@ export default function AboutTeam() {
                     <h3 className="text-lg font-bold text-secondary">
                       {dept.name}
                     </h3>
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      {dept.count}
-                    </span>
                   </div>
                   <p className="text-sm font-medium text-gray-400 mb-3">
                     {dept.role}
@@ -102,7 +94,6 @@ export default function AboutTeam() {
               <Users size={24} className="text-primary" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-white font-bold text-lg">29+ specjalistów</p>
               <p className="text-gray-400 text-sm">
                 Zgrany zespół z pasją do logistyki
               </p>

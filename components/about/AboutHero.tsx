@@ -3,16 +3,17 @@ import PageHero from '@/components/shared/PageHero';
 export default function AboutHero() {
   return (
     <PageHero
-      titleFirst="Poznaj nasz"
-      titleHighlight="zespół i misję"
+      titleFirst="Poznaj naszą"
+      titleHighlight="firmę i wartości"
       titleBreak
-      description="Od ponad dekady łączymy europejskie rynki, stawiając na innowacyjność, terminowość i niezawodność. Jesteśmy strategicznym partnerem w logistyce drogowej."
-      eyebrow="AMPM Spedition"
+      description="Jesteśmy firmą spedycyjną specjalizującą się w transporcie drogowym na terenie Polski i całej Unii Europejskiej. Stawiamy na partnerskie relacje, przejrzyste zasady i profesjonalną obsługę każdego zlecenia."
+      eyebrow="O nas"
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },
         { label: 'O nas' },
       ]}
       layout="split"
+      scrollToId="formularz"
     />
   );
 }

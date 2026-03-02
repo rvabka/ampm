@@ -66,7 +66,16 @@ export default function CarrierContact() {
       aria-labelledby="carrier-contact-heading"
     >
       <div className="max-w-4xl mx-auto">
+
+        {/* CTA intro */}
         <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="h-px w-10 bg-primary" aria-hidden="true" />
+            <span className="text-primary font-semibold tracking-wider uppercase text-xs">
+              Postaw na sprawdzoną spedycję
+            </span>
+            <div className="h-px w-10 bg-primary" aria-hidden="true" />
+          </div>
           <span className="text-primary font-bold tracking-wider uppercase text-xs mb-2 block">
             Skontaktuj się
           </span>
@@ -74,11 +83,16 @@ export default function CarrierContact() {
             id="carrier-contact-heading"
             className="text-3xl md:text-4xl font-display font-bold text-secondary"
           >
-            Zostań naszym partnerem
+            Gotowy do współpracy?
           </h2>
-          <p className="text-gray-500 mt-4 max-w-lg mx-auto">
-            Wypełnij krótki formularz, a nasz zespół skontaktuje się z Tobą,
-            aby przedstawić szczegóły współpracy.
+          <p className="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+            W AMPM stawiamy na jasne zasady, partnerskie relacje i profesjonalną organizację
+            transportu. Współpracując z nami, zyskujesz nie tylko zlecenia, ale także wsparcie
+            i stabilność. Skontaktuj się z nami już dziś i przekonaj się, dlaczego warto z nami
+            współpracować.
+          </p>
+          <p className="text-gray-500 mt-3">
+            Wypełnij formularz, a my skontaktujemy się z Tobą.
           </p>
         </div>
 
@@ -87,10 +101,15 @@ export default function CarrierContact() {
           submitLabel="Wyślij zgłoszenie"
         />
 
-        <p className="text-xs text-gray-400 text-center mt-4">
-          Wysyłając formularz akceptujesz naszą{' '}
-          <a href="/polityka-prywatnosci" className="hover:text-primary underline underline-offset-2 transition-colors">
-            politykę prywatności
+        <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
+          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
+          z{' '}
+          <a
+            href="/polityka-prywatnosci"
+            className="hover:text-primary underline underline-offset-2 transition-colors"
+          >
+            polityką prywatności
           </a>
           .
         </p>

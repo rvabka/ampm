@@ -35,7 +35,7 @@ const fields: FormField[] = [
 
 export default function AboutContact() {
   return (
-    <section className="py-24 px-8 bg-background-light border-t border-gray-200">
+    <section id="formularz" className="py-24 px-8 bg-background-light border-t border-gray-200">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-bold tracking-wider uppercase text-xs mb-2 block">
@@ -51,6 +51,19 @@ export default function AboutContact() {
         </div>
 
         <ContactForm fields={fields} submitLabel="Wyślij" />
+
+        <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
+          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
+          z{' '}
+          <a
+            href="/polityka-prywatnosci"
+            className="hover:text-primary underline underline-offset-2 transition-colors"
+          >
+            polityką prywatności
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

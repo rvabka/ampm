@@ -8,9 +8,10 @@ import type { Topology, GeometryCollection } from 'topojson-specification';
 import type { FeatureCollection, Geometry } from 'geojson';
 
 const routeDescriptions = [
-  'Regularne trasy Polska - Niemcy - Francja - Hiszpania',
-  'Obsługa rynków Skandynawskich',
-  'Południe Europy: Włochy i Bałkany',
+  'Polska – Niemcy – Francja – Benelux – Hiszpania',
+  'Europa Środkowa: Czechy, Austria, Węgry, Słowacja',
+  'Skandynawia: Kopenhaga, Sztokholm, Helsinki',
+  'Południe i Wschód: Włochy, Rumunia, Bałkany',
 ];
 
 const EU_CODES = new Set([
@@ -23,18 +24,21 @@ const EU_CODES = new Set([
 const cities: { name: string; coords: [number, number]; isHQ?: boolean }[] = [
   { name: 'Lublin',    coords: [22.5684, 51.2465], isHQ: true },
   { name: 'Berlin',    coords: [13.4050, 52.5200] },
+  { name: 'Amsterdam', coords: [4.9041,  52.3676] },
   { name: 'Paryż',     coords: [2.3522,  48.8566] },
   { name: 'Madryt',    coords: [-3.7038, 40.4168] },
   { name: 'Rzym',      coords: [12.4964, 41.9028] },
+  { name: 'Wiedeń',    coords: [16.3738, 48.2082] },
+  { name: 'Kopenhaga', coords: [12.5683, 55.6761] },
   { name: 'Sztokholm', coords: [18.0686, 59.3293] },
   { name: 'Bukareszt', coords: [26.1025, 44.4268] },
 ];
 
 const routeSegments: [string, string][][] = [
-  [['Lublin','Berlin'],['Berlin','Paryż'],['Paryż','Madryt']],
-  [['Lublin','Berlin'],['Berlin','Rzym']],
-  [['Lublin','Sztokholm']],
+  [['Lublin','Berlin'],['Berlin','Amsterdam'],['Amsterdam','Paryż'],['Paryż','Madryt']],
+  [['Lublin','Wiedeń'],['Wiedeń','Rzym']],
   [['Lublin','Bukareszt']],
+  [['Berlin','Kopenhaga'],['Kopenhaga','Sztokholm']],
 ];
 
 const SVG_W = 500;

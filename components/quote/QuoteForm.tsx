@@ -16,6 +16,18 @@ export default function QuoteForm() {
       noValidate
     >
       
+      <div className="mb-8 pb-8 border-b border-gray-100">
+        <span className="text-primary font-bold tracking-wider uppercase text-xs block mb-2">
+          Formularz wyceny
+        </span>
+        <h2 className="text-2xl font-display font-bold text-secondary">
+          Wyślij zapytanie o wycenę
+        </h2>
+        <p className="text-gray-500 mt-2 text-sm leading-relaxed">
+          Wypełnij formularz, a nasi specjaliści skontaktują się z Tobą.
+        </p>
+      </div>
+
       <fieldset className="mb-10 pb-8 border-b border-gray-100">
         <legend className="w-full flex items-center gap-3 mb-6">
           <span
@@ -155,17 +167,7 @@ export default function QuoteForm() {
         </div>
       </fieldset>
 
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-gray-100">
-        <p className="text-xs text-gray-400">
-          <span aria-hidden="true">*</span> Pola wymagane.{' '}
-          <a
-            href="/polityka-prywatnosci"
-            className="hover:text-primary underline underline-offset-2 transition-colors"
-          >
-            Polityka prywatności
-          </a>
-          .
-        </p>
+      <div className="pt-4 border-t border-gray-100 space-y-4">
         <button
           type="submit"
           className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white font-semibold rounded-full transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer"
@@ -173,6 +175,19 @@ export default function QuoteForm() {
           Wyślij zapytanie
           <Send size={16} aria-hidden="true" />
         </button>
+        <p className="text-xs text-gray-400 leading-relaxed">
+          <span aria-hidden="true">* </span>Pola wymagane.
+          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
+          z{' '}
+          <a
+            href="/polityka-prywatnosci"
+            className="hover:text-primary underline underline-offset-2 transition-colors"
+          >
+            polityką prywatności
+          </a>
+          .
+        </p>
       </div>
     </form>
   );

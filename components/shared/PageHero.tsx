@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ChevronDown } from 'lucide-react';
 
 interface BreadcrumbItem {
   label: string;
@@ -18,6 +18,7 @@ interface PageHeroProps {
   backgroundImageAlt?: string;
   layout?: 'default' | 'split';
   height?: string;
+  scrollToId?: string;
 }
 
 export default function PageHero({
@@ -31,6 +32,7 @@ export default function PageHero({
   backgroundImageAlt = '',
   layout = 'default',
   height,
+  scrollToId,
 }: PageHeroProps) {
   const hasImage = !!backgroundImage;
   const heightClass = height ?? (hasImage ? 'h-[400px]' : 'min-h-[80vh]');
@@ -152,9 +154,46 @@ export default function PageHero({
         </div>
 
         {!hasImage && (
-          <div className="mt-16 flex items-center gap-4" aria-hidden="true">
-            <div className="h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent" />
-            <div className="w-2 h-2 rounded-full bg-primary" />
+          <div className="mt-16 flex items-center gap-4">
+            <div className="h-px flex-1 bg-gradient-to-r from-primary/40 to-transparent" aria-hidden="true" />
+            {scrollToId ? (
+              <>
+                <style>{`
+                  @keyframes arrowFly {
+                    0%   { transform: translateY(-16px); opacity: 0; }
+                    25%  { opacity: 1; }
+                    75%  { opacity: 1; }
+                    100% { transform: translateY(16px);  opacity: 0; }
+                  }
+                  @keyframes circleGlow {
+                    0%, 100% { box-shadow: 0 0 12px 3px rgba(0,174,239,0.20); }
+                    50%       { box-shadow: 0 0 28px 10px rgba(0,174,239,0.50); }
+                  }
+                `}</style>
+                <a
+                  href={`#${scrollToId}`}
+                  aria-label="Przejdź do formularza"
+                  className="group flex flex-col items-center gap-2"
+                >
+                  <div
+                    className="w-12 h-12 rounded-full border border-primary/50 bg-primary/10 overflow-hidden flex items-center justify-center group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300"
+                    style={{ animation: 'circleGlow 2s ease-in-out infinite' }}
+                    aria-hidden="true"
+                  >
+                    <ChevronDown
+                      size={22}
+                      className="text-primary absolute"
+                      style={{ animation: 'arrowFly 1.6s ease-in-out infinite' }}
+                    />
+                  </div>
+                  <span className="text-gray-400 text-[10px] font-bold tracking-[0.2em] uppercase group-hover:text-primary transition-colors duration-300">
+                    Formularz
+                  </span>
+                </a>
+              </>
+            ) : (
+              <div className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+            )}
           </div>
         )}
       </div>

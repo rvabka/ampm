@@ -1,30 +1,36 @@
-import { CreditCard, CalendarCheck, Headphones, Handshake } from 'lucide-react';
+import { CalendarCheck, CreditCard, Headphones, Globe, ShieldCheck } from 'lucide-react';
 import FeatureCard from '@/components/shared/FeatureCard';
 
 const benefits = [
   {
-    icon: CreditCard,
-    title: 'Terminowe Płatności',
+    icon: CalendarCheck,
+    title: 'Stałe i regularne zlecenia',
     description:
-      'Szybkie przelewy i gwarancja płynności finansowej. Oferujemy opcję skonto dla zainteresowanych.',
+      'Oferujemy zarówno pojedyncze ładunki, jak i możliwość stałej współpracy. Dbamy o ciągłość zleceń i optymalne planowanie tras.',
   },
   {
-    icon: CalendarCheck,
-    title: 'Stałe Zlecenia',
+    icon: CreditCard,
+    title: 'Terminowe płatności',
     description:
-      'Zapewniamy ciągłość pracy przez cały rok, niezależnie od sezonu. Regularne trasy i ładunki.',
+      'Gwarantujemy przejrzyste warunki rozliczeń oraz dotrzymywanie ustalonych terminów płatności. Szanujemy Twoją pracę.',
   },
   {
     icon: Headphones,
-    title: 'Wsparcie 24/7',
+    title: 'Dedykowany spedytor',
     description:
-      'Dedykowany spedytor jest do Twojej dyspozycji całą dobę. Pomoc w każdej sytuacji na drodze.',
+      'Współpracujesz z jednym spedytorem, który zna Twoje możliwości transportowe. Szybka komunikacja, bez zbędnej biurokracji.',
   },
   {
-    icon: Handshake,
-    title: 'Przejrzyste Zasady',
+    icon: Globe,
+    title: 'Transport międzynarodowy',
     description:
-      'Uczciwe stawki rynkowe i brak ukrytych opłat. Jasna umowa i partnerskie relacje.',
+      'Realizujemy przewozy na terenie całej Unii Europejskiej. Ładunki dopasowane do różnych typów pojazdów — od busów po zestawy 13,6 m.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Wsparcie w trasie',
+    description:
+      'W przypadku nieprzewidzianych sytuacji jesteśmy w stałym kontakcie i reagujemy szybko, aby znaleźć najlepsze rozwiązanie.',
   },
 ];
 
@@ -43,15 +49,15 @@ export default function CarrierBenefits() {
             id="benefits-heading"
             className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4"
           >
-            Twoje Korzyści
+            Dlaczego warto z nami współpracować?
           </h2>
           <p className="text-gray-500">
-            Współpraca z AMPM Spedition to gwarancja stabilności i rozwoju
-            Twojej firmy transportowej.
+            Wiemy, że solidny przewoźnik to fundament sprawnie działającej spedycji — dlatego
+            stawiamy na uczciwe warunki, stały kontakt i realne wsparcie w codziennej pracy.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map(benefit => (
             <FeatureCard
               key={benefit.title}

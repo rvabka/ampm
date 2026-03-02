@@ -14,23 +14,105 @@ import AboutTeam from '@/components/about/AboutTeam';
 import AboutContact from '@/components/about/AboutContact';
 
 export const metadata: Metadata = {
-  title: 'O Nas – Flota, Standardy i Zespół',
+  title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna z Lublina',
   description:
-    'Poznaj AMPM Spedition – naszą historię, misję, nowoczesną flotę spełniającą normy Euro 6 oraz zespół ekspertów logistyki drogowej.',
+    'Poznaj AMPM Sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Dowiedz się, kim jesteśmy i co nas wyróżnia.',
+  keywords: [
+    'AMPM spedycja',
+    'firma spedycyjna Lublin',
+    'transport drogowy Polska UE',
+    'spedycja FTL LTL',
+    'transport międzynarodowy',
+    'o nas AMPM',
+    'spedytor Lublin',
+    'przewozy drogowe Europa',
+    'transport towarów Niemcy Francja',
+    'firma TSL Lublin',
+  ],
   alternates: {
-    canonical: '/o-nas'
+    canonical: '/o-nas',
   },
   openGraph: {
-    title: 'O Nas – AMPM Spedition',
+    title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna',
     description:
-      'Od ponad dekady wyznaczamy standardy w transporcie drogowym na terenie całej Europy. Poznaj nasz zespół i flotę.',
-    url: '/o-nas'
-  }
+      'Jesteśmy zespołem specjalistów z Lublina specjalizujących się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Poznaj nasze priorytety i sposób pracy.',
+    url: '/o-nas',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Strona Główna',
+      item: 'https://ampmspedition.pl/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'O Nas',
+      item: 'https://ampmspedition.pl/o-nas',
+    },
+  ],
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://ampmspedition.pl/#organization',
+  name: 'AMPM Sp. z o.o.',
+  alternateName: 'AMPM Full Time Spedition',
+  url: 'https://ampmspedition.pl',
+  logo: 'https://ampmspedition.pl/logo.png',
+  description:
+    'Firma spedycyjna z Lublina specjalizująca się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Obsługujemy transport krajowy i międzynarodowy do wszystkich krajów UE.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'ul. Zemborzycka 53b',
+    addressLocality: 'Lublin',
+    postalCode: '20-445',
+    addressCountry: 'PL',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+48-570-112-512',
+    contactType: 'customer service',
+    availableLanguage: ['Polish'],
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '15:00',
+    },
+  },
+  email: 'biuro@ampm.com.pl',
+  areaServed: {
+    '@type': 'Place',
+    name: 'Unia Europejska',
+  },
+  knowsAbout: [
+    'transport drogowy',
+    'spedycja FTL',
+    'spedycja LTL',
+    'transport międzynarodowy',
+    'logistyka',
+  ],
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       <Navbar />
       <main id="main-content">
         <AboutHero />

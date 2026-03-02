@@ -3,16 +3,17 @@ import PageHero from '@/components/shared/PageHero';
 export default function QuoteHero() {
   return (
     <PageHero
-      titleFirst="Zapytaj o"
-      titleHighlight="Wycenę"
+      titleFirst="Wycena"
+      titleHighlight="transportu"
       titleBreak
-      description="Wypełnij formularz — opisz trasę i szczegóły ładunku, a my przygotujemy ofertę dopasowaną do Twoich potrzeb."
-      eyebrow="Bezpłatna wycena"
+      description="Potrzebujesz sprawnej kalkulacji kosztów przewozu? W AMPM przygotowujemy indywidualną wycenę transportu dopasowaną do specyfiki Twojego ładunku oraz aktualnej sytuacji rynkowej."
+      eyebrow="Wycena transportu"
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },
         { label: 'Wycena' },
       ]}
       layout="split"
+      scrollToId="formularz"
     />
   );
 }
