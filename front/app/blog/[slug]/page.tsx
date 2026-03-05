@@ -19,16 +19,18 @@ interface PostPageProps {
 
 export async function generateStaticParams() {
   const slugs = await client.fetch<{ slug: string }[]>(allPostSlugsQuery);
-  return slugs.map(({ slug }) => ({ slug }));
+  return slugs.map(({ slug }: { slug: string }) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: PostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await client.fetch<Post | null>(postQuery, { slug });
 
   if (!post) {
     return {
-      title: 'Artykuł nie znaleziony',
+      title: 'Artykuł nie znaleziony'
     };
   }
 
@@ -45,7 +47,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       ? { index: false, follow: false }
       : { index: true, follow: true },
     alternates: {
-      canonical,
+      canonical
     },
     openGraph: {
       title,
@@ -57,15 +59,22 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
       section: post.category,
       tags: post.tags,
       images: ogImage
-        ? [{ url: ogImage, width: 1200, height: 630, alt: post.mainImageAlt || title }]
-        : [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }],
+        ? [
+            {
+              url: ogImage,
+              width: 1200,
+              height: 630,
+              alt: post.mainImageAlt || title
+            }
+          ]
+        : [{ url: '/og-image.jpg', width: 1200, height: 630, alt: title }]
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ogImage ? [ogImage] : ['/og-image.jpg'],
-    },
+      images: ogImage ? [ogImage] : ['/og-image.jpg']
+    }
   };
 }
 
@@ -86,32 +95,47 @@ export default async function PostPage({ params }: PostPageProps) {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     image: post.mainImage
-      ? { '@type': 'ImageObject', url: post.mainImage, width: 1200, height: 630 }
+      ? {
+          '@type': 'ImageObject',
+          url: post.mainImage,
+          width: 1200,
+          height: 630
+        }
       : undefined,
     author: {
       '@type': 'Organization',
       name: 'AMPM Full Time Spedition',
-      url: BASE_URL,
+      url: BASE_URL
     },
     publisher: {
       '@type': 'Organization',
       name: 'AMPM Full Time Spedition',
-      logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.webp` },
+      logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.webp` }
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
     articleSection: post.category,
     keywords: post.tags?.join(', '),
-    inLanguage: 'pl-PL',
+    inLanguage: 'pl-PL'
   };
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Strona Główna', item: `${BASE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blog` },
-      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
-    ],
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Strona Główna',
+        item: `${BASE_URL}/`
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${BASE_URL}/blog`
+      },
+      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl }
+    ]
   };
 
   return (
