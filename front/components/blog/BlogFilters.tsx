@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowDownAZ, ArrowUpAZ } from 'lucide-react';
-import type { Category } from '@/src/sanity/types';
+import type { Category } from '../../src/sanity/types';
 
 interface BlogFiltersProps {
   categories: Category[];

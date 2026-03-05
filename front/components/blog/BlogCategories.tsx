@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { Category } from '@/src/sanity/types';
+import type { Category } from '../../src/sanity/types';
 
 interface BlogCategoriesProps {
   categories: Category[];

@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { portableTextComponents } from '@/src/sanity/portableTextComponents';
+import { portableTextComponents } from '../../src/sanity/portableTextComponents';
 import BlogShareButtons from './BlogShareButtons';
-import type { Post, RelatedPost } from '@/src/sanity/types';
+import type { Post, RelatedPost } from '../../src/sanity/types';
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString('pl-PL', {

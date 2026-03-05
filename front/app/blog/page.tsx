@@ -9,8 +9,8 @@ import {
   postsByCategoryQueryAsc,
   postsByCategoryCountQuery,
   featuredPostsQuery,
-} from '@/src/sanity/queries';
-import type { Post, Category } from '@/src/sanity/types';
+} from '../../src/sanity/queries';
+import type { Post, Category } from '../../src/sanity/types';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, Clock, Calendar } from 'lucide-react';
-import type { Post } from '@/src/sanity/types';
+import type { Post } from '../../src/sanity/types';
 
 function formatDate(dateString: string) {
   return new Date(dateString).toLocaleDateString('pl-PL', {

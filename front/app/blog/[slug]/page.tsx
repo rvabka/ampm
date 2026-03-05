@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { client } from '../../../src/sanity/client';
-import { postQuery, allPostSlugsQuery } from '@/src/sanity/queries';
-import type { Post } from '@/src/sanity/types';
+import { postQuery, allPostSlugsQuery } from '../../../src/sanity/queries';
+import type { Post } from '../../../src/sanity/types';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';

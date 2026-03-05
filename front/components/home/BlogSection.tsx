@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { client } from "@/src/sanity/client";
-import { recentPostsQuery } from "@/src/sanity/queries";
+import { client } from "../../src/sanity/client";
+import { recentPostsQuery } from "../../src/sanity/queries";
 
 interface Post {
   _id: string;
