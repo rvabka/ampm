@@ -1,9 +1,10 @@
 import { CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
 
 const points = [
-  'Szybkie procesy decyzyjne',
-  'Bezpośredni kontakt z zarządem',
-  'Realny wpływ na rozwój firmy',
+  'Szybkie decyzje i konkretna komunikacja',
+  'Wzajemne wsparcie w zespole',
+  'Liczy się wynik, zaangażowanie i profesjonalizm'
 ];
 
 export default function CareerCulture() {
@@ -28,19 +29,26 @@ export default function CareerCulture() {
           </h2>
           <div className="space-y-5 text-gray-500 leading-relaxed mb-8">
             <p>
-              Wierzymy w płaską strukturę i bezpośrednią komunikację. U nas drzwi są zawsze
-              otwarte, a każdy pomysł wart jest wysłuchania. Zamiast skomplikowanych procedur
-              stawiamy na zdrowy rozsądek i elastyczność.
+              Stawiamy na samodzielność, odpowiedzialność i efektywność. Nie
+              działamy korporacyjnie — cenimy szybkie decyzje, konkretną
+              komunikację i wzajemne wsparcie w zespole.
             </p>
             <p>
-              Cenimy samodzielność i odpowiedzialność. Tworzymy miejsce, w którym każdy czuje
-              się częścią zespołu, a nie trybikiem w maszynie.
+              W AMPM liczy się wynik, zaangażowanie i profesjonalne podejście do
+              klienta oraz przewoźnika.
             </p>
           </div>
           <ul className="space-y-3" aria-label="Wartości kultury pracy">
-            {points.map((point) => (
-              <li key={point} className="flex items-center gap-3 text-secondary font-medium">
-                <CheckCircle2 size={20} className="text-primary shrink-0" aria-hidden="true" />
+            {points.map(point => (
+              <li
+                key={point}
+                className="flex items-center gap-3 text-secondary font-medium"
+              >
+                <CheckCircle2
+                  size={20}
+                  className="text-primary shrink-0"
+                  aria-hidden="true"
+                />
                 {point}
               </li>
             ))}
@@ -52,16 +60,13 @@ export default function CareerCulture() {
           role="presentation"
           aria-hidden="true"
         >
-          <div
-            className="absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(0,0,0,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.4) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
-            }}
+          <Image
+            src="/image6.webp"
+            alt="Zespół pracowników AMPM podczas spotkania biznesowego"
+            fill
+            className="object-cover object-bottom"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
-          <div className="absolute top-10 right-10 w-56 h-56 bg-primary/15 rounded-full blur-3xl" />
-          <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-secondary/8 rounded-full blur-3xl" />
         </div>
       </div>
     </section>

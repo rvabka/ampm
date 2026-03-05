@@ -50,3 +50,39 @@
 .testimonials-swiper .swiper-slide-active .testimonial-bar {
   background-color: var(--color-primary);
 }
+
+/* Flying leaf animation */
+.leaf-particle {
+  position: absolute;
+  pointer-events: none;
+  color: #22c55e;
+  top: 50%;
+  left: 50%;
+  line-height: 0;
+}
+
+.leaf-1 { animation: leaf-fly-1 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.leaf-2 { animation: leaf-fly-2 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.08s; }
+.leaf-3 { animation: leaf-fly-3 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.18s; }
+.leaf-4 { animation: leaf-fly-4 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.05s; }
+
+@keyframes leaf-fly-1 {
+  0%   { transform: translate(-50%, -50%) rotate(0deg) scale(1);   opacity: 1; }
+  60%  { opacity: 0.8; }
+  100% { transform: translate(calc(-50% - 55px), calc(-50% - 110px)) rotate(-400deg) scale(0.4); opacity: 0; }
+}
+@keyframes leaf-fly-2 {
+  0%   { transform: translate(-50%, -50%) rotate(20deg) scale(1);  opacity: 1; }
+  60%  { opacity: 0.8; }
+  100% { transform: translate(calc(-50% + 10px), calc(-50% - 140px)) rotate(560deg) scale(0.25); opacity: 0; }
+}
+@keyframes leaf-fly-3 {
+  0%   { transform: translate(-50%, -50%) rotate(-15deg) scale(1); opacity: 1; }
+  60%  { opacity: 0.8; }
+  100% { transform: translate(calc(-50% + 60px), calc(-50% - 100px)) rotate(300deg) scale(0.5); opacity: 0; }
+}
+@keyframes leaf-fly-4 {
+  0%   { transform: translate(-50%, -50%) rotate(45deg) scale(1);  opacity: 1; }
+  60%  { opacity: 0.8; }
+  100% { transform: translate(calc(-50% - 20px), calc(-50% - 130px)) rotate(-600deg) scale(0.3); opacity: 0; }
+}

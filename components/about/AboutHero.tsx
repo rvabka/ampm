@@ -13,7 +13,6 @@ export default function AboutHero() {
         { label: 'O nas' },
       ]}
       layout="split"
-      scrollToId="formularz"
     />
   );
 }

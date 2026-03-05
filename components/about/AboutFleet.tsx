@@ -5,21 +5,21 @@ const vehicles = [
     title: 'Ciągniki Siodłowe + Naczepy',
     specs: ['Ładowność do 24t', 'Plandeki, Firanki, Mega'],
     image:
-      'https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      '/image11.webp',
     alt: 'Ciągnik siodłowy z naczepą na autostradzie',
   },
   {
     title: 'Chłodnie i Izotermy',
     specs: ['Kontrola temperatury', 'Transport żywności i leków'],
     image:
-      'https://images.pexels.com/photos/2226458/pexels-photo-2226458.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      '/image12.webp',
     alt: 'Samochód chłodnia do transportu żywności',
   },
   {
     title: 'Busy do 3.5t',
     specs: ['Ekspresowe dostawy', 'Winda załadowcza'],
     image:
-      'https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=800&h=600',
+      '/image13.webp',
     alt: 'Samochód dostawczy do 3.5 tony',
   },
 ];

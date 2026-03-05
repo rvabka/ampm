@@ -23,29 +23,29 @@ export default function FaqContact() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="tel:+48123456789"
+            href="tel:+48570112512"
             className="group flex items-center gap-3 px-6 py-4 rounded-xl border border-gray-200 hover:border-primary/40 hover:bg-primary/5 transition-all"
-            aria-label="Zadzwoń do AMPM Spedition: +48 123 456 789"
+            aria-label="Zadzwoń do AMPM Spedition: +48 570 112 512"
           >
             <Phone size={18} className="text-primary shrink-0" aria-hidden="true" />
             <div className="text-left">
               <p className="text-xs text-gray-400 leading-none mb-0.5">Telefon</p>
               <span className="text-sm font-semibold text-secondary group-hover:text-primary transition-colors">
-                +48 123 456 789
+               +48 570 112 512
               </span>
             </div>
           </a>
 
           <a
-            href="mailto:kontakt@ampm-spedition.pl"
+            href="mailto:biuro@ampm.com.pl"
             className="group flex items-center gap-3 px-6 py-4 rounded-xl border border-gray-200 hover:border-primary/40 hover:bg-primary/5 transition-all"
-            aria-label="Napisz do AMPM Spedition: kontakt@ampm-spedition.pl"
+            aria-label="Napisz do AMPM Spedition: biuro@ampm.com.pl"
           >
             <Mail size={18} className="text-primary shrink-0" aria-hidden="true" />
             <div className="text-left">
               <p className="text-xs text-gray-400 leading-none mb-0.5">E-mail</p>
               <span className="text-sm font-semibold text-secondary group-hover:text-primary transition-colors">
-                kontakt@ampm-spedition.pl
+                biuro@ampm.com.pl
               </span>
             </div>
           </a>

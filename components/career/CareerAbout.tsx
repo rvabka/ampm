@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function CareerAbout() {
   return (
     <section
@@ -10,16 +12,13 @@ export default function CareerAbout() {
           role="presentation"
           aria-hidden="true"
         >
-          <div
-            className="absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(0,0,0,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.4) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
-            }}
+          <Image
+            src="/image4.webp"
+            alt="Zespół pracowników AMPM podczas spotkania biznesowego"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
-          <div className="absolute -top-20 -right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-52 h-52 bg-secondary/10 rounded-full blur-2xl" />
         </div>
 
         <div>
@@ -37,15 +36,13 @@ export default function CareerAbout() {
           </h2>
           <div className="space-y-5 text-gray-500 leading-relaxed">
             <p>
-              W AMPM Sp. z o.o. rozumiemy, że sukces w transporcie i spedycji zależy nie tylko
-              od nowoczesnej floty, ale przede wszystkim od ludzi. Każdego dnia mierzymy się
-              z wyzwaniami globalnego rynku, dostarczając rozwiązania napędzające biznes naszych
-              klientów.
+              W AMPM tworzymy zespół ludzi ambitnych, zaangażowanych i nastawionych
+              na rozwój. W branży TSL liczy się szybkość działania, odpowiedzialność
+              i dobra organizacja — i dokładnie na tych wartościach budujemy naszą pracę.
             </p>
             <p>
-              Stawiamy na innowacyjność, szybkość działania i precyzję. Jeśli szukasz miejsca,
-              gdzie Twoje zaangażowanie przekłada się na realne wyniki, a rozwój zawodowy jest
-              wpisany w DNA firmy — jesteś we właściwym miejscu.
+              Jeśli cenisz samodzielność, partnerską atmosferę i realny wpływ na
+              wyniki — jesteś we właściwym miejscu.
             </p>
           </div>
         </div>

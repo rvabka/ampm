@@ -11,10 +11,9 @@ import AboutFleet from '@/components/about/AboutFleet';
 import AboutMap from '@/components/about/AboutMap';
 import AboutValues from '@/components/about/AboutValues';
 import AboutTeam from '@/components/about/AboutTeam';
-import AboutContact from '@/components/about/AboutContact';
 
 export const metadata: Metadata = {
-  title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna z Lublina',
+  title: 'O Nas – Firma Spedycyjna z Lublina',
   description:
     'Poznaj AMPM Sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Dowiedz się, kim jesteśmy i co nas wyróżnia.',
   keywords: [
@@ -37,6 +36,21 @@ export const metadata: Metadata = {
     description:
       'Jesteśmy zespołem specjalistów z Lublina specjalizujących się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Poznaj nasze priorytety i sposób pracy.',
     url: '/o-nas',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna z Lublina',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna',
+    description:
+      'Poznaj AMPM Sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i UE.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -48,13 +62,13 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'O Nas',
-      item: 'https://ampmspedition.pl/o-nas',
+      item: 'https://ampm.com.pl/o-nas',
     },
   ],
 };
@@ -62,11 +76,11 @@ const breadcrumbJsonLd = {
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://ampmspedition.pl/#organization',
+  '@id': 'https://ampm.com.pl/#organization',
   name: 'AMPM Sp. z o.o.',
   alternateName: 'AMPM Full Time Spedition',
-  url: 'https://ampmspedition.pl',
-  logo: 'https://ampmspedition.pl/logo.png',
+  url: 'https://ampm.com.pl',
+  logo: 'https://ampm.com.pl/logo.png',
   description:
     'Firma spedycyjna z Lublina specjalizująca się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Obsługujemy transport krajowy i międzynarodowy do wszystkich krajów UE.',
   address: {
@@ -124,7 +138,6 @@ export default function AboutPage() {
         <AboutValues />
         <AboutMap />
         <AboutTeam />
-        <AboutContact />
       </main>
       <Footer />
       <ScrollToTop />

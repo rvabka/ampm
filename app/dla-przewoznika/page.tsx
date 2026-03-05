@@ -10,7 +10,7 @@ import CarrierStats from '@/components/carrier/CarrierStats';
 import CarrierContact from '@/components/carrier/CarrierContact';
 
 export const metadata: Metadata = {
-  title: 'Dla Przewoźnika – Współpraca i Zlecenia Transportowe',
+  title: 'Dla Przewoźnika – Zlecenia i Współpraca',
   description:
     'Dołącz do sieci partnerów AMPM Spedition. Oferujemy terminowe płatności (skonto 14 dni), stałe zlecenia w całej Europie, wsparcie spedytora 24/7 i przejrzyste warunki umowy.',
   keywords: [
@@ -31,6 +31,21 @@ export const metadata: Metadata = {
     description:
       'Stabilne zlecenia, terminowe płatności i wsparcie 24/7. Zostań partnerem AMPM Spedition i rozwijaj swój biznes transportowy w całej Europie.',
     url: '/dla-przewoznika',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dla Przewoźnika – Zlecenia i Współpraca z AMPM Spedition',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dla Przewoźnika – Zlecenia i Współpraca',
+    description:
+      'Dołącz do sieci partnerów AMPM Spedition. Terminowe płatności, stałe zlecenia w całej Europie i wsparcie spedytora 24/7.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -42,13 +57,13 @@ const jsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Dla Przewoźnika',
-      item: 'https://ampmspedition.pl/dla-przewoznika',
+      item: 'https://ampm.com.pl/dla-przewoznika',
     },
   ],
 };
@@ -62,7 +77,7 @@ const serviceJsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'AMPM Full Time Spedition',
-    url: 'https://ampmspedition.pl',
+    url: 'https://ampm.com.pl',
   },
   areaServed: {
     '@type': 'Place',

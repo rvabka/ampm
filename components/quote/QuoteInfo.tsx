@@ -41,9 +41,7 @@ export default function QuoteInfo() {
           </div>
           <p className="text-gray-500 text-lg leading-relaxed">
             Każde zapytanie analizujemy indywidualnie, biorąc pod uwagę kluczowe parametry
-            logistyczne, aby zaproponować optymalne i konkurencyjne rozwiązanie. Naszym celem
-            jest nie tylko przedstawienie ceny, ale zaproponowanie rozwiązania, które będzie
-            bezpieczne, terminowe i korzystne biznesowo.
+            logistyczne, aby zaproponować optymalne i konkurencyjne rozwiązanie.
           </p>
         </div>
 
@@ -83,7 +81,7 @@ export default function QuoteInfo() {
           {/* Dlaczego warto */}
           <div>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-secondary mb-3">
-              Dlaczego warto wysłać zapytanie do AMPM?
+              Dlaczego warto wysłać zapytanie?
             </h2>
             <p className="text-gray-500 mb-6 leading-relaxed">
               Stawiamy na indywidualne podejście i pełną transparentność:
@@ -96,6 +94,10 @@ export default function QuoteInfo() {
                 </li>
               ))}
             </ul>
+            <p className="text-gray-500 text-sm mt-6 leading-relaxed">
+              Naszym celem jest nie tylko przedstawienie ceny, ale zaproponowanie rozwiązania,
+              które będzie bezpieczne, terminowe i korzystne biznesowo.
+            </p>
           </div>
         </div>
 

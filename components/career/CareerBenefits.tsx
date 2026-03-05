@@ -11,39 +11,39 @@ import {
 const benefits: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: ShieldCheck,
-    title: 'Stabilne warunki',
+    title: 'Stabilne warunki współpracy',
     description:
-      'Umowa o pracę lub B2B, jasna ścieżka kariery i bezpieczeństwo zatrudnienia w firmie o ugruntowanej pozycji.',
+      'Bezpieczeństwo zatrudnienia w firmie o ugruntowanej pozycji na rynku TSL.',
   },
   {
     icon: Banknote,
-    title: 'System wynagrodzeń',
+    title: 'Atrakcyjny system wynagrodzeń',
     description:
-      'Atrakcyjna podstawa oraz przejrzysty system premiowy uzależniony od wyników i zaangażowania.',
+      'Podstawa wynagrodzenia oraz przejrzysty system prowizyjny uzależniony od wyników.',
   },
   {
     icon: Laptop,
-    title: 'Narzędzia pracy',
+    title: 'Niezbędne narzędzia pracy',
     description:
-      'Nowoczesny sprzęt, profesjonalne oprogramowanie i flota samochodowa dla stanowisk mobilnych.',
+      'Zapewniamy wszystko, czego potrzebujesz do efektywnej pracy na danym stanowisku.',
   },
   {
     icon: TrendingUp,
-    title: 'Wpływ na zarobki',
+    title: 'Realny wpływ na wysokość zarobków',
     description:
-      'Twoje wyniki mają bezpośrednie przełożenie na wysokość premii. Doceniamy skuteczność.',
+      'Twoje wyniki bezpośrednio przekładają się na zarobki. Doceniamy zaangażowanie i skuteczność.',
   },
   {
     icon: Users,
-    title: 'Atmosfera',
+    title: 'Przyjazna, partnerska atmosfera',
     description:
-      'Zgrany zespół, brak korporacyjnego sztywniactwa, imprezy integracyjne i wspólne cele.',
+      'Budujemy zespół oparty na wzajemnym szacunku, otwartej komunikacji i wspólnych celach.',
   },
   {
     icon: GraduationCap,
-    title: 'Rozwój',
+    title: 'Możliwość rozwoju zawodowego',
     description:
-      'Szkolenia wewnętrzne i zewnętrzne, kursy językowe oraz możliwość awansu w strukturach firmy.',
+      'Inwestujemy w ludzi — stawiamy na rozwój kompetencji i awans w strukturach firmy.',
   },
 ];
 

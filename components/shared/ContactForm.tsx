@@ -1,6 +1,6 @@
 'use client';
 
-import { Send } from 'lucide-react';
+import SubmitButton from '@/components/shared/SubmitButton';
 
 export interface FormField {
   id: string;
@@ -89,13 +89,7 @@ export default function ContactForm({
       </div>
 
       <div className="mt-8 flex justify-end">
-        <button
-          type="submit"
-          className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 cursor-pointer"
-        >
-          {submitLabel}
-          <Send size={16} aria-hidden="true" />
-        </button>
+        <SubmitButton />
       </div>
     </form>
   );

@@ -6,7 +6,7 @@ export default function CareerHero() {
       titleFirst="Dołącz do"
       titleHighlight="zespołu AMPM"
       titleBreak
-      description="Twórz z nami przyszłość logistyki. Szukamy pasjonatów, którzy chcą rozwijać się w dynamicznym środowisku międzynarodowym."
+      description="Branża TSL to dynamiczne środowisko, w którym liczy się szybkość działania, odpowiedzialność i dobra organizacja. Jeśli cenisz samodzielność, partnerską atmosferę i realny wpływ na wyniki — zapraszamy do współpracy."
       eyebrow="Kariera"
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },

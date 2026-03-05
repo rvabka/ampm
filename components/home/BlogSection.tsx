@@ -1,47 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { client } from "../../src/sanity/client";
+import { recentPostsQuery } from "../../src/sanity/queries";
 
-const articles = [
-  {
-    slug: "nowe-centrum-dystrybucyjne",
-    category: "Logistyka",
-    date: "2023-10-12",
-    dateFormatted: "12 Października, 2023",
-    title: "Nowe centrum dystrybucyjne w centralnej Polsce",
-    excerpt:
-      "Rozszerzamy nasze możliwości magazynowe. Nowy obiekt o powierzchni 10 000 m² już otwarty dla naszych kluczowych partnerów.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDRrV52FOWEkKmMPhYba320_haLp0VMLMexGWA9silkzaadf8EAbTbYCZUgsKPtnTPNdV1Xj9E3U-l7i8VXmxhRS1uNtcfTPJsLdA8pzYxKEnNWZU6XLFZyluo8lCavNqbTqGKPnN34laJCy9GsrdwHqTaDSb9jiCYb4T-lXt1eK3y7tnbcIvzV3hOYgPMIxGZ90fYl1kTDw_7lJjKgTiNdZkY8Jpvt8D9XPew6-KLBnePdHTMIjbNRW0tGlFKBbpWZjN0GxoGo5kEg",
-    imageAlt: "Nowoczesne centrum dystrybucyjne AMPM Spedition w Polsce",
-  },
-  {
-    slug: "zmiany-pakiet-mobilnosci",
-    category: "Transport",
-    date: "2023-09-28",
-    dateFormatted: "28 Września, 2023",
-    title: "Zmiany w przepisach pakietu mobilności",
-    excerpt:
-      "Co oznaczają nowe regulacje unijne dla polskich przewoźników drogowych? Analiza ekspercka naszego zespołu prawnego.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD42QjYg4doBrCAnXA2L2jVMlntgxDx-FQoZo8mtuNdkuygeyVWgX1k6JrCl-Biz-cosrs4EQ5k9uADO2EGxMjI9xJTZuCZZHpIvDtaIMWLAHZzeUqMLFa6MA_1cEBZeN1R84EG9fXuReEUu1AnBcSWladOxW7W4k5Eb1Dh3Yvax_5GcXkfBj9R37km2f0qGfCLDBvIkSaRDAJm3pR4JrEoXGlvz2V0T_mV6LyCS1TIKeVRb9e7R42kQmiV9gjGZiKBQ7_f4DZmb9hJ",
-    imageAlt: "Ciężarówka na drodze – zmiany w przepisach pakietu mobilności",
-  },
-  {
-    slug: "trendy-transport-q4-2023",
-    category: "Rynek",
-    date: "2023-09-15",
-    dateFormatted: "15 Września, 2023",
-    title: "Trendy w transporcie drogowym na Q4 2023",
-    excerpt:
-      "Stawki frachtowe stabilizują się. Przewidujemy wzrost zapotrzebowania na usługi transportowe w okresie przedświątecznym.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDu99yzUmdBfQYvXDB19ud9ScudrdBraRGgHuA06-A3YdFcFoY6LiGROBaR5nl2qFWQq310KhZ7h4zOs6syDoDskyPEbPTbN1v3cYan0plolfpVmUaT-QSV0jaVYORrQeNBhwSriUh8-uIrYaE5LtSme9N31bjey_hVVkRz8H5MTRSOTX3XnfS0mcK8TDf-2ZmfEUdxuKl6ZXoN7UCfEhiI8Mz85ZAGWF6hANDP_JC6N-wjPkJX7sfieMXlAVH2m1oP3fImV-pjWU09",
-    imageAlt: "Trasa transportowa – trendy w transporcie drogowym Q4 2023",
-  },
-];
+interface Post {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  excerpt: string;
+  publishedAt: string;
+  category: string;
+  mainImage: string | null;
+  mainImageAlt: string | null;
+}
 
-export default function BlogSection() {
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("pl-PL", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+export default async function BlogSection() {
+  const posts: Post[] = await client.fetch(recentPostsQuery, {}, { next: { revalidate: 3600 } });
+
+  if (!posts?.length) return null;
+
   return (
     <section
       className="py-24 px-8 bg-background-light"
@@ -71,35 +57,39 @@ export default function BlogSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {articles.map((article) => (
-            <article key={article.slug} className="flex flex-col group cursor-pointer">
-              <Link href={`/blog/${article.slug}`} className="block">
-                <div className="rounded-2xl overflow-hidden mb-4 h-56 relative">
-                  <Image
-                    src={article.image}
-                    alt={article.imageAlt}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded">
-                    {article.category}
-                  </div>
+          {posts.map((post) => (
+            <article key={post._id} className="flex flex-col group cursor-pointer">
+              <Link href={`/blog/${post.slug.current}`} className="block">
+                <div className="rounded-2xl overflow-hidden mb-4 h-56 relative bg-gray-100">
+                  {post.mainImage && (
+                    <Image
+                      src={post.mainImage}
+                      alt={post.mainImageAlt ?? post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  )}
+                  {post.category && (
+                    <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded">
+                      {post.category}
+                    </div>
+                  )}
                 </div>
 
                 <time
-                  dateTime={article.date}
+                  dateTime={post.publishedAt}
                   className="text-gray-500 text-sm mb-2 block"
                 >
-                  {article.dateFormatted}
+                  {formatDate(post.publishedAt)}
                 </time>
 
                 <h3 className="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">
-                  {article.title}
+                  {post.title}
                 </h3>
 
                 <p className="text-gray-600 text-sm line-clamp-2">
-                  {article.excerpt}
+                  {post.excerpt}
                 </p>
               </Link>
             </article>

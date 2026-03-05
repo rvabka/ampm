@@ -26,6 +26,21 @@ export const metadata: Metadata = {
     description:
       'Biuro w Lublinie, serwis telefoniczny 24/7, formularz kontaktowy. Skontaktuj się z naszym zespołem logistycznym.',
     url: '/kontakt',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Kontakt – AMPM Spedition, biuro Lublin',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kontakt – Napisz lub Zadzwoń do AMPM Spedition',
+    description:
+      'Biuro w Lublinie, telefon 24/7, e-mail dla zapytań. Skontaktuj się z AMPM Spedition – odpowiadamy w ciągu 24 godzin.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -37,13 +52,13 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Kontakt',
-      item: 'https://ampmspedition.pl/kontakt',
+      item: 'https://ampm.com.pl/kontakt',
     },
   ],
 };
@@ -52,9 +67,9 @@ const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MovingCompany',
   name: 'AMPM Full Time Spedition',
-  url: 'https://ampmspedition.pl',
-  logo: 'https://ampmspedition.pl/logo.webp',
-  image: 'https://ampmspedition.pl/logo.webp',
+  url: 'https://ampm.com.pl',
+  logo: 'https://ampm.com.pl/logo.webp',
+  image: 'https://ampm.com.pl/logo.webp',
   description:
     'Profesjonalny transport drogowy ciężarowy i dostawczy na terenie całej Europy.',
   address: {

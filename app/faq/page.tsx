@@ -8,7 +8,7 @@ import FaqContact from '@/components/faq/FaqContact';
 import { FAQ_ITEMS } from '@/components/faq/faq-data';
 
 export const metadata: Metadata = {
-  title: 'FAQ – Najczęstsze Pytania o Transport i Spedycję',
+  title: 'FAQ – Pytania o Transport i Spedycję',
   description:
     'Odpowiedzi na najważniejsze pytania dotyczące transportu drogowego, floty EURO 6, ubezpieczenia OCP, dokumentów CMR i warunków płatności w AMPM Spedition.',
   keywords: [
@@ -28,6 +28,21 @@ export const metadata: Metadata = {
     description:
       'Znajdź odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP i warunki współpracy z AMPM Spedition.',
     url: '/faq',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'FAQ – Pytania o Transport i Spedycję – AMPM Spedition',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ – Pytania o Transport i Spedycję',
+    description:
+      'Odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP, dokumenty CMR i warunki współpracy z AMPM Spedition.',
+    images: ['/og-image.jpg'],
   },
 };
 

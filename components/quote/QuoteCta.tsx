@@ -1,18 +1,26 @@
 export default function QuoteCta() {
   return (
     <section
-      className="py-16 px-6 lg:px-8 bg-secondary"
+      className="py-20 px-6 lg:px-8 bg-secondary"
       aria-labelledby="quote-cta-heading"
     >
       <div className="max-w-4xl mx-auto text-center">
-        <p
+        <h2
           id="quote-cta-heading"
-          className="text-gray-300 text-lg leading-relaxed"
+          className="text-3xl md:text-4xl font-display font-bold text-white mb-4"
         >
-          Dołącz do sprawdzonych partnerów i buduj stabilną pozycję w branży transportu,
-          spedycji i logistyki. Stawiamy na transparentną współpracę opartą na wzajemnym
-          zaufaniu oraz wysokich standardach obsługi.
+          Masz transport do zrealizowania?
+        </h2>
+        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+          Wyślij zapytanie już dziś i sprawdź, jak możemy zoptymalizować koszty Twojej
+          logistyki.
         </p>
+        <a
+          href="#formularz"
+          className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/90 transition-colors text-sm uppercase tracking-wider"
+        >
+          Wyślij zapytanie
+        </a>
       </div>
     </section>
   );

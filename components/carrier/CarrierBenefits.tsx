@@ -58,7 +58,17 @@ export default function CarrierBenefits() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map(benefit => (
+          {benefits.slice(0, 3).map(benefit => (
+            <FeatureCard
+              key={benefit.title}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+            />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 lg:w-2/3 mx-auto">
+          {benefits.slice(3).map(benefit => (
             <FeatureCard
               key={benefit.title}
               icon={benefit.icon}

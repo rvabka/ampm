@@ -1,6 +1,7 @@
 'use client';
 
-import { Send, Upload } from 'lucide-react';
+import { Upload } from 'lucide-react';
+import SubmitButton from '@/components/shared/SubmitButton';
 
 const inputBase =
   'w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-secondary placeholder-gray-400 text-sm transition-all duration-300 outline-none focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10';
@@ -23,25 +24,25 @@ const voivodeships = [
   { value: 'swietokrzyskie', label: 'Świętokrzyskie' },
   { value: 'warminsko-mazurskie', label: 'Warmińsko-mazurskie' },
   { value: 'wielkopolskie', label: 'Wielkopolskie' },
-  { value: 'zachodniopomorskie', label: 'Zachodniopomorskie' },
+  { value: 'zachodniopomorskie', label: 'Zachodniopomorskie' }
 ];
 
 const steps = [
   {
     step: '1',
     title: 'Przygotuj CV',
-    description: 'Upewnij się, że jest aktualne (PDF/DOC).',
+    description: 'Upewnij się, że jest aktualne (PDF/DOC).'
   },
   {
     step: '2',
     title: 'Wyślij zgłoszenie',
-    description: 'Wypełnij formularz — zajmie to mniej niż 3 minuty.',
+    description: 'Wypełnij formularz — zajmie to mniej niż 3 minuty.'
   },
   {
     step: '3',
     title: 'Czekaj na kontakt',
-    description: 'Odpiszemy w ciągu 5 dni roboczych.',
-  },
+    description: 'Skontaktujemy się z wybranymi kandydatami.'
+  }
 ];
 
 export default function CareerApplicationForm() {
@@ -63,8 +64,8 @@ export default function CareerApplicationForm() {
             Aplikuj teraz
           </h2>
           <p className="text-gray-500 mt-4 max-w-lg mx-auto">
-            Wypełnij formularz, aby dołączyć do naszego zespołu. Skontaktujemy się
-            z wybranymi kandydatami.
+            Wypełnij formularz, aby dołączyć do naszego zespołu. Skontaktujemy
+            się z wybranymi kandydatami.
           </p>
         </div>
 
@@ -89,7 +90,8 @@ export default function CareerApplicationForm() {
                   Dołącz do nas
                 </span>
                 <p className="text-gray-300 text-sm leading-relaxed mb-10">
-                  Analizujemy każde zgłoszenie indywidualnie i odpowiadamy na wszystkie aplikacje.
+                  Analizujemy każde zgłoszenie indywidualnie i odpowiadamy na
+                  wszystkie aplikacje.
                 </p>
                 <ol className="space-y-6">
                   {steps.map(({ step, title, description }) => (
@@ -102,7 +104,9 @@ export default function CareerApplicationForm() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-sm">{title}</h3>
-                        <p className="text-xs text-gray-400 mt-1">{description}</p>
+                        <p className="text-xs text-gray-400 mt-1">
+                          {description}
+                        </p>
                       </div>
                     </li>
                   ))}
@@ -110,9 +114,8 @@ export default function CareerApplicationForm() {
               </div>
             </aside>
 
-            {/* Form */}
             <div className="lg:col-span-3 p-10 lg:p-12">
-              <form onSubmit={(e) => e.preventDefault()} noValidate>
+              <form onSubmit={e => e.preventDefault()} noValidate>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Full name */}
                   <div className="md:col-span-2">
@@ -120,7 +123,10 @@ export default function CareerApplicationForm() {
                       htmlFor="career-fullname"
                       className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
                     >
-                      Imię i nazwisko <span className="text-primary" aria-hidden="true">*</span>
+                      Imię i nazwisko{' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </label>
                     <input
                       id="career-fullname"
@@ -140,7 +146,10 @@ export default function CareerApplicationForm() {
                       htmlFor="career-email"
                       className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
                     >
-                      E-mail <span className="text-primary" aria-hidden="true">*</span>
+                      E-mail{' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </label>
                     <input
                       id="career-email"
@@ -160,7 +169,10 @@ export default function CareerApplicationForm() {
                       htmlFor="career-phone"
                       className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
                     >
-                      Telefon <span className="text-primary" aria-hidden="true">*</span>
+                      Telefon{' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </label>
                     <input
                       id="career-phone"
@@ -180,7 +192,10 @@ export default function CareerApplicationForm() {
                       htmlFor="career-position"
                       className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
                     >
-                      Stanowisko <span className="text-primary" aria-hidden="true">*</span>
+                      Stanowisko{' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </label>
                     <input
                       id="career-position"
@@ -197,9 +212,12 @@ export default function CareerApplicationForm() {
                   <div>
                     <label
                       htmlFor="career-region"
-                      className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
+                      className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider "
                     >
-                      Województwo <span className="text-primary" aria-hidden="true">*</span>
+                      Województwo{' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </label>
                     <select
                       id="career-region"
@@ -207,12 +225,12 @@ export default function CareerApplicationForm() {
                       required
                       defaultValue=""
                       aria-required="true"
-                      className={`${inputBase} cursor-pointer`}
+                      className={`${inputBase} cursor-pointer text-gray-500`}
                     >
                       <option value="" disabled>
                         Wybierz z listy
                       </option>
-                      {voivodeships.map((v) => (
+                      {voivodeships.map(v => (
                         <option key={v.value} value={v.value}>
                           {v.label}
                         </option>
@@ -223,20 +241,32 @@ export default function CareerApplicationForm() {
                   {/* CV Upload */}
                   <div className="md:col-span-2">
                     <span className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider">
-                      CV (PDF/DOC/DOCX) <span className="text-primary" aria-hidden="true">*</span>
+                      CV (PDF/DOC/DOCX){' '}
+                      <span className="text-primary" aria-hidden="true">
+                        *
+                      </span>
                     </span>
                     <label
                       htmlFor="career-cv"
                       className="flex flex-col items-center justify-center gap-3 px-6 py-8 border-2 border-dashed border-gray-200 rounded-xl bg-gray-50 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all duration-200"
                     >
-                      <Upload size={28} className="text-gray-400" aria-hidden="true" />
+                      <Upload
+                        size={28}
+                        className="text-gray-400"
+                        aria-hidden="true"
+                      />
                       <div className="text-center">
                         <span className="text-sm font-semibold text-primary">
                           Wybierz plik CV
                         </span>
-                        <span className="text-sm text-gray-500"> lub przeciągnij tutaj</span>
+                        <span className="text-sm text-gray-500">
+                          {' '}
+                          lub przeciągnij tutaj
+                        </span>
                       </div>
-                      <span className="text-xs text-gray-400">Maks. 10 MB · PDF, DOC, DOCX</span>
+                      <span className="text-xs text-gray-400">
+                        Maks. 10 MB · PDF, DOC, DOCX
+                      </span>
                       <input
                         id="career-cv"
                         name="cv"
@@ -268,17 +298,13 @@ export default function CareerApplicationForm() {
                 </div>
 
                 <div className="mt-8">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/40 cursor-pointer w-full justify-center"
-                  >
-                    Wyślij aplikację
-                    <Send size={16} aria-hidden="true" />
-                  </button>
+                  <div className="flex justify-end">
+                    <SubmitButton />
+                  </div>
                   <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
-                    Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane
-                    w formularzu będą przetwarzane w celu udzielenia odpowiedzi na
-                    przesłane zgłoszenie zgodnie z{' '}
+                    Administratorem danych osobowych jest AMPM Sp. z o.o. Dane
+                    wpisane w formularzu będą przetwarzane w celu udzielenia
+                    odpowiedzi na przesłane zgłoszenie zgodnie z{' '}
                     <a
                       href="/polityka-prywatnosci"
                       className="hover:text-primary underline underline-offset-2 transition-colors"

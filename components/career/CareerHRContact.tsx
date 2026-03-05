@@ -12,21 +12,21 @@ export default function CareerHRContact() {
             id="career-hr-heading"
             className="text-xl font-display font-bold text-secondary mb-1"
           >
-            Masz pytania?
+            Jak aplikować?
           </h2>
-          <p className="text-gray-500 text-sm">Napisz do naszego działu HR bezpośrednio.</p>
+          <p className="text-gray-500 text-sm">Wyślij swoje CV — skontaktujemy się z wybranymi kandydatami.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <div className="flex items-center gap-3 bg-gray-50 px-5 py-3 rounded-xl border border-gray-200">
             <Mail size={18} className="text-primary shrink-0" aria-hidden="true" />
-            <span className="font-semibold text-secondary text-sm">biuro@ampm.com.pl</span>
+            <span className="font-semibold text-secondary text-sm">spedycja@ampm.com.pl</span>
           </div>
           <a
-            href="mailto:biuro@ampm.com.pl"
+            href="#aplikuj"
             className="text-primary font-semibold hover:text-primary-hover transition-colors text-sm whitespace-nowrap"
-            aria-label="Wyślij wiadomość do działu HR na adres biuro@ampm.com.pl"
+            aria-label="Przejdź do formularza aplikacyjnego"
           >
-            Wyślij wiadomość →
+            Wyślij CV →
           </a>
         </div>
       </div>

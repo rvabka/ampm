@@ -9,7 +9,7 @@ import QuoteSidebar from '@/components/quote/QuoteSidebar';
 import QuoteCta from '@/components/quote/QuoteCta';
 
 export const metadata: Metadata = {
-  title: 'Wycena Transportu – Bezpłatne Zapytanie Ofertowe',
+  title: 'Wycena Transportu – Bezpłatna Oferta',
   description:
     'Zapytaj o bezpłatną wycenę transportu drogowego. Podaj trasę, rodzaj towaru i wagę — przygotujemy ofertę dopasowaną do Twoich potrzeb. Transport krajowy i międzynarodowy.',
   keywords: [
@@ -29,6 +29,21 @@ export const metadata: Metadata = {
     description:
       'Bezpłatne zapytanie ofertowe o transport drogowy. Opisz trasę i ładunek — przygotujemy indywidualną ofertę.',
     url: '/wycena',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Wycena Transportu – Bezpłatna Oferta AMPM Spedition',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wycena Transportu – Bezpłatna Oferta',
+    description:
+      'Zapytaj o bezpłatną wycenę transportu drogowego. Podaj trasę, rodzaj towaru i wagę — przygotujemy ofertę na miarę.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -40,13 +55,13 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Wycena',
-      item: 'https://ampmspedition.pl/wycena',
+      item: 'https://ampm.com.pl/wycena',
     },
   ],
 };
@@ -60,7 +75,7 @@ const serviceJsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'AMPM Full Time Spedition',
-    url: 'https://ampmspedition.pl',
+    url: 'https://ampm.com.pl',
   },
   areaServed: { '@type': 'Place', name: 'Europa' },
   offers: {

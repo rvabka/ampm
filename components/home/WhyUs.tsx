@@ -54,11 +54,11 @@ export default function WhyUs() {
           <div className="grid grid-cols-2 gap-4 md:gap-6 relative">
             <div className="col-span-1 row-span-2 relative group overflow-hidden rounded-3xl h-[400px]">
               <Image
-                src={WAREHOUSE_IMG}
+                src="/image9.webp"
                 alt="Transport krajowy i międzynarodowy – AMPM Sp. z o.o."
                 fill
-                className="object-cover transition duration-700 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 40vw"
               />
               <div
                 className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-transparent to-transparent"
@@ -71,16 +71,15 @@ export default function WhyUs() {
                 <h4 className="text-white font-bold text-xl">
                   Organizacja Transportu
                 </h4>
-                <p className="text-white/70 text-sm mt-1">FTL i LTL</p>
               </div>
             </div>
 
             <div className="col-span-1 h-[190px] relative group overflow-hidden rounded-3xl">
               <Image
-                src={TRUCK_IMG}
+                src="/image7.webp"
                 alt="Ciężarówka AMPM w trasie – transport krajowy i międzynarodowy"
                 fill
-                className="object-cover transition duration-700 group-hover:scale-110"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 20vw"
               />
               <div

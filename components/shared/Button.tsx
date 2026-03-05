@@ -50,7 +50,7 @@ export default function Button({
   disabled = false,
   external = false,
 }: ButtonProps) {
-  const baseClasses = `inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? "opacity-50 pointer-events-none" : ""}`;
+  const baseClasses = `inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 cursor-pointer ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? "opacity-50 pointer-events-none" : ""}`;
 
   const content = (
     <>

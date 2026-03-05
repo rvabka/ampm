@@ -62,7 +62,17 @@ export default function AboutStandards() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {priorities.map((item) => (
+          {priorities.slice(0, 3).map((item) => (
+            <FeatureCard
+              key={item.title}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 lg:w-2/3 mx-auto">
+          {priorities.slice(3).map((item) => (
             <FeatureCard
               key={item.title}
               icon={item.icon}

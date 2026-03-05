@@ -28,6 +28,21 @@ export const metadata: Metadata = {
     description:
       'Dołącz do dynamicznego zespołu AMPM. Oferujemy stabilne warunki, system premiowy i realne możliwości rozwoju w branży TSL.',
     url: '/kariera',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
+    description:
+      'Szukamy spedytorów, koordynatorów i kierowców w Lublinie. Stabilne warunki, system premiowy i realne możliwości rozwoju.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -39,13 +54,13 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Kariera',
-      item: 'https://ampmspedition.pl/kariera',
+      item: 'https://ampm.com.pl/kariera',
     },
   ],
 };
@@ -59,8 +74,8 @@ const jobPostingJsonLd = {
   hiringOrganization: {
     '@type': 'Organization',
     name: 'AMPM Sp. z o.o.',
-    sameAs: 'https://ampmspedition.pl',
-    logo: 'https://ampmspedition.pl/logo.webp',
+    sameAs: 'https://ampm.com.pl',
+    logo: 'https://ampm.com.pl/logo.webp',
   },
   jobLocation: {
     '@type': 'Place',

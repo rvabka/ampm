@@ -1,6 +1,6 @@
 'use client';
 
-import { Send } from 'lucide-react';
+import SubmitButton from '@/components/shared/SubmitButton';
 
 const inputBase =
   'w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-secondary placeholder-gray-400 text-sm transition-all outline-none focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10';
@@ -168,13 +168,9 @@ export default function QuoteForm() {
       </fieldset>
 
       <div className="pt-4 border-t border-gray-100 space-y-4">
-        <button
-          type="submit"
-          className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-primary hover:bg-primary-hover text-white font-semibold rounded-full transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer"
-        >
-          Wyślij zapytanie
-          <Send size={16} aria-hidden="true" />
-        </button>
+        <div className="flex justify-end">
+          <SubmitButton />
+        </div>
         <p className="text-xs text-gray-400 leading-relaxed">
           <span aria-hidden="true">* </span>Pola wymagane.
           Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu

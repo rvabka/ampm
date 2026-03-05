@@ -41,7 +41,7 @@ export default function Fleet() {
       className="py-20 px-8 bg-white relative overflow-hidden"
       aria-labelledby="fleet-heading"
     >
-      
+
       <div
         className="absolute top-0 right-0 w-1/3 h-full bg-gray-100 -skew-x-12 transform translate-x-20 z-0 pointer-events-none"
         aria-hidden="true"
@@ -64,10 +64,10 @@ export default function Fleet() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          
+
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px]">
             <Image
-              src={FLEET_IMG}
+              src="/image1.webp"
               alt="Nowoczesna biała ciężarówka AMPM Spedition klasy EURO 6"
               fill
               className="object-cover"
@@ -91,7 +91,7 @@ export default function Fleet() {
             </div>
           </div>
 
-          
+
           <div className="space-y-6">
             {fleetItems.map((item) => (
               <div

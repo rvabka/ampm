@@ -28,6 +28,21 @@ export const metadata: Metadata = {
     description:
       'Licencje, certyfikaty i polisy ubezpieczeniowe AMPM Spedition. Transparentność i pełna dokumentacja naszej działalności.',
     url: '/dokumenty',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dokumenty – Licencje, Certyfikaty i Polisy AMPM Spedition',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dokumenty – Licencje, Certyfikaty i Polisy',
+    description:
+      'Pobierz dokumenty AMPM Spedition: licencja transportowa, certyfikat ISO 9001, normy Euro 6 i polisa OCP do 300 000 EUR.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -39,13 +54,13 @@ const jsonLd = {
       '@type': 'ListItem',
       position: 1,
       name: 'Strona Główna',
-      item: 'https://ampmspedition.pl/',
+      item: 'https://ampm.com.pl/',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Dokumenty',
-      item: 'https://ampmspedition.pl/dokumenty',
+      item: 'https://ampm.com.pl/dokumenty',
     },
   ],
 };

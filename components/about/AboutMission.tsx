@@ -8,7 +8,7 @@ export default function AboutMission() {
           <div className="w-full lg:w-1/2 relative z-10">
             <div className="aspect-[4/3] w-full overflow-hidden shadow-2xl rounded-2xl">
               <Image
-                src="https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                src="/image1.webp"
                 alt="Kierowca sprawdzający ładunek ciężarówki"
                 width={800}
                 height={600}

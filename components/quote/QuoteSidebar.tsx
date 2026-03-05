@@ -1,4 +1,4 @@
-import { BadgeCheck, Shield, MapPin, Phone } from 'lucide-react';
+import { BadgeCheck, Shield, UserCheck, Phone } from 'lucide-react';
 
 const guarantees = [
   {
@@ -9,15 +9,15 @@ const guarantees = [
   },
   {
     icon: Shield,
-    title: 'Ubezpieczenie OCP',
+    title: 'Brak ukrytych kosztów',
     description:
-      'Każdy ładunek objęty jest ubezpieczeniem odpowiedzialności cywilnej przewoźnika do 300 000 EUR.',
+      'Przedstawiamy transparentne warunki współpracy. Cena w ofercie to cena ostateczna — bez niespodzianek.',
   },
   {
-    icon: MapPin,
-    title: 'Śledzenie GPS',
+    icon: UserCheck,
+    title: 'Dedykowany spedytor',
     description:
-      'Monitorujemy każdy pojazd w czasie rzeczywistym. Na życzenie informujemy o aktualnej lokalizacji przesyłki.',
+      'Od pierwszego kontaktu opiekuje się Tobą jeden spedytor, który zna Twoje potrzeby i historię zleceń.',
   },
 ];
 
