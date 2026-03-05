@@ -7,7 +7,7 @@ import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 import BlogPostHero from '../../../components/blog/BlogPostHero';
-import BlogPostContent from '@/components/blog/BlogPostContent';
+import BlogPostContent from '../../../components/blog/BlogPostContent';
 
 export const revalidate = 3600;
 
