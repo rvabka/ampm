@@ -14,11 +14,11 @@ import type { Post, Category } from '../../src/sanity/types';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
-import BlogHero from '@/components/blog/BlogHero';
-import BlogFilters from '@/components/blog/BlogFilters';
-import BlogFeaturedPost from '@/components/blog/BlogFeaturedPost';
-import BlogGrid from '@/components/blog/BlogGrid';
-import BlogPagination from '@/components/blog/BlogPagination';
+import BlogHero from '../../components/blog/BlogHero';
+import BlogFilters from '../../components/blog/BlogFilters';
+import BlogFeaturedPost from '../../components/blog/BlogFeaturedPost';
+import BlogGrid from '../../components/blog/BlogGrid';
+import BlogPagination from '../../components/blog/BlogPagination';
 
 export const revalidate = 3600;
 
