@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { client } from '@/src/sanity/client';
+import { client } from '../../src/sanity/client';
 import {
   categoriesQuery,
   postsQuery,
