@@ -1,19 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-import { Check, Leaf } from 'lucide-react';
+import { Check, Leaf, Loader2 } from 'lucide-react';
 
-export default function SubmitButton() {
-  const [sent, setSent] = useState(false);
+interface SubmitButtonProps {
+  label?: string;
+  loading?: boolean;
+  success?: boolean;
+  disabled?: boolean;
+}
 
-  const handleClick = () => {
-    setSent(true);
-    setTimeout(() => setSent(false), 2500);
-  };
+export default function SubmitButton({
+  label = 'Wyślij wiadomość',
+  loading = false,
+  success = false,
+  disabled = false,
+}: SubmitButtonProps) {
+  const isDisabled = disabled || loading || success;
 
   return (
     <div className="relative inline-flex">
-      {sent && (
+      {success && (
         <>
           <span className="leaf-particle leaf-1"><Leaf size={15} /></span>
           <span className="leaf-particle leaf-2"><Leaf size={11} /></span>
@@ -23,21 +29,28 @@ export default function SubmitButton() {
       )}
       <button
         type="submit"
-        onClick={handleClick}
-        className={`inline-flex items-center gap-2.5 px-8 py-3.5 font-semibold rounded-full transition-all duration-300 shadow-lg cursor-pointer select-none ${
-          sent
+        disabled={isDisabled}
+        className={`inline-flex items-center gap-2.5 px-8 py-3.5 font-semibold rounded-full transition-all duration-300 shadow-lg select-none ${
+          success
             ? 'bg-green-500 shadow-green-500/25 text-white scale-95'
-            : 'bg-primary hover:bg-primary-hover text-white shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5'
+            : isDisabled
+            ? 'bg-gray-300 shadow-none text-gray-500 cursor-not-allowed'
+            : 'bg-primary hover:bg-primary-hover text-white shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer'
         }`}
       >
-        {sent ? (
+        {success ? (
           <>
             Wysłano!
             <Check size={16} aria-hidden="true" />
           </>
+        ) : loading ? (
+          <>
+            Wysyłanie…
+            <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+          </>
         ) : (
           <>
-            Wyślij wiadomość
+            {label}
             <Leaf size={16} aria-hidden="true" />
           </>
         )}

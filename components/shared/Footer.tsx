@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { Linkedin } from 'lucide-react';
 import { type ComponentType } from 'react';
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -44,17 +45,17 @@ const menuCol2 = [
 
 const socialLinks: { href: string; label: string; icon: ComponentType<{ className?: string }> }[] = [
   {
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/profile.php?id=61586839199138',
     label: 'AMPM Spedition na Facebooku',
     icon: FacebookIcon
   },
   {
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/company/ampm-sp-z-o-o/',
     label: 'AMPM Spedition na LinkedIn',
     icon: LinkedinIcon
   },
   {
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/ampmspzoo/',
     label: 'AMPM Spedition na Instagramie',
     icon: InstagramIcon
   }
@@ -162,21 +163,34 @@ export default function Footer() {
         </div>
 
 
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
           <p>
             &copy; {new Date().getFullYear()} AM PM Sp. z o.o. Transport i Spedycja. Wszelkie
             prawa zastrzeżone.
           </p>
-          <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="flex gap-6">
             <Link
               href="/polityka-prywatnosci"
               className="hover:text-white transition"
             >
               Polityka Prywatności
             </Link>
-            <Link href="/warunki-uslug" className="hover:text-white transition">
-              Warunki Usługi
+            <Link href="/polityka-cookies" className="hover:text-white transition">
+              Polityka Cookies
             </Link>
+          </div>
+          <div className="text-center md:text-right">
+            <p className="text-gray-500 text-xs flex items-center justify-center gap-2">
+              Projekt i wykonanie:
+              <a
+                href="https://www.linkedin.com/in/wiktor-stefaniak-4b9287279/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <Linkedin size={16} />
+              </a>
+            </p>
           </div>
         </div>
       </div>

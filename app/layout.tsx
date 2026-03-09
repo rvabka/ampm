@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import CookieBannerLoader from '@/components/shared/CookieBannerLoader';
 
 const plusJakartaSans = localFont({
   src: [
@@ -120,6 +121,7 @@ export default function RootLayout({
           Przejdź do treści
         </a>
         {children}
+        <CookieBannerLoader />
       </body>
     </html>
   );

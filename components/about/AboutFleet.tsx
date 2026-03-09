@@ -28,8 +28,8 @@ export default function AboutFleet() {
   return (
     <section className="py-24 px-8 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-          <div>
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-16">
+          <div className="text-center md:text-left">
             <span className="text-primary font-bold tracking-wider uppercase text-xs mb-2 block">
               Tabor i Możliwości
             </span>
@@ -37,7 +37,7 @@ export default function AboutFleet() {
               Nowoczesna Flota
             </h2>
           </div>
-          <p className="text-gray-500 max-w-md mt-4 md:mt-0">
+          <p className="text-gray-500 md:max-w-md text-center md:text-left">
             Elastyczność to nasza domena. Dysponujemy zróżnicowaną flotą
             dostosowaną do każdego rodzaju ładunku.
           </p>

@@ -55,7 +55,7 @@ export default function Hero() {
       className="relative h-dvh w-full overflow-hidden flex flex-col justify-end pb-10"
       aria-label="Baner główny"
     >
-      
+
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -76,14 +76,14 @@ export default function Hero() {
         />
       </div>
 
-      
+
       <div
         className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-6 items-center"
         aria-label="Media społecznościowe"
       >
         <div className="h-16 w-px bg-white/30 mb-2" aria-hidden="true" />
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/profile.php?id=61586839199138"
           aria-label="AMPM Spedition na Facebooku"
           rel="noopener noreferrer"
           target="_blank"
@@ -92,7 +92,7 @@ export default function Hero() {
           <FacebookIcon />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/ampm-sp-z-o-o/"
           aria-label="AMPM Spedition na LinkedIn"
           rel="noopener noreferrer"
           target="_blank"
@@ -101,7 +101,7 @@ export default function Hero() {
           <LinkedinIcon />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/ampmspzoo/"
           aria-label="AMPM Spedition na Instagramie"
           rel="noopener noreferrer"
           target="_blank"
@@ -112,8 +112,8 @@ export default function Hero() {
         <div className="h-16 w-px bg-white/30 mt-2" aria-hidden="true" />
       </div>
 
-      
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col justify-end h-full pb-16 text-center md:text-left">
+
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col lg:justify-end justify-center h-full lg:pb-16 text-center md:text-left">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
           Transport
           <br className="hidden md:block" /> i Spedycja
@@ -123,7 +123,7 @@ export default function Hero() {
           i terminowości. Twój ładunek w pewnych rękach.
         </p>
 
-        
+
         <div className="relative z-20 w-full flex flex-col md:flex-row items-center gap-6">
           <div className="bg-white shadow-2xl rounded-2xl p-1.5 flex flex-col md:flex-row items-stretch md:items-center w-full md:w-auto">
             {ctaItems.map((item) => (

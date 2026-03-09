@@ -5,7 +5,7 @@ export interface Post {
     current: string;
   };
   excerpt: string;
-  body?: any[];
+  body?: unknown[];
   publishedAt: string;
   updatedAt?: string;
   readTime?: number;

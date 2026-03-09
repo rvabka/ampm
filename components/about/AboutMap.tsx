@@ -117,9 +117,12 @@ export default function AboutMap() {
         .eu-path:hover{fill:rgba(0,174,239,.35)!important;stroke:rgba(0,174,239,.8)!important}
         .route-seg{stroke-dasharray:6 4;stroke-dashoffset:200;animation:mapDraw 2.5s ease-out forwards}
         .city-lbl{animation:mapFade .6s ease-out both}
+        @media(max-width:767px){
+          .city-lbl,.city-lbl-hq{font-size:15px}
+        }
       `}</style>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
         <div className="w-full md:w-1/2">
           <span className="text-primary font-bold tracking-wider uppercase text-xs mb-4 block">
             Logistyka&nbsp;bez&nbsp;granic
@@ -144,7 +147,7 @@ export default function AboutMap() {
 
         <div className="w-full md:w-1/2 relative">
           <div
-            className="relative w-full bg-surface-dark/30 rounded-2xl border border-gray-700 backdrop-blur-sm overflow-hidden"
+            className="relative w-full bg-surface-dark/30 rounded-2xl border border-gray-700 backdrop-blur-sm overflow-hidden min-h-96 md:min-h-0"
             style={{ aspectRatio: '5/4' }}
           >
             <div
@@ -260,7 +263,7 @@ export default function AboutMap() {
                       fontSize={c.isHQ ? 13 : 11}
                       fontWeight={c.isHQ ? 700 : 600}
                       fontFamily="'Plus Jakarta Sans', sans-serif"
-                      className="city-lbl"
+                      className={`city-lbl${c.isHQ ? ' city-lbl-hq' : ''}`}
                       style={{
                         animationDelay: `${1 + ci * 0.12}s`,
                         textShadow: '0 1px 4px rgba(0,0,0,.9)',

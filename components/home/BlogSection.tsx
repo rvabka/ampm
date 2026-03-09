@@ -34,7 +34,7 @@ export default async function BlogSection() {
       aria-labelledby="blog-heading"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-12">
           <div>
             <span className="text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">
               Blog
@@ -48,7 +48,7 @@ export default async function BlogSection() {
           </div>
           <Link
             href="/blog"
-            className="text-primary font-bold hover:text-primary-hover flex items-center gap-2 transition-colors"
+            className="text-primary font-bold hover:text-primary-hover flex items-center gap-2 transition-colors shrink-0"
             aria-label="Zobacz wszystkie artykuły na blogu"
           >
             Zobacz wszystkie

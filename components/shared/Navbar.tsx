@@ -219,7 +219,7 @@ export default function Navbar() {
           </p>
           <div className="flex items-center gap-2">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61586839199138"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -228,7 +228,7 @@ export default function Navbar() {
               <FacebookIcon />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/ampm-sp-z-o-o/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -237,7 +237,7 @@ export default function Navbar() {
               <LinkedInIcon />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/ampmspzoo/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

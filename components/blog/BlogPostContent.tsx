@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
+import type { PortableTextBlock } from '@portabletext/types';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { portableTextComponents } from '../../src/sanity/portableTextComponents';
 import BlogShareButtons from './BlogShareButtons';
@@ -39,7 +40,7 @@ export default function BlogPostContent({ post, postUrl }: BlogPostContentProps)
               prose-ul:list-disc prose-ul:ml-6 prose-li:text-gray-600 prose-li:leading-relaxed
               prose-img:rounded-2xl prose-img:shadow-xl
             ">
-              {post.body && <PortableText value={post.body} components={portableTextComponents} />}
+              {post.body && <PortableText value={post.body as PortableTextBlock[]} components={portableTextComponents} />}
             </div>
 
             {post.tags && post.tags.length > 0 && (
@@ -103,17 +104,6 @@ export default function BlogPostContent({ post, postUrl }: BlogPostContentProps)
                   <ArrowRight size={16} aria-hidden="true" />
                 </Link>
               </div>
-
-              {post.category && (
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
-                    Kategoria
-                  </p>
-                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-              )}
 
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">

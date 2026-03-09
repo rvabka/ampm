@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
+import { client } from '@/src/sanity/client';
+import { jobsQuery } from '@/src/sanity/queries';
+import type { Job } from '@/src/sanity/types';
 import Navbar from '@/components/shared/Navbar';
 import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
@@ -8,6 +12,9 @@ import CareerBenefits from '@/components/career/CareerBenefits';
 import CareerCulture from '@/components/career/CareerCulture';
 import CareerHRContact from '@/components/career/CareerHRContact';
 import CareerApplicationForm from '@/components/career/CareerApplicationForm';
+import CareerJobsSection from '@/components/career/CareerJobsSection';
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
@@ -21,13 +28,13 @@ export const metadata: Metadata = {
     'praca kierowca TIR Lublin',
   ],
   alternates: {
-    canonical: '/kariera',
+    canonical: 'https://ampm.com.pl/kariera',
   },
   openGraph: {
     title: 'Kariera – AMPM Sp. z o.o.',
     description:
       'Dołącz do dynamicznego zespołu AMPM. Oferujemy stabilne warunki, system premiowy i realne możliwości rozwoju w branży TSL.',
-    url: '/kariera',
+    url: 'https://ampm.com.pl/kariera',
     images: [
       {
         url: '/og-image.jpg',
@@ -45,6 +52,47 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
 };
+
+const HIRING_ORG = {
+  '@type': 'Organization',
+  name: 'AMPM Sp. z o.o.',
+  sameAs: 'https://ampm.com.pl',
+  logo: 'https://ampm.com.pl/logo.webp',
+};
+
+const JOB_ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: 'ul. Zemborzycka 53b',
+  addressLocality: 'Lublin',
+  postalCode: '20-445',
+  addressCountry: 'PL',
+};
+
+const TYPE_SCHEMA_MAP: Record<string, string> = {
+  'full-time': 'FULL_TIME',
+  'part-time': 'PART_TIME',
+  contract: 'CONTRACTOR',
+  b2b: 'CONTRACTOR',
+  internship: 'INTERN',
+};
+
+function buildJobPostingJsonLd(job: Job) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title: job.title,
+    description: job.description,
+    hiringOrganization: HIRING_ORG,
+    jobLocation: {
+      '@type': 'Place',
+      address: JOB_ADDRESS,
+    },
+    employmentType: TYPE_SCHEMA_MAP[job.type] ?? 'OTHER',
+    datePosted: job.publishedAt ?? new Date().toISOString().slice(0, 10),
+    directApply: true,
+    url: `https://ampm.com.pl/kariera?position=${encodeURIComponent(job.title)}#aplikuj`,
+  };
+}
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -65,53 +113,33 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const jobPostingJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'JobPosting',
-  title: 'Spedytor / Pracownik działu logistyki',
-  description:
-    'AMPM Sp. z o.o. poszukuje kandydatów do pracy w branży TSL na terenie Lublina i okolic. Oferujemy stabilne zatrudnienie, atrakcyjne wynagrodzenie i realne możliwości awansu.',
-  hiringOrganization: {
-    '@type': 'Organization',
-    name: 'AMPM Sp. z o.o.',
-    sameAs: 'https://ampm.com.pl',
-    logo: 'https://ampm.com.pl/logo.webp',
-  },
-  jobLocation: {
-    '@type': 'Place',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'ul. Zemborzycka 53b',
-      addressLocality: 'Lublin',
-      postalCode: '20-445',
-      addressCountry: 'PL',
-    },
-  },
-  employmentType: ['FULL_TIME', 'CONTRACTOR'],
-  datePosted: '2026-01-01',
-  validThrough: '2026-12-31',
-  workHours: 'Poniedziałek–Piątek 07:00–15:00',
-};
+export default async function CareerPage() {
+  const jobs = await client.fetch<Job[]>(jobsQuery);
 
-export default function CareerPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingJsonLd) }}
-      />
+      {jobs.map(job => (
+        <script
+          key={job._id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJobPostingJsonLd(job)) }}
+        />
+      ))}
       <Navbar />
       <main id="main-content">
         <CareerHero />
         <CareerAbout />
         <CareerBenefits />
+        <CareerJobsSection jobs={jobs} />
         <CareerCulture />
         <CareerHRContact />
-        <CareerApplicationForm />
+        <Suspense>
+          <CareerApplicationForm />
+        </Suspense>
       </main>
       <Footer />
       <ScrollToTop />

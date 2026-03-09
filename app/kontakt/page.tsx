@@ -90,9 +90,9 @@ const localBusinessJsonLd = {
     },
   ],
   sameAs: [
-    'https://facebook.com',
-    'https://linkedin.com',
-    'https://instagram.com',
+    'https://www.facebook.com/profile.php?id=61586839199138',
+    'https://www.linkedin.com/company/ampm-sp-z-o-o/',
+    'https://www.instagram.com/ampmspzoo/',
   ],
 };
 

@@ -1,7 +1,10 @@
 'use client';
 
-import { Upload } from 'lucide-react';
+import { useState, useCallback, useRef, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Upload, X } from 'lucide-react';
 import SubmitButton from '@/components/shared/SubmitButton';
+import TurnstileWidget from '@/components/shared/TurnstileWidget';
 
 const inputBase =
   'w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3.5 text-secondary placeholder-gray-400 text-sm transition-all duration-300 outline-none focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10';
@@ -45,14 +48,160 @@ const steps = [
   }
 ];
 
+function matchVoivodeship(region: string): string {
+  if (!region) return '';
+  const normalized = region.toLowerCase().trim();
+  const match = voivodeships.find(
+    v => v.value === normalized || v.label.toLowerCase() === normalized
+  );
+  return match?.value ?? '';
+}
+
 export default function CareerApplicationForm() {
+  const searchParams = useSearchParams();
+  const prefillPosition = searchParams.get('position') ?? '';
+  const prefillRegion = matchVoivodeship(searchParams.get('region') ?? '');
+  const sectionRef = useRef<HTMLElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [values, setValues] = useState({
+    fullname: '',
+    email: '',
+    phone: '',
+    position: prefillPosition,
+    region: prefillRegion
+  });
+  const [cvFile, setCvFile] = useState<File | null>(null);
+  const [cvError, setCvError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const isFormValid =
+    values.fullname.trim() !== '' &&
+    values.email.trim() !== '' &&
+    values.phone.trim() !== '' &&
+    values.position.trim() !== '' &&
+    values.region !== '' &&
+    cvFile !== null;
+
+  useEffect(() => {
+    if (prefillPosition && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [prefillPosition]);
+
+  const handleTurnstileSuccess = useCallback((token: string) => {
+    setTurnstileToken(token);
+    setError(null);
+  }, []);
+
+  const handleTurnstileExpired = useCallback(() => setTurnstileToken(null), []);
+
+  const handleTurnstileError = useCallback(() => {
+    setTurnstileToken(null);
+    setError(
+      'Weryfikacja CAPTCHA nie powiodła się. Odśwież stronę i spróbuj ponownie.'
+    );
+  }, []);
+
+  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0] ?? null;
+    setCvError(null);
+
+    if (!file) {
+      setCvFile(null);
+      return;
+    }
+
+    const allowed = [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
+    if (!allowed.includes(file.type)) {
+      setCvError('Niedozwolony format. Wybierz plik PDF, DOC lub DOCX.');
+      setCvFile(null);
+      e.target.value = '';
+      return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+      setCvError('Plik jest za duży. Maksymalny rozmiar to 10 MB.');
+      setCvFile(null);
+      e.target.value = '';
+      return;
+    }
+
+    setCvFile(file);
+  }
+
+  function removeFile() {
+    setCvFile(null);
+    setCvError(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }
+
+  async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    if (!turnstileToken) {
+      setError('Potwierdź, że nie jesteś robotem.');
+      return;
+    }
+
+    if (!cvFile) {
+      setCvError('Plik CV jest wymagany.');
+      return;
+    }
+
+    const formData = new FormData(e.currentTarget);
+    formData.set('cv', cvFile);
+    formData.set('turnstileToken', turnstileToken);
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/career', {
+        method: 'POST',
+        body: formData
+      });
+
+      const json = (await res.json()) as { success?: boolean; error?: string };
+
+      if (!res.ok || !json.success) {
+        setError(json.error ?? 'Wystąpił błąd. Spróbuj ponownie.');
+        return;
+      }
+
+      setSuccess(true);
+      (e.target as HTMLFormElement).reset();
+      setCvFile(null);
+      setValues({
+        fullname: '',
+        email: '',
+        phone: '',
+        position: '',
+        region: ''
+      });
+      setTimeout(() => setSuccess(false), 3000);
+    } catch {
+      setError('Błąd połączenia. Sprawdź internet i spróbuj ponownie.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <section
+      ref={sectionRef}
       className="py-24 px-6 lg:px-8 bg-white"
       id="aplikuj"
       aria-labelledby="career-form-heading"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-primary font-bold tracking-wider uppercase text-xs mb-2 block">
             Rekrutacja
@@ -63,17 +212,25 @@ export default function CareerApplicationForm() {
           >
             Aplikuj teraz
           </h2>
-          <p className="text-gray-500 mt-4 max-w-lg mx-auto">
-            Wypełnij formularz, aby dołączyć do naszego zespołu. Skontaktujemy
-            się z wybranymi kandydatami.
-          </p>
+          {prefillPosition ? (
+            <p className="text-gray-500 mt-4 max-w-lg mx-auto">
+              Aplikujesz na stanowisko:{' '}
+              <span className="font-semibold text-secondary">
+                {prefillPosition}
+              </span>
+            </p>
+          ) : (
+            <p className="text-gray-500 mt-4 max-w-lg mx-auto">
+              Wypełnij formularz, aby dołączyć do naszego zespołu. Skontaktujemy
+              się z wybranymi kandydatami.
+            </p>
+          )}
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-5">
-            {/* Sidebar */}
+          <div className="grid grid-cols-1 lg:grid-cols-3">
             <aside
-              className="lg:col-span-2 bg-secondary p-10 flex flex-col justify-between text-white relative overflow-hidden"
+              className="bg-secondary p-4 lg:p-10 flex flex-col justify-between text-white relative overflow-hidden"
               aria-label="Informacje o procesie rekrutacji"
             >
               <div
@@ -114,10 +271,9 @@ export default function CareerApplicationForm() {
               </div>
             </aside>
 
-            <div className="lg:col-span-3 p-10 lg:p-12">
-              <form onSubmit={e => e.preventDefault()} noValidate>
+            <div className="lg:col-span-2 p-4 lg:p-12">
+              <form onSubmit={handleSubmit} noValidate>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Full name */}
                   <div className="md:col-span-2">
                     <label
                       htmlFor="career-fullname"
@@ -136,11 +292,14 @@ export default function CareerApplicationForm() {
                       required
                       autoComplete="name"
                       aria-required="true"
+                      value={values.fullname}
+                      onChange={e =>
+                        setValues(p => ({ ...p, fullname: e.target.value }))
+                      }
                       className={inputBase}
                     />
                   </div>
 
-                  {/* Email */}
                   <div>
                     <label
                       htmlFor="career-email"
@@ -159,11 +318,14 @@ export default function CareerApplicationForm() {
                       required
                       autoComplete="email"
                       aria-required="true"
+                      value={values.email}
+                      onChange={e =>
+                        setValues(p => ({ ...p, email: e.target.value }))
+                      }
                       className={inputBase}
                     />
                   </div>
 
-                  {/* Phone */}
                   <div>
                     <label
                       htmlFor="career-phone"
@@ -182,11 +344,14 @@ export default function CareerApplicationForm() {
                       required
                       autoComplete="tel"
                       aria-required="true"
+                      value={values.phone}
+                      onChange={e =>
+                        setValues(p => ({ ...p, phone: e.target.value }))
+                      }
                       className={inputBase}
                     />
                   </div>
 
-                  {/* Position */}
                   <div>
                     <label
                       htmlFor="career-position"
@@ -204,15 +369,18 @@ export default function CareerApplicationForm() {
                       placeholder="np. Spedytor Międzynarodowy"
                       required
                       aria-required="true"
+                      value={values.position}
+                      onChange={e =>
+                        setValues(p => ({ ...p, position: e.target.value }))
+                      }
                       className={inputBase}
                     />
                   </div>
 
-                  {/* Region */}
                   <div>
                     <label
                       htmlFor="career-region"
-                      className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider "
+                      className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider"
                     >
                       Województwo{' '}
                       <span className="text-primary" aria-hidden="true">
@@ -223,9 +391,12 @@ export default function CareerApplicationForm() {
                       id="career-region"
                       name="region"
                       required
-                      defaultValue=""
                       aria-required="true"
-                      className={`${inputBase} cursor-pointer text-gray-500`}
+                      value={values.region}
+                      onChange={e =>
+                        setValues(p => ({ ...p, region: e.target.value }))
+                      }
+                      className={`${inputBase} cursor-pointer ${values.region ? 'text-secondary' : 'text-gray-500'}`}
                     >
                       <option value="" disabled>
                         Wybierz z listy
@@ -238,7 +409,6 @@ export default function CareerApplicationForm() {
                     </select>
                   </div>
 
-                  {/* CV Upload */}
                   <div className="md:col-span-2">
                     <span className="block text-xs font-semibold uppercase text-gray-500 mb-2 tracking-wider">
                       CV (PDF/DOC/DOCX){' '}
@@ -246,40 +416,65 @@ export default function CareerApplicationForm() {
                         *
                       </span>
                     </span>
-                    <label
-                      htmlFor="career-cv"
-                      className="flex flex-col items-center justify-center gap-3 px-6 py-8 border-2 border-dashed border-gray-200 rounded-xl bg-gray-50 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all duration-200"
-                    >
-                      <Upload
-                        size={28}
-                        className="text-gray-400"
-                        aria-hidden="true"
-                      />
-                      <div className="text-center">
-                        <span className="text-sm font-semibold text-primary">
-                          Wybierz plik CV
+
+                    {cvFile ? (
+                      <div className="flex items-center justify-between gap-3 px-4 py-3 border border-primary/30 bg-primary/5 rounded-xl">
+                        <span className="text-sm text-secondary font-medium truncate">
+                          {cvFile.name}
                         </span>
-                        <span className="text-sm text-gray-500">
-                          {' '}
-                          lub przeciągnij tutaj
-                        </span>
+                        <button
+                          type="button"
+                          onClick={removeFile}
+                          className="shrink-0 text-gray-400 hover:text-red-500 transition-colors"
+                          aria-label="Usuń plik"
+                        >
+                          <X size={16} />
+                        </button>
                       </div>
-                      <span className="text-xs text-gray-400">
-                        Maks. 10 MB · PDF, DOC, DOCX
-                      </span>
-                      <input
-                        id="career-cv"
-                        name="cv"
-                        type="file"
-                        accept=".pdf,.doc,.docx"
-                        required
-                        aria-required="true"
-                        className="sr-only"
-                      />
-                    </label>
+                    ) : (
+                      <label
+                        htmlFor="career-cv"
+                        className="flex flex-col items-center justify-center gap-3 px-6 py-8 border-2 border-dashed border-gray-200 rounded-xl bg-gray-50 cursor-pointer hover:border-primary hover:bg-primary/5 transition-all duration-200"
+                      >
+                        <Upload
+                          size={28}
+                          className="text-gray-400"
+                          aria-hidden="true"
+                        />
+                        <div className="text-center">
+                          <span className="text-sm font-semibold text-primary">
+                            Wybierz plik CV
+                          </span>
+                          <span className="text-sm text-gray-500">
+                            {' '}
+                            lub przeciągnij tutaj
+                          </span>
+                        </div>
+                        <span className="text-xs text-gray-400">
+                          Maks. 10 MB · PDF, DOC, DOCX
+                        </span>
+                        <input
+                          id="career-cv"
+                          name="cv"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          ref={fileInputRef}
+                          onChange={handleFileChange}
+                          className="sr-only"
+                        />
+                      </label>
+                    )}
+
+                    {cvError && (
+                      <p
+                        role="alert"
+                        className="mt-2 text-sm text-red-600 font-medium"
+                      >
+                        {cvError}
+                      </p>
+                    )}
                   </div>
 
-                  {/* Cover letter */}
                   <div className="md:col-span-2">
                     <label
                       htmlFor="career-cover-letter"
@@ -297,23 +492,41 @@ export default function CareerApplicationForm() {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <div className="flex justify-end">
-                    <SubmitButton />
-                  </div>
-                  <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
-                    Administratorem danych osobowych jest AMPM Sp. z o.o. Dane
-                    wpisane w formularzu będą przetwarzane w celu udzielenia
-                    odpowiedzi na przesłane zgłoszenie zgodnie z{' '}
-                    <a
-                      href="/polityka-prywatnosci"
-                      className="hover:text-primary underline underline-offset-2 transition-colors"
-                    >
-                      polityką prywatności
-                    </a>
-                    .
+                {error && (
+                  <p
+                    role="alert"
+                    className="mt-6 text-sm text-red-600 font-medium"
+                  >
+                    {error}
                   </p>
+                )}
+
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <TurnstileWidget
+                    onSuccess={handleTurnstileSuccess}
+                    onExpired={handleTurnstileExpired}
+                    onError={handleTurnstileError}
+                  />
+                  <SubmitButton
+                    label="Wyślij aplikację"
+                    loading={loading}
+                    success={success}
+                    disabled={!turnstileToken || !isFormValid}
+                  />
                 </div>
+
+                <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
+                  Administratorem danych osobowych jest AMPM Sp. z o.o. Dane
+                  wpisane w formularzu będą przetwarzane w celu udzielenia
+                  odpowiedzi na przesłane zgłoszenie zgodnie z{' '}
+                  <a
+                    href="/polityka-prywatnosci"
+                    className="hover:text-primary underline underline-offset-2 transition-colors"
+                  >
+                    polityką prywatności
+                  </a>
+                  .
+                </p>
               </form>
             </div>
           </div>
