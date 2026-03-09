@@ -3,6 +3,16 @@
 import { useEffect, useRef, useCallback } from 'react';
 import Script from 'next/script';
 
+declare global {
+  interface Window {
+    turnstile: {
+      render: (container: HTMLElement, options: Record<string, unknown>) => string;
+      remove: (widgetId: string) => void;
+    };
+    onloadTurnstileCallback: () => void;
+  }
+}
+
 interface TurnstileWidgetProps {
   onSuccess: (token: string) => void;
   onExpired?: () => void;
