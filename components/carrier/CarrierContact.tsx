@@ -99,6 +99,7 @@ export default function CarrierContact() {
         <ContactForm
           fields={fields}
           submitLabel="Wyślij zgłoszenie"
+          endpoint="/api/carrier"
         />
 
         <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">

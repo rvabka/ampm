@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { transporter } from '@/lib/mailer';
 import { verifyTurnstile } from '@/lib/turnstile';
 import { checkRateLimit } from '@/lib/rateLimit';
+import { buildEmail } from '@/lib/emailTemplate';
 
 const ALLOWED_MIME = new Set([
   'application/pdf',
@@ -12,15 +13,6 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const PHONE_RE = /^[+\d\s\-().]{7,20}$/;
-
-function esc(s: string): string {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
 
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
@@ -86,15 +78,19 @@ export async function POST(req: NextRequest) {
     to: process.env.EMAIL_RECRUITMENT,
     replyTo: email,
     subject: `Aplikacja: ${position} – ${fullname}`,
-    html: `
-      <h2>Nowa aplikacja o pracę</h2>
-      <p><strong>Imię i nazwisko:</strong> ${esc(fullname)}</p>
-      <p><strong>E-mail:</strong> ${esc(email)}</p>
-      <p><strong>Telefon:</strong> ${esc(phone)}</p>
-      <p><strong>Stanowisko:</strong> ${esc(position)}</p>
-      <p><strong>Województwo:</strong> ${esc(region)}</p>
-      ${coverLetter ? `<h3>List motywacyjny</h3><p style="white-space:pre-wrap">${esc(coverLetter)}</p>` : ''}
-    `,
+    html: buildEmail({
+      category: 'Rekrutacja',
+      title: 'Nowa aplikacja o pracę',
+      subtitle: `Stanowisko: ${position}`,
+      fields: [
+        { label: 'Imię i nazwisko', value: fullname },
+        { label: 'E-mail', value: email },
+        { label: 'Telefon', value: phone },
+        { label: 'Stanowisko', value: position },
+        { label: 'Województwo', value: region },
+      ],
+      ...(coverLetter ? { message: { label: 'List motywacyjny', value: coverLetter } } : {}),
+    }),
     attachments: [
       {
         filename: safeFilename,
