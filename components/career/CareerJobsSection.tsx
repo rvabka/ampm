@@ -50,7 +50,13 @@ function JobCard({ job }: { job: Job }) {
     const params = new URLSearchParams();
     params.set('position', job.title);
     if (job.region) params.set('region', job.region);
-    router.push(`/kariera?${params.toString()}#aplikuj`);
+    router.push(`/kariera?${params.toString()}`);
+    setTimeout(() => {
+      const el = document.getElementById('aplikuj');
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 80);
   }
 
   const hasList = (arr?: string[]) => Array.isArray(arr) && arr.length > 0;

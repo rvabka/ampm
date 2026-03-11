@@ -78,7 +78,7 @@ export default function Hero() {
 
 
       <div
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-6 items-center"
+        className="hero-rise hero-rise-3 absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-6 items-center"
         aria-label="Media społecznościowe"
       >
         <div className="h-16 w-px bg-white/30 mb-2" aria-hidden="true" />
@@ -114,17 +114,17 @@ export default function Hero() {
 
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col lg:justify-end justify-center h-full lg:pb-16 text-center md:text-left">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
+        <h1 className="hero-rise hero-rise-1 text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
           Transport
           <br className="hidden md:block" /> i Spedycja
         </h1>
-        <p className="text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto md:mx-0">
+        <p className="hero-rise hero-rise-2 text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto md:mx-0">
           Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa
           i terminowości. Twój ładunek w pewnych rękach.
         </p>
 
 
-        <div className="relative z-20 w-full flex flex-col md:flex-row items-center gap-6">
+        <div className="hero-rise hero-rise-3 relative z-20 w-full flex flex-col md:flex-row items-center gap-6">
           <div className="bg-white shadow-2xl rounded-2xl p-1.5 flex flex-col md:flex-row items-stretch md:items-center w-full md:w-auto">
             {ctaItems.map((item) => (
               <Link

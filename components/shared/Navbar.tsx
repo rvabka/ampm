@@ -122,7 +122,7 @@ export default function Navbar() {
                 className={`transition ${
                   (link.href === '/' ? pathname === '/' : pathname.startsWith(link.href))
                     ? 'text-primary font-bold hover:text-primary'
-                    : 'hover:text-white'
+                    : 'hover:text-white nav-underline'
                 }`}
               >
                 {link.label}

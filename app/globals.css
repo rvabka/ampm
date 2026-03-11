@@ -51,6 +51,87 @@
   background-color: var(--color-primary);
 }
 
+/* =====================================================
+   Animations — desktop only (mouse/pointer devices)
+   + respects prefers-reduced-motion
+   ===================================================== */
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+
+  /* --- Scroll reveal base --- */
+  .reveal {
+    will-change: opacity, transform;
+  }
+
+  .reveal.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity  0.65s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  }
+
+  .reveal.reveal-fade-in {
+    opacity: 0;
+    transition: opacity 0.65s ease var(--reveal-delay, 0ms);
+  }
+
+  .reveal.reveal-slide-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition:
+      opacity  0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  }
+
+  .reveal.reveal-slide-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition:
+      opacity  0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* --- Hero load animations --- */
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .hero-rise {
+    animation: hero-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-rise-1 { animation-delay: 0.20s; }
+  .hero-rise-2 { animation-delay: 0.38s; }
+  .hero-rise-3 { animation-delay: 0.54s; }
+
+  /* --- Animated nav underline --- */
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
 /* Flying leaf animation */
 .leaf-particle {
   position: absolute;

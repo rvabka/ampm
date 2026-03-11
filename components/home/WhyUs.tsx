@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
+import AnimateIn from '@/components/shared/AnimateIn';
 
 const WAREHOUSE_IMG =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuAjnGNobQjAB5xo3-fWhhiMNiPi1TSDWDlM6NVAtI2DmQ2FTYsgts_aAcxhXCC43B9uQyhCk3TRGNMHDlAxx-zd3gYzJ9FTB9TxCb05D43Tk4CI9Hr86gac7l9bdroNk0VqFH2M2YbU0r2zHirMS_6AYStrU7XE6gXCz4-HLRZKlYFd_74ttQlODYxNkzIv3xzf5pu9RJgWAgo2dYQPHESXi4gbhoQGDnvwKNYYelBV0QD4iOyaQl2PkQ4bCpCGLkN_tVQF-PxO_N8y';
@@ -13,6 +14,7 @@ export default function WhyUs() {
     <section className="pt-32 pb-20 px-8" aria-labelledby="why-us-heading">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <AnimateIn type="slide-left">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="h-px w-8 bg-secondary" aria-hidden="true" />
@@ -50,7 +52,9 @@ export default function WhyUs() {
               </Link>
             </div>
           </div>
+          </AnimateIn>
 
+          <AnimateIn type="slide-right" delay={120}>
           <div className="grid grid-cols-2 gap-4 md:gap-6 relative">
             <div className="col-span-1 row-span-2 relative group overflow-hidden rounded-3xl h-[400px]">
               <Image
@@ -105,6 +109,7 @@ export default function WhyUs() {
               </div>
             </div>
           </div>
+          </AnimateIn>
         </div>
       </div>
     </section>

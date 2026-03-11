@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { client } from "../../src/sanity/client";
 import { recentPostsQuery } from "../../src/sanity/queries";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 interface Post {
   _id: string;
@@ -57,8 +58,9 @@ export default async function BlogSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <article key={post._id} className="flex flex-col group cursor-pointer">
+          {posts.map((post, i) => (
+            <AnimateIn key={post._id} type="fade-up" delay={i * 100}>
+            <article className="flex flex-col group cursor-pointer h-full">
               <Link href={`/blog/${post.slug.current}`} className="block">
                 <div className="rounded-2xl overflow-hidden mb-4 h-56 relative bg-gray-100">
                   {post.mainImage && (
@@ -93,6 +95,7 @@ export default async function BlogSection() {
                 </p>
               </Link>
             </article>
+            </AnimateIn>
           ))}
         </div>
       </div>

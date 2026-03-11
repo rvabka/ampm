@@ -88,7 +88,8 @@ export default function CareerApplicationForm() {
 
   useEffect(() => {
     if (prefillPosition && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const top = sectionRef.current.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   }, [prefillPosition]);
 

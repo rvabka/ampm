@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Truck, Bus, Snowflake, Info, type LucideIcon } from "lucide-react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 const FLEET_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDu99yzUmdBfQYvXDB19ud9ScudrdBraRGgHuA06-A3YdFcFoY6LiGROBaR5nl2qFWQq310KhZ7h4zOs6syDoDskyPEbPTbN1v3cYan0plolfpVmUaT-QSV0jaVYORrQeNBhwSriUh8-uIrYaE5LtSme9N31bjey_hVVkRz8H5MTRSOTX3XnfS0mcK8TDf-2ZmfEUdxuKl6ZXoN7UCfEhiI8Mz85ZAGWF6hANDP_JC6N-wjPkJX7sfieMXlAVH2m1oP3fImV-pjWU09";
@@ -64,7 +65,7 @@ export default function Fleet() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-
+          <AnimateIn type="slide-left">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px]">
             <Image
               src="/image1.webp"
@@ -90,8 +91,9 @@ export default function Fleet() {
               </div>
             </div>
           </div>
+          </AnimateIn>
 
-
+          <AnimateIn type="slide-right" delay={120}>
           <div className="space-y-6">
             {fleetItems.map((item) => (
               <div
@@ -136,6 +138,7 @@ export default function Fleet() {
               </div>
             ))}
           </div>
+          </AnimateIn>
 
         </div>
       </div>
