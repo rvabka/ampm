@@ -1,10 +1,32 @@
-import { CheckCircle2 } from 'lucide-react';
+import { Users, Clock, Laptop, TrendingUp, Leaf, type LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 
-const points = [
-  'Szybkie decyzje i konkretna komunikacja',
-  'Wzajemne wsparcie w zespole',
-  'Liczy się wynik, zaangażowanie i profesjonalizm'
+const points: { icon: LucideIcon; title: string; desc: string }[] = [
+  {
+    icon: Users,
+    title: 'Przyjazna atmosfera',
+    desc: 'Tworzymy środowisko oparte na partnerskich relacjach i swobodnej komunikacji. Stawiamy na współpracę, a nie sztywną hierarchię.',
+  },
+  {
+    icon: Clock,
+    title: 'Elastyczne godziny pracy',
+    desc: 'Rozumiemy, że każdy ma swój rytm dnia. Dlatego umożliwiamy rozpoczęcie pracy w elastycznym przedziale godzin.',
+  },
+  {
+    icon: Laptop,
+    title: 'Nowoczesne technologie',
+    desc: 'Korzystamy z nowoczesnych narzędzi i systemów, które usprawniają codzienną pracę oraz komunikację w zespole.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Rozwój zawodowy',
+    desc: 'Oferujemy szkolenia, mentoring oraz możliwość zdobywania nowych kompetencji w dynamicznie rozwijającej się branży logistycznej.',
+  },
+  {
+    icon: Leaf,
+    title: 'Odpowiedzialność i środowisko',
+    desc: 'Dbamy o zrównoważony rozwój oraz odpowiedzialne podejście do biznesu i środowiska.',
+  },
 ];
 
 export default function CareerCulture() {
@@ -23,33 +45,23 @@ export default function CareerCulture() {
           </div>
           <h2
             id="career-culture-heading"
-            className="text-3xl md:text-4xl font-display font-bold text-secondary mb-6"
+            className="text-3xl md:text-4xl font-display font-bold text-secondary mb-4"
           >
-            Nie działamy korporacyjnie
+            Jak wygląda praca w naszej firmie?
           </h2>
-          <div className="space-y-5 text-gray-500 leading-relaxed mb-8">
-            <p>
-              Stawiamy na samodzielność, odpowiedzialność i efektywność. Nie
-              działamy korporacyjnie — cenimy szybkie decyzje, konkretną
-              komunikację i wzajemne wsparcie w zespole.
-            </p>
-            <p>
-              W AMPM liczy się wynik, zaangażowanie i profesjonalne podejście do
-              klienta oraz przewoźnika.
-            </p>
-          </div>
-          <ul className="space-y-3" aria-label="Wartości kultury pracy">
-            {points.map(point => (
-              <li
-                key={point}
-                className="flex items-center gap-3 text-secondary font-medium"
-              >
-                <CheckCircle2
-                  size={20}
-                  className="text-primary shrink-0"
-                  aria-hidden="true"
-                />
-                {point}
+          <p className="text-gray-500 leading-relaxed mb-8">
+            Stawiamy na otwartość, rozwój i dobrą atmosferę. Wierzymy, że komfort pracy przekłada się na efektywność całego zespołu.
+          </p>
+          <ul className="space-y-5" aria-label="Wartości kultury pracy">
+            {points.map(({ icon: Icon, title, desc }) => (
+              <li key={title} className="flex items-start gap-4">
+                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <Icon size={17} className="text-primary" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="font-semibold text-secondary text-sm mb-0.5">{title}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                </div>
               </li>
             ))}
           </ul>

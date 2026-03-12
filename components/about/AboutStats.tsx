@@ -1,9 +1,11 @@
 import Image from 'next/image';
 
+const yearsOfExperience = new Date().getFullYear() - 2020;
+
 const stats = [
-  { value: '15', label: 'Lat doświadczenia' },
-  { value: '500+', label: 'Pojazdów w dyspozycji' },
-  { value: '1M+', label: 'Przejechanych km rocznie' },
+  { value: '250', label: 'Zadowolonych klientów' },
+  { value: String(yearsOfExperience), label: 'Lat doświadczenia' },
+  { value: '50k+', label: 'Wykonanych zleceń' },
 ];
 
 export default function AboutStats() {

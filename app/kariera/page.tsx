@@ -10,6 +10,7 @@ import CareerHero from '@/components/career/CareerHero';
 import CareerAbout from '@/components/career/CareerAbout';
 import CareerBenefits from '@/components/career/CareerBenefits';
 import CareerCulture from '@/components/career/CareerCulture';
+import CareerProcess from '@/components/career/CareerProcess';
 import CareerHRContact from '@/components/career/CareerHRContact';
 import CareerApplicationForm from '@/components/career/CareerApplicationForm';
 import CareerJobsSection from '@/components/career/CareerJobsSection';
@@ -133,6 +134,7 @@ export default async function CareerPage() {
       <main id="main-content">
         <CareerHero />
         <CareerAbout />
+        <CareerProcess />
         <CareerBenefits />
         <CareerJobsSection jobs={jobs} />
         <CareerCulture />

@@ -13,32 +13,32 @@ const priorities: Priority[] = [
     icon: Clock,
     title: 'Terminowa realizacja zleceń',
     description:
-      'Dotrzymywanie uzgodnionych terminów to fundament naszej pracy. Spedytor monitoruje każde zlecenie i niezwłocznie reaguje w przypadku nieprzewidzianych sytuacji.',
+      'Dotrzymywanie uzgodnionych terminów to fundament naszej pracy. Spedytor monitoruje każde zlecenie i niezwłocznie reaguje w przypadku nieprzewidzianych sytuacji.'
   },
   {
     icon: ShieldCheck,
     title: 'Bezpieczeństwo przewożonych towarów',
     description:
-      'Każdy transport objęty jest ubezpieczeniem OCP. Współpracujemy wyłącznie ze sprawdzonymi podwykonawcami, którzy spełniają aktualne normy techniczne i posiadają ważne dokumenty.',
+      'Każdy transport objęty jest ubezpieczeniem OCP. Współpracujemy wyłącznie ze sprawdzonymi podwykonawcami, którzy spełniają aktualne normy techniczne i posiadają ważne dokumenty.'
   },
   {
     icon: FileText,
     title: 'Przejrzyste warunki współpracy',
     description:
-      'Każdą współpracę formalizujemy umową jasno określającą warunki zleceń, zasady rozliczeń i terminy płatności. Żadnych ukrytych kosztów ani niejasnych zapisów.',
+      'Każdą współpracę formalizujemy umową jasno określającą warunki zleceń, zasady rozliczeń i terminy płatności. Żadnych ukrytych kosztów ani niejasnych zapisów.'
   },
   {
     icon: Headphones,
     title: 'Szybka i sprawna komunikacja',
     description:
-      'Każdy klient i przewoźnik ma przydzielonego dedykowanego spedytora – główny punkt kontaktu dostępny w godzinach pracy biura (Pon–Pt, 07:00–15:00).',
+      'Każdy klient i przewoźnik ma przydzielonego dedykowanego spedytora dostępnego 24/7'
   },
   {
     icon: Zap,
     title: 'Elastyczność w działaniu',
     description:
-      'Realizujemy zarówno regularne zlecenia cykliczne, jak i transporty ekspresowe. Szybko organizujemy przewóz nawet w trybie natychmiastowym dzięki sieci sprawdzonych partnerów.',
-  },
+      'Realizujemy zarówno regularne zlecenia cykliczne, jak i transporty ekspresowe. Szybko organizujemy przewóz nawet w trybie natychmiastowym dzięki sieci sprawdzonych partnerów.'
+  }
 ];
 
 export default function AboutStandards() {

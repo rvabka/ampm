@@ -8,7 +8,6 @@ import AboutMission from '@/components/about/AboutMission';
 import AboutStats from '@/components/about/AboutStats';
 import AboutStandards from '@/components/about/AboutStandards';
 import AboutFleet from '@/components/about/AboutFleet';
-import AboutMap from '@/components/about/AboutMap';
 import AboutValues from '@/components/about/AboutValues';
 import AboutTeam from '@/components/about/AboutTeam';
 
@@ -136,7 +135,6 @@ export default function AboutPage() {
         <AboutStandards />
         <AboutFleet />
         <AboutValues />
-        <AboutMap />
         <AboutTeam />
       </main>
       <Footer />

@@ -14,28 +14,28 @@ const departments: TeamDept[] = [
     name: 'Zarząd',
     role: 'Strategia i Rozwój',
     description:
-      'Doświadczony zarząd z ponad 15-letnim stażem w branży TSL, odpowiedzialny za wyznaczanie kierunków rozwoju firmy i budowanie relacji z kluczowymi partnerami.',
+      'Doświadczony zarząd z wieloletnim stażem w branży TSL, odpowiedzialny za wyznaczanie kierunków rozwoju firmy i budowanie relacji z kluczowymi partnerami.'
   },
   {
     icon: Headphones,
     name: 'Dział Spedycji',
     role: 'Koordynacja Transportów',
     description:
-      'Wykwalifikowani spedytorzy, którzy każdego dnia koordynują setki zleceń. Znajomość rynków europejskich i języków obcych to nasz standard.',
+      'Wykwalifikowani spedytorzy, którzy każdego dnia koordynują setki zleceń. Znajomość rynków europejskich i języków obcych to nasz standard.'
   },
   {
     icon: Truck,
     name: 'Dział Operacyjny',
     role: 'Logistyka i Flota',
     description:
-      'Specjaliści odpowiedzialni za zarządzanie flotą, planowanie tras i monitorowanie realizacji zleceń w czasie rzeczywistym.',
+      'Specjaliści odpowiedzialni za zarządzanie flotą, planowanie tras i monitorowanie realizacji zleceń w czasie rzeczywistym.'
   },
   {
     icon: Users,
     name: 'Obsługa Klienta',
     role: 'Relacje i Wsparcie',
     description:
-      'Dedykowany zespół dbający o każdego klienta. Szybka komunikacja, proaktywne rozwiązywanie problemów i indywidualne podejście.',
+      'Dedykowany zespół dbający o każdego klienta. Szybka komunikacja, proaktywne rozwiązywanie problemów i indywidualne podejście.'
   }
 ];
 

@@ -55,16 +55,15 @@ export default function Hero() {
       className="relative h-dvh w-full overflow-hidden flex flex-col justify-end pb-10"
       aria-label="Baner główny"
     >
-
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover [transform:translate3d(0,0,0)] will-change-transform"
+          className="absolute inset-0 w-full h-full object-cover object-[center_60%] transform-[translate3d(0,0,0)] will-change-transform"
         >
-          <source src="/hero.webm" type="video/webm" />
+          <source src="/hero4.webm" type="video/webm" />
         </video>
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/70"
@@ -75,7 +74,6 @@ export default function Hero() {
           aria-hidden="true"
         />
       </div>
-
 
       <div
         className="hero-rise hero-rise-3 absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-6 items-center"
@@ -112,28 +110,26 @@ export default function Hero() {
         <div className="h-16 w-px bg-white/30 mt-2" aria-hidden="true" />
       </div>
 
-
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col lg:justify-end justify-center h-full lg:pb-16 text-center md:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col justify-end h-full pb-10 lg:pb-16 text-center md:text-left">
         <h1 className="hero-rise hero-rise-1 text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
           Transport
           <br className="hidden md:block" /> i Spedycja
         </h1>
         <p className="hero-rise hero-rise-2 text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto md:mx-0">
-          Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa
-          i terminowości. Twój ładunek w pewnych rękach.
+          Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa i
+          terminowości. Twój ładunek w pewnych rękach.
         </p>
-
 
         <div className="hero-rise hero-rise-3 relative z-20 w-full flex flex-col md:flex-row items-center gap-6">
           <div className="bg-white shadow-2xl rounded-2xl p-1.5 flex flex-col md:flex-row items-stretch md:items-center w-full md:w-auto">
-            {ctaItems.map((item) => (
+            {ctaItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`flex items-center px-6 py-4 group hover:bg-gray-50 rounded-xl transition-colors whitespace-nowrap ${
                   item.border
-                    ? "border-b md:border-b-0 md:border-r border-gray-100"
-                    : ""
+                    ? 'border-b md:border-b-0 md:border-r border-gray-100'
+                    : ''
                 }`}
               >
                 <div className="bg-gray-100 p-2 rounded-full mr-4 group-hover:bg-primary/10 transition-colors shrink-0">

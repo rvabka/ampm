@@ -3,10 +3,10 @@ import PageHero from '@/components/shared/PageHero';
 export default function CareerHero() {
   return (
     <PageHero
-      titleFirst="Dołącz do"
-      titleHighlight="zespołu AMPM"
+      titleFirst="Kariera w"
+      titleHighlight="naszej firmie"
       titleBreak
-      description="Branża TSL to dynamiczne środowisko, w którym liczy się szybkość działania, odpowiedzialność i dobra organizacja. Jeśli cenisz samodzielność, partnerską atmosferę i realny wpływ na wyniki — zapraszamy do współpracy."
+      description="Dołącz do zespołu profesjonalistów i rozwijaj swoją karierę w branży transportu i logistyki. Tworzymy środowisko pracy, w którym liczą się ludzie, rozwój oraz partnerska współpraca. Jeśli szukasz miejsca, w którym możesz zdobywać doświadczenie i realizować ambitne cele – jesteś we właściwym miejscu."
       eyebrow="Kariera"
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },

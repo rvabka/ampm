@@ -32,17 +32,16 @@ export default function CareerAbout() {
             id="career-about-heading"
             className="text-3xl md:text-4xl font-display font-bold text-secondary mb-6"
           >
-            Branża TSL to dynamiczne środowisko
+            Kariera w naszej firmie
           </h2>
           <div className="space-y-5 text-gray-500 leading-relaxed">
             <p>
-              W AMPM tworzymy zespół ludzi ambitnych, zaangażowanych i nastawionych
-              na rozwój. W branży TSL liczy się szybkość działania, odpowiedzialność
-              i dobra organizacja — i dokładnie na tych wartościach budujemy naszą pracę.
+              Dołącz do zespołu profesjonalistów i rozwijaj swoją karierę w branży transportu i logistyki.
+              Tworzymy środowisko pracy, w którym liczą się ludzie, rozwój oraz partnerska współpraca.
             </p>
             <p>
-              Jeśli cenisz samodzielność, partnerską atmosferę i realny wpływ na
-              wyniki — jesteś we właściwym miejscu.
+              Jeśli szukasz miejsca, w którym możesz zdobywać doświadczenie i realizować ambitne cele –
+              jesteś we właściwym miejscu.
             </p>
           </div>
         </div>

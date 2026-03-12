@@ -43,6 +43,14 @@ const menuCol2 = [
   { href: '/kontakt', label: 'Kontakt' }
 ];
 
+const serviceLinks = [
+  { href: '/uslugi/transport-miedzynarodowy', label: 'Transport Międzynarodowy' },
+  { href: '/uslugi/transport-krajowy', label: 'Transport Krajowy' },
+  { href: '/uslugi/transport-ekspresowy', label: 'Transport Ekspresowy' },
+  { href: '/uslugi/transport-chlodniczy', label: 'Transport Chłodniczy' },
+  { href: '/uslugi/transport-adr', label: 'Transport ADR' },
+];
+
 const socialLinks: { href: string; label: string; icon: ComponentType<{ className?: string }> }[] = [
   {
     href: 'https://www.facebook.com/profile.php?id=61586839199138',
@@ -122,16 +130,13 @@ export default function Footer() {
           </div>
 
 
-          <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-8">
+          <div className="col-span-1 md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8">
             <nav aria-label="Menu główne – kolumna 1">
               <h2 className="font-bold mb-6 text-white text-sm">Menu</h2>
               <ul className="space-y-3 text-sm text-gray-400">
                 {menuCol1.map(item => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-primary transition"
-                    >
+                    <Link href={item.href} className="hover:text-primary transition">
                       {item.label}
                     </Link>
                   </li>
@@ -140,19 +145,26 @@ export default function Footer() {
             </nav>
 
             <nav aria-label="Menu główne – kolumna 2">
-              <h2
-                className="font-bold mb-6 text-white text-sm opacity-0 select-none"
-                aria-hidden="true"
-              >
+              <h2 className="font-bold mb-6 text-white text-sm opacity-0 select-none" aria-hidden="true">
                 Menu
               </h2>
               <ul className="space-y-3 text-sm text-gray-400">
                 {menuCol2.map(item => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-primary transition"
-                    >
+                    <Link href={item.href} className="hover:text-primary transition">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label="Usługi – kolumna">
+              <h2 className="font-bold mb-6 text-white text-sm">Usługi</h2>
+              <ul className="space-y-3 text-sm text-gray-400">
+                {serviceLinks.map(item => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="hover:text-primary transition">
                       {item.label}
                     </Link>
                   </li>

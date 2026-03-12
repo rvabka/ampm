@@ -88,7 +88,8 @@ export default function CareerApplicationForm() {
 
   useEffect(() => {
     if (prefillPosition && sectionRef.current) {
-      const top = sectionRef.current.getBoundingClientRect().top + window.scrollY - 96;
+      const top =
+        sectionRef.current.getBoundingClientRect().top + window.scrollY - 96;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   }, [prefillPosition]);
@@ -211,7 +212,7 @@ export default function CareerApplicationForm() {
             id="career-form-heading"
             className="text-3xl md:text-4xl font-display font-bold text-secondary"
           >
-            Aplikuj teraz
+            Aplikuj do naszego zespołu
           </h2>
           {prefillPosition ? (
             <p className="text-gray-500 mt-4 max-w-lg mx-auto">
@@ -222,8 +223,8 @@ export default function CareerApplicationForm() {
             </p>
           ) : (
             <p className="text-gray-500 mt-4 max-w-lg mx-auto">
-              Wypełnij formularz, aby dołączyć do naszego zespołu. Skontaktujemy
-              się z wybranymi kandydatami.
+              Chcesz dołączyć do naszego zespołu? Wypełnij formularz aplikacyjny
+              i prześlij swoje CV. Skontaktujemy się z Tobą.
             </p>
           )}
         </div>
