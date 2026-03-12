@@ -66,7 +66,7 @@ export default function Hero() {
           <source src="/hero4.webm" type="video/webm" />
         </video>
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/70"
+          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"
           aria-hidden="true"
         />
         <div
@@ -110,17 +110,17 @@ export default function Hero() {
         <div className="h-16 w-px bg-white/30 mt-2" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col justify-end h-full pb-10 lg:pb-16 text-center md:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 flex flex-col justify-center items-center h-full pt-20 lg:pt-0 pb-10 text-center">
         <h1 className="hero-rise hero-rise-1 text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white tracking-tight mb-6 drop-shadow-2xl">
           Transport
           <br className="hidden md:block" /> i Spedycja
         </h1>
-        <p className="hero-rise hero-rise-2 text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto md:mx-0">
+        <p className="hero-rise hero-rise-2 text-lg md:text-xl text-white/80 max-w-xl font-light drop-shadow-md tracking-wide mb-10 mx-auto">
           Profesjonalny transport międzynarodowy z gwarancją bezpieczeństwa i
           terminowości. Twój ładunek w pewnych rękach.
         </p>
 
-        <div className="hero-rise hero-rise-3 relative z-20 w-full flex flex-col md:flex-row items-center gap-6">
+        <div className="hero-rise hero-rise-3 relative z-20 w-full flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="bg-white shadow-2xl rounded-2xl p-1.5 flex flex-col md:flex-row items-stretch md:items-center w-full md:w-auto">
             {ctaItems.map(item => (
               <Link

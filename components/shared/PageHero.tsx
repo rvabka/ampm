@@ -138,7 +138,7 @@ export default function PageHero({
                 className={
                   hasImage
                     ? 'text-lg text-white/80 max-w-xl font-light drop-shadow-md tracking-wide'
-                    : 'text-gray-400 text-lg leading-relaxed'
+                    : 'mt-8 text-gray-400 text-lg leading-relaxed'
                 }
               >
                 {description}

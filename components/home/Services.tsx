@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay, Pagination } from "swiper/modules";
-import { Truck, Bus, Package, Boxes, Snowflake, Globe, AlertTriangle, ArrowLeft, ArrowRight, type LucideIcon } from "lucide-react";
+import { Truck, Bus, Snowflake, Globe, AlertTriangle, ArrowLeft, ArrowRight, type LucideIcon } from "lucide-react";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -30,8 +30,7 @@ const services: Service[] = [
     category: "miedzynarodowy",
     categoryLabel: "Międzynarodowy",
     icon: Globe,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuADTbwAqRFXv_cxWJ0U_ng2ORydFvV1rKMjt7I0wq7ChL7ZeBGucqyyDyymktdjGUQ2wSXjyguocWYgkoQvI_JHwnc2yKIZPDskYR_AoNYAyg2PDEa1h7CPActrKNdyk9dnpJ_HVc6O1w3111psfmLHSuyI5wblxHBOOqJJ6iWvgvgbr4Gmvu1_NsiTC9V3L6MC1aQcaPrcqn_q7b21iFd9NQuIShpcISeVzaNLVdFOYUIp3UOX-exdu0UuSS9O-zAay9eSR8lUndRn",
+    image: "/image18.webp",
     imageAlt: "Ciężarówka TIR na autostradzie – transport międzynarodowy UE",
     description:
       "Realizujemy transport towarów na terenie całej Europy oraz poza jej granicami. Zapewniamy pełną obsługę logistyczną, w tym planowanie tras, dokumentację transportową oraz stały monitoring przesyłek. Nasze rozwiązania pozwalają na szybkie i bezpieczne dostarczanie ładunków między krajami.",
@@ -43,44 +42,18 @@ const services: Service[] = [
     category: "krajowy",
     categoryLabel: "Krajowy",
     icon: Truck,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDu99yzUmdBfQYvXDB19ud9ScudrdBraRGgHuA06-A3YdFcFoY6LiGROBaR5nl2qFWQq310KhZ7h4zOs6syDoDskyPEbPTbN1v3cYan0plolfpVmUaT-QSV0jaVYORrQeNBhwSriUh8-uIrYaE5LtSme9N31bjey_hVVkRz8H5MTRSOTX3XnfS0mcK8TDf-2ZmfEUdxuKl6ZXoN7UCfEhiI8Mz85ZAGWF6hANDP_JC6N-wjPkJX7sfieMXlAVH2m1oP3fImV-pjWU09",
+    image: "/image17.webp",
     imageAlt: "Transport krajowy na terenie Polski – AMPM Sp. z o.o.",
     description:
       "Świadczymy usługi transportu na terenie całej Polski, gwarantując terminowe i bezpieczne dostawy. Dzięki nowoczesnej flocie oraz doświadczonym kierowcom jesteśmy w stanie obsługiwać zarówno pojedyncze zlecenia, jak i stałe kontrakty logistyczne dla firm z różnych branż.",
     href: "/uslugi/transport-krajowy",
   },
   {
-    title: "Ładunki Całopojazdowe (FTL)",
-    category: "miedzynarodowy",
-    categoryLabel: "Międzynarodowy",
-    icon: Boxes,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB__78BM9IiMqI0Pm6leaLopc3haMt_5mEDhGsUsEvxuRodAZrS6VXkR-IkK3KUrxdO5vwxl2PE4PaQ_kcYB44kbaTgOaujKiY-SOnsdCdWEVqNSoA0lqMfkjOJlLqgitrQ6I2ZBddshdEsW_EmALDilcl7JwDMt4goQV4gYWCXvQpRkQzvxbkNngNQCHH8-CmJfjVAhsTkTBemxlKaL6fWMCDTrxmw0vqCECdi4xnkc3JVW-LteyLa2wh2OiOc5AvbQTTGUyj85JV2",
-    imageAlt: "Naczepa plandekowa 13,6 m – ładunek całopojazdowy FTL",
-    description:
-      "Pełne załadunki zestawów 13,6 m (firanka, plandeka). Optymalne rozwiązanie dla dużych i regularnych wysyłek krajowych i europejskich.",
-    href: "/uslugi/ftl",
-  },
-  {
-    title: "Ładunki Częściowe (LTL)",
-    category: "krajowy",
-    categoryLabel: "Krajowy",
-    icon: Package,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAjnGNobQjAB5xo3-fWhhiMNiPi1TSDWDlM6NVAtI2DmQ2FTYsgts_aAcxhXCC43B9uQyhCk3TRGNMHDlAxx-zd3gYzJ9FTB9TxCb05D43Tk4CI9Hr86gac7l9bdroNk0VqFH2M2YbU0r2zHirMS_6AYStrU7XE6gXCz4-HLRZKlYFd_74ttQlODYxNkzIv3xzf5pu9RJgWAgo2dYQPHESXi4gbhoQGDnvwKNYYelBV0QD4iOyaQl2PkQ4bCpCGLkN_tVQF-PxO_N8y",
-    imageAlt: "Konsolidacja ładunków częściowych LTL",
-    description:
-      "Konsolidacja ładunków częściowych – idealne dla mniejszych przesyłek bez konieczności wynajmowania całego pojazdu.",
-    href: "/uslugi/ltl",
-  },
-  {
     title: "Transport Ekspresowy",
     category: "krajowy",
     categoryLabel: "Ekspres",
     icon: Bus,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD42QjYg4doBrCAnXA2L2jVMlntgxDx-FQoZo8mtuNdkuygeyVWgX1k6JrCl-Biz-cosrs4EQ5k9uADO2EGxMjI9xJTZuCZZHpIvDtaIMWLAHZzeUqMLFa6MA_1cEBZeN1R84EG9fXuReEUu1AnBcSWladOxW7W4k5Eb1Dh3Yvax_5GcXkfBj9R37km2f0qGfCLDBvIkSaRDAJm3pR4JrEoXGlvz2V0T_mV6LyCS1TIKeVRb9e7R42kQmiV9gjGZiKBQ7_f4DZmb9hJ",
+    image: "/image16.webp",
     imageAlt: "Bus dostawczy do 3,5 t – transport ekspresowy",
     description:
       "Transport ekspresowy to rozwiązanie dla przesyłek wymagających natychmiastowej realizacji. Oferujemy szybki przewóz towarów z krótkim czasem dostawy oraz bezpośrednim transportem od nadawcy do odbiorcy. Idealnie sprawdza się w przypadku pilnych dostaw i ładunków o wysokim priorytecie.",
@@ -91,8 +64,7 @@ const services: Service[] = [
     category: "specjalny",
     categoryLabel: "Specjalny",
     icon: Snowflake,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDu99yzUmdBfQYvXDB19ud9ScudrdBraRGgHuA06-A3YdFcFoY6LiGROBaR5nl2qFWQq310KhZ7h4zOs6syDoDskyPEbPTbN1v3cYan0plolfpVmUaT-QSV0jaVYORrQeNBhwSriUh8-uIrYaE5LtSme9N31bjey_hVVkRz8H5MTRSOTX3XnfS0mcK8TDf-2ZmfEUdxuKl6ZXoN7UCfEhiI8Mz85ZAGWF6hANDP_JC6N-wjPkJX7sfieMXlAVH2m1oP3fImV-pjWU09",
+    image: "/image14.webp",
     imageAlt: "Transport chłodniczy – kontrolowana temperatura",
     description:
       "Zapewniamy specjalistyczny transport towarów wymagających kontrolowanej temperatury, takich jak żywność, produkty farmaceutyczne czy chemiczne. Nasze pojazdy chłodnicze wyposażone są w nowoczesne systemy utrzymujące stałą temperaturę podczas całego transportu.",
@@ -103,8 +75,7 @@ const services: Service[] = [
     category: "specjalny",
     categoryLabel: "Specjalny",
     icon: AlertTriangle,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB__78BM9IiMqI0Pm6leaLopc3haMt_5mEDhGsUsEvxuRodAZrS6VXkR-IkK3KUrxdO5vwxl2PE4PaQ_kcYB44kbaTgOaujKiY-SOnsdCdWEVqNSoA0lqMfkjOJlLqgitrQ6I2ZBddshdEsW_EmALDilcl7JwDMt4goQV4gYWCXvQpRkQzvxbkNngNQCHH8-CmJfjVAhsTkTBemxlKaL6fWMCDTrxmw0vqCECdi4xnkc3JVW-LteyLa2wh2OiOc5AvbQTTGUyj85JV2",
+    image: "/image15.webp",
     imageAlt: "Transport ADR – przewóz materiałów niebezpiecznych",
     description:
       "Specjalizujemy się w przewozie materiałów niebezpiecznych zgodnie z międzynarodową konwencją ADR. Nasi przewoźnicy posiadają odpowiednie uprawnienia, a pojazdy są przystosowane do bezpiecznego transportu tego typu ładunków. Zapewniamy pełną zgodność z przepisami oraz najwyższe standardy bezpieczeństwa.",
