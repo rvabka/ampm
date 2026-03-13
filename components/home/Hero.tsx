@@ -61,12 +61,12 @@ export default function Hero() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover object-[center_60%] transform-[translate3d(0,0,0)] will-change-transform"
+          className="absolute inset-0 w-full h-full object-cover object-[bottom_20%] transform-[translate3d(0,0,0)] will-change-transform"
         >
           <source src="/hero4.webm" type="video/webm" />
         </video>
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"
+          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/95"
           aria-hidden="true"
         />
         <div
