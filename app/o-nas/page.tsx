@@ -5,7 +5,6 @@ import ScrollToTop from '@/components/shared/ScrollToTop';
 import AboutHero from '@/components/about/AboutHero';
 import AboutHistory from '@/components/about/AboutHistory';
 import AboutMission from '@/components/about/AboutMission';
-import AboutStats from '@/components/about/AboutStats';
 import AboutStandards from '@/components/about/AboutStandards';
 import AboutFleet from '@/components/about/AboutFleet';
 import AboutValues from '@/components/about/AboutValues';
@@ -131,7 +130,6 @@ export default function AboutPage() {
         <AboutHero />
         <AboutHistory />
         <AboutMission />
-        <AboutStats />
         <AboutStandards />
         <AboutFleet />
         <AboutValues />

@@ -236,3 +236,29 @@ export const jobBySlugQuery = groq`
     publishedAt
   }
 `;
+
+export const testimonialsQuery = groq`
+  *[_type == "testimonial" && featured == true] | order(order asc, date desc) {
+    _id,
+    name,
+    initials,
+    rating,
+    quote,
+    source,
+    date
+  }
+`;
+
+export const documentsQuery = groq`
+  *[_type == "companyDocument"] | order(category asc, order asc) {
+    _id,
+    title,
+    description,
+    category,
+    icon,
+    "fileUrl": file.asset->url,
+    fileSize,
+    dateLabel,
+    date
+  }
+`;

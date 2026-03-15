@@ -4,15 +4,14 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { X, Cookie } from 'lucide-react';
 import Button from '@/components/shared/Button';
-
-const STORAGE_KEY = 'ampm_cookie_consent';
+import { CONSENT_KEY, CONSENT_EVENT } from '@/lib/consent';
 
 type ConsentValue = 'accepted' | 'rejected';
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(() => {
     try {
-      return !localStorage.getItem(STORAGE_KEY);
+      return !localStorage.getItem(CONSENT_KEY);
     } catch {
       return true;
     }
@@ -20,7 +19,8 @@ export default function CookieBanner() {
 
   function handleConsent(value: ConsentValue) {
     try {
-      localStorage.setItem(STORAGE_KEY, value);
+      localStorage.setItem(CONSENT_KEY, value);
+      window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: value }));
     } catch {
       // storage unavailable
     }
@@ -44,9 +44,9 @@ export default function CookieBanner() {
         <div className="flex-1 text-sm text-gray-400 leading-relaxed">
           <p>
             <span className="text-white font-semibold">Używamy plików cookies.</span>{' '}
-            Nasza strona wykorzystuje niezbędne pliki cookies zapewniające prawidłowe działanie
-            serwisu oraz usługę Cloudflare Turnstile chroniącą formularze przed spamem.
-            Szczegóły znajdziesz w{' '}
+            Nasza strona wykorzystuje niezbędne cookies zapewniające prawidłowe działanie serwisu
+            (Cloudflare Turnstile) oraz — za Twoją zgodą — analityczne cookies Google Analytics
+            pomagające nam ulepszać witrynę. Szczegóły znajdziesz w{' '}
             <Link
               href="/polityka-cookies"
               className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"

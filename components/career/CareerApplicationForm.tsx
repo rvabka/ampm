@@ -11,7 +11,7 @@ const inputBase =
 
 const voivodeships = [
   { value: 'remote', label: 'Praca zdalna' },
-  { value: 'poland', label: 'Cała Polska' },
+  { value: 'cala-polska', label: 'Cała Polska' },
   { value: 'dolnoslaskie', label: 'Dolnośląskie' },
   { value: 'kujawsko-pomorskie', label: 'Kujawsko-pomorskie' },
   { value: 'lubelskie', label: 'Lubelskie' },

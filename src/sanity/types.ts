@@ -67,3 +67,25 @@ export interface Job {
   active: boolean;
   publishedAt: string;
 }
+
+export interface Testimonial {
+  _id: string;
+  name: string;
+  initials?: string;
+  rating: number;
+  quote?: string;
+  source: 'google' | 'direct';
+  date: string;
+}
+
+export interface CompanyDocument {
+  _id: string;
+  title: string;
+  description: string;
+  category: 'licencje' | 'polisy';
+  icon: 'file-text' | 'shield' | 'badge-check' | 'shield-plus';
+  fileUrl: string;
+  fileSize: string;
+  dateLabel: 'Aktualizacja' | 'Ważna do';
+  date: string;
+}

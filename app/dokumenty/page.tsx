@@ -5,7 +5,9 @@ import ScrollToTop from '@/components/shared/ScrollToTop';
 import DocumentsHero from '@/components/documents/DocumentsHero';
 import DocumentsList from '@/components/documents/DocumentsList';
 import DocumentsCta from '@/components/documents/DocumentsCta';
-import { DOCUMENT_CATEGORIES } from '@/components/documents/documents-data';
+import { client } from '../../src/sanity/client';
+import { documentsQuery } from '../../src/sanity/queries';
+import type { CompanyDocument } from '../../src/sanity/types';
 
 export const metadata: Metadata = {
   title: 'Dokumenty – Licencje, Certyfikaty i Polisy',
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
@@ -65,29 +67,32 @@ const jsonLd = {
   ],
 };
 
-const itemListJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'Dokumenty AMPM Spedition',
-  description:
-    'Licencje, certyfikaty i polisy ubezpieczeniowe dostępne do pobrania.',
-  numberOfItems: DOCUMENT_CATEGORIES.flatMap(c => c.documents).length,
-  itemListElement: DOCUMENT_CATEGORIES.flatMap((cat, catIdx) =>
-    cat.documents.map((doc, docIdx) => ({
+export default async function DocumentsPage() {
+  const docs: CompanyDocument[] = await client.fetch(
+    documentsQuery,
+    {},
+    { next: { revalidate: 3600 } },
+  );
+
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Dokumenty AMPM Spedition',
+    description: 'Licencje, certyfikaty i polisy ubezpieczeniowe dostępne do pobrania.',
+    numberOfItems: docs.length,
+    itemListElement: docs.map((doc, idx) => ({
       '@type': 'ListItem',
-      position: catIdx * 10 + docIdx + 1,
+      position: idx + 1,
       name: doc.title,
       description: doc.description,
-    }))
-  ),
-};
+    })),
+  };
 
-export default function DocumentsPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <script
         type="application/ld+json"

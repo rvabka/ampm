@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import CookieBannerLoader from '@/components/shared/CookieBannerLoader';
+import GoogleAnalytics from '@/components/shared/GoogleAnalytics';
 
 const plusJakartaSans = localFont({
   src: [
@@ -122,6 +123,7 @@ export default function RootLayout({
         </a>
         {children}
         <CookieBannerLoader />
+        <GoogleAnalytics />
       </body>
     </html>
   );
