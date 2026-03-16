@@ -7,9 +7,9 @@ import PageHero from '@/components/shared/PageHero';
 import { AlertTriangle, Shield, FileCheck, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Transport ADR – Przewóz Materiałów Niebezpiecznych | AMPM Sp. z o.o.',
+  title: 'Transport ADR – Przewóz Materiałów Niebezpiecznych | Am Pm sp. z o.o.',
   description:
-    'Specjalistyczny transport ADR materiałów niebezpiecznych zgodnie z konwencją ADR. Certyfikowani przewoźnicy, przystosowane pojazdy i pełna zgodność z przepisami. Bezpieczeństwo na każdym etapie.',
+    'Specjalistyczny transport ADR materiałów niebezpiecznych zgodnie z konwencją ADR. Obsługujemy klientów z Lublina, Warszawy i całej Polski. Certyfikowani przewoźnicy, przystosowane pojazdy i pełna zgodność z przepisami.',
   keywords: [
     'transport ADR',
     'przewóz materiałów niebezpiecznych',
@@ -23,18 +23,22 @@ export const metadata: Metadata = {
     'transport paliw',
     'transport gazów',
     'konwencja ADR przewóz',
+    'transport ADR Lublin',
+    'transport ADR Warszawa',
+    'przewóz materiałów niebezpiecznych Lublin',
+    'przewóz materiałów niebezpiecznych Warszawa',
   ],
   alternates: { canonical: '/uslugi/transport-adr' },
   openGraph: {
-    title: 'Transport ADR – AMPM Sp. z o.o.',
+    title: 'Transport ADR – Am Pm sp. z o.o.',
     description:
       'Przewóz materiałów niebezpiecznych zgodnie z konwencją ADR. Certyfikowani przewoźnicy, specjalistyczne pojazdy i najwyższe standardy bezpieczeństwa.',
     url: '/uslugi/transport-adr',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport ADR – AMPM Spedition' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport ADR – Am Pm sp. z o.o.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transport ADR – AMPM Sp. z o.o.',
+    title: 'Transport ADR – Am Pm sp. z o.o.',
     description: 'Bezpieczny przewóz materiałów niebezpiecznych. Pełna zgodność z konwencją ADR i najwyższe standardy.',
     images: ['/og-image.jpg'],
   },
@@ -46,7 +50,7 @@ const serviceJsonLd = {
   name: 'Transport ADR',
   description:
     'Specjalizujemy się w przewozie materiałów niebezpiecznych zgodnie z międzynarodową konwencją ADR. Nasi przewoźnicy posiadają odpowiednie uprawnienia, a pojazdy są przystosowane do bezpiecznego transportu tego typu ładunków.',
-  provider: { '@type': 'Organization', name: 'AMPM Sp. z o.o.', url: 'https://ampm.com.pl' },
+  provider: { '@type': 'Organization', name: 'Am Pm sp. z o.o.', url: 'https://ampm.com.pl' },
   serviceType: 'Transport ADR',
 };
 
@@ -102,7 +106,7 @@ export default function TransportADRPage() {
                   Specjalizujemy się w przewozie materiałów niebezpiecznych zgodnie z międzynarodową konwencją ADR. Nasi przewoźnicy posiadają odpowiednie uprawnienia, a pojazdy są przystosowane do bezpiecznego transportu tego typu ładunków.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Zapewniamy pełną zgodność z przepisami oraz najwyższe standardy bezpieczeństwa na każdym etapie przewozu. Obsługujemy transport materiałów z różnych klas ADR – od substancji łatwopalnych, przez gazy, po materiały żrące i toksyczne. Każde zlecenie realizowane jest z zachowaniem wszelkich wymagań formalnych i bezpieczeństwa.
+                  Zapewniamy pełną zgodność z przepisami oraz najwyższe standardy bezpieczeństwa na każdym etapie przewozu. Obsługujemy klientów z Lublina, Warszawy i całej Polski. Realizujemy transport materiałów z różnych klas ADR – od substancji łatwopalnych, przez gazy, po materiały żrące i toksyczne. Każde zlecenie realizowane jest z zachowaniem wszelkich wymagań formalnych i bezpieczeństwa.
                 </p>
                 <Link
                   href="/wycena"

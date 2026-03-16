@@ -92,7 +92,7 @@ export default function BlogPostContent({ post, postUrl }: BlogPostContentProps)
 
               <div className="bg-secondary rounded-2xl p-8 text-white">
                 <div className="h-px w-8 bg-primary mb-4" aria-hidden="true" />
-                <h3 className="font-display font-bold text-xl mb-2">AMPM Blog</h3>
+                <h3 className="font-display font-bold text-xl mb-2">Am Pm sp. z o.o. Blog</h3>
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
                   Odkryj więcej artykułów z branży TSL, logistyki i transportu drogowego.
                 </p>

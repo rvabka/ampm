@@ -25,7 +25,7 @@ export default function DocumentsCta() {
           <a
             href="mailto:biuro@ampm.com.pl"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-secondary text-white rounded-full font-semibold hover:bg-secondary-light transition shadow-lg"
-            aria-label="Napisz do AMPM Spedition: biuro@ampm.com.pl"
+            aria-label="Napisz do Am Pm sp. z o.o.: biuro@ampm.com.pl"
           >
             <Mail size={16} aria-hidden="true" />
             Napisz do nas
@@ -33,7 +33,7 @@ export default function DocumentsCta() {
           <a
             href="tel:+48570112512"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-secondary text-secondary rounded-full font-semibold hover:bg-gray-50 transition"
-            aria-label="Zadzwoń do AMPM Spedition: +48 570 112 512"
+            aria-label="Zadzwoń do Am Pm sp. z o.o.: +48 570 112 512"
           >
             <Phone size={16} aria-hidden="true" />
             Zadzwoń

@@ -13,12 +13,12 @@ import ScrollToTop from "@/components/shared/ScrollToTop";
 export const metadata: Metadata = {
   title: "Transport Drogowy i Spedycja Europejska",
   description:
-    "AMPM Spedition – profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie. Wycena online, wsparcie 24/7, ponad 25 krajów obsługi. Zaufaj liderowi logistyki drogowej.",
+    "Am Pm sp. z o.o. – profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie. Wycena online, wsparcie 24/7, ponad 25 krajów obsługi. Zaufaj liderowi logistyki drogowej.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "AMPM Spedition – Transport Drogowy i Spedycja Europejska",
+    title: "Am Pm sp. z o.o. – Transport Drogowy i Spedycja Europejska",
     description:
       "Profesjonalny transport ciężarowy TIR, dostawczy do 3.5t oraz magazynowanie na terenie całej Europy.",
     url: "/",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "AMPM Spedition – Transport Drogowy i Spedycja Europejska",
+        alt: "Am Pm sp. z o.o. – Transport Drogowy i Spedycja Europejska",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AMPM Spedition – Transport Drogowy i Spedycja Europejska",
+    title: "Am Pm sp. z o.o. – Transport Drogowy i Spedycja Europejska",
     description:
       "Profesjonalny transport ciężarowy TIR, dostawczy do 3.5t oraz magazynowanie na terenie całej Europy.",
     images: ["/og-image.jpg"],

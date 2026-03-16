@@ -74,7 +74,7 @@ export async function POST(req: NextRequest) {
   const safeFilename = cvFile.name.replace(/[^a-zA-Z0-9._\-]/g, '_').slice(0, 100);
 
   await transporter.sendMail({
-    from: `"AMPM – Rekrutacja" <${process.env.SMTP_USER}>`,
+    from: `"Am Pm sp. z o.o. – Rekrutacja" <${process.env.SMTP_USER}>`,
     to: process.env.EMAIL_RECRUITMENT,
     replyTo: email,
     subject: `Aplikacja: ${position} – ${fullname}`,

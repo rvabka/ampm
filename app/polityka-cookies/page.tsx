@@ -4,9 +4,9 @@ import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Polityka Cookies – AMPM Sp. z o.o.',
+  title: 'Polityka Cookies – Am Pm sp. z o.o.',
   description:
-    'Informacje o plikach cookies i technologiach śledzących stosowanych przez AMPM Sp. z o.o.',
+    'Informacje o plikach cookies i technologiach śledzących stosowanych przez Am Pm sp. z o.o.',
   alternates: {
     canonical: '/polityka-cookies',
   },
@@ -149,7 +149,7 @@ const sections = [
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>AMPM Sp. z o.o.</strong>, ul. Zemborzycka 53B, 20-445 Lublin
+            <strong>Am Pm sp. z o.o.</strong>, ul. Zemborzycka 53B, 20-445 Lublin
           </li>
           <li>
             E-mail:{' '}
@@ -217,7 +217,7 @@ export default function CookiePolicyPage() {
             </h1>
             <p className="text-gray-400 mt-4 text-lg leading-relaxed max-w-2xl">
               Informacje o plikach cookies i technologiach śledzących stosowanych przez{' '}
-              <strong className="text-gray-300">AMPM Sp. z o.o.</strong>
+              <strong className="text-gray-300">Am Pm sp. z o.o.</strong>
             </p>
           </div>
         </header>

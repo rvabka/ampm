@@ -8,11 +8,11 @@ import ContactFormSection from '@/components/contact/ContactFormSection';
 import ContactMap from '@/components/contact/ContactMap';
 
 export const metadata: Metadata = {
-  title: 'Kontakt – Napisz lub Zadzwoń do AMPM Spedition',
+  title: 'Kontakt – Napisz lub Zadzwoń do Am Pm sp. z o.o.',
   description:
-    'Skontaktuj się z AMPM Spedition. Biuro w Lublinie, telefon 24/7, e-mail dla zapytań i rekrutacji. Odpowiadamy w ciągu 24 godzin.',
+    'Skontaktuj się z Am Pm sp. z o.o.. Biuro w Lublinie, telefon 24/7, e-mail dla zapytań i rekrutacji. Odpowiadamy w ciągu 24 godzin.',
   keywords: [
-    'kontakt AMPM Spedition',
+    'kontakt Am Pm sp. z o.o.',
     'biuro spedycja Lublin',
     'telefon transport drogowy',
     'zapytanie ofertowe transport',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: '/kontakt',
   },
   openGraph: {
-    title: 'Kontakt – AMPM Spedition',
+    title: 'Kontakt – Am Pm sp. z o.o.',
     description:
       'Biuro w Lublinie, serwis telefoniczny 24/7, formularz kontaktowy. Skontaktuj się z naszym zespołem logistycznym.',
     url: '/kontakt',
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Kontakt – AMPM Spedition, biuro Lublin',
+        alt: 'Kontakt – Am Pm sp. z o.o., biuro Lublin',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kontakt – Napisz lub Zadzwoń do AMPM Spedition',
+    title: 'Kontakt – Napisz lub Zadzwoń do Am Pm sp. z o.o.',
     description:
-      'Biuro w Lublinie, telefon 24/7, e-mail dla zapytań. Skontaktuj się z AMPM Spedition – odpowiadamy w ciągu 24 godzin.',
+      'Biuro w Lublinie, telefon 24/7, e-mail dla zapytań. Skontaktuj się z Am Pm sp. z o.o. – odpowiadamy w ciągu 24 godzin.',
     images: ['/og-image.jpg'],
   },
 };
@@ -66,7 +66,7 @@ const breadcrumbJsonLd = {
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MovingCompany',
-  name: 'AMPM Full Time Spedition',
+  name: 'Am Pm sp. z o.o.',
   url: 'https://ampm.com.pl',
   logo: 'https://ampm.com.pl/logo.webp',
   image: 'https://ampm.com.pl/logo.webp',

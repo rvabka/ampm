@@ -71,9 +71,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 10,
-    question: 'Czym wyróżnia się AMPM na tle innych firm z branży TSL?',
+    question: 'Czym wyróżnia się Am Pm sp. z o.o. na tle innych firm z branży TSL?',
     answer:
-      'AMPM wyróżnia przede wszystkim indywidualne podejście do każdego klienta i przewoźnika, bezpośrednia komunikacja z dedykowanym spedytorem oraz transparentne zasady współpracy. Stawiamy na partnerskie, długofalowe relacje — a nie jednorazowe transakcje.',
+      'Am Pm sp. z o.o. wyróżnia przede wszystkim indywidualne podejście do każdego klienta i przewoźnika, bezpośrednia komunikacja z dedykowanym spedytorem oraz transparentne zasady współpracy. Stawiamy na partnerskie, długofalowe relacje — a nie jednorazowe transakcje.',
     category: 'klienci',
   },
   {
@@ -113,9 +113,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 16,
-    question: 'Jaki jest główny zakres działalności firmy AMPM?',
+    question: 'Jaki jest główny zakres działalności firmy Am Pm sp. z o.o.?',
     answer:
-      'AMPM Sp. z o.o. to firma zajmująca się transportem i spedycją drogową na terenie Polski i Unii Europejskiej. Organizujemy przewozy ładunków w systemie FTL i LTL, zarządzamy siecią sprawdzonych podwykonawców i zapewniamy kompleksową obsługę logistyczną dla klientów z różnych branż.',
+      'Am Pm sp. z o.o. to firma zajmująca się transportem i spedycją drogową na terenie Polski i Unii Europejskiej. Organizujemy przewozy ładunków w systemie FTL i LTL, zarządzamy siecią sprawdzonych podwykonawców i zapewniamy kompleksową obsługę logistyczną dla klientów z różnych branż.',
     category: 'klienci',
   },
   {
@@ -157,7 +157,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 22,
     question: 'Czy posiadacie swoją flotę?',
     answer:
-      'AMPM działa jako firma spedycyjna i realizuje transporty głównie przy współpracy z siecią sprawdzonych podwykonawców — przewoźników drogowych. Dzięki temu jesteśmy elastyczni, szybko reagujemy na zmieniające się potrzeby klientów i możemy obsłużyć zlecenia o różnym charakterze i skali.',
+      'Am Pm sp. z o.o. działa jako firma spedycyjna i realizuje transporty głównie przy współpracy z siecią sprawdzonych podwykonawców — przewoźników drogowych. Dzięki temu jesteśmy elastyczni, szybko reagujemy na zmieniające się potrzeby klientów i możemy obsłużyć zlecenia o różnym charakterze i skali.',
     category: 'klienci',
   },
 ];

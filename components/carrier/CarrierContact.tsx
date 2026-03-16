@@ -86,7 +86,7 @@ export default function CarrierContact() {
             Gotowy do współpracy?
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-            W AMPM stawiamy na jasne zasady, partnerskie relacje i profesjonalną organizację
+            W Am Pm sp. z o.o. stawiamy na jasne zasady, partnerskie relacje i profesjonalną organizację
             transportu. Współpracując z nami, zyskujesz nie tylko zlecenia, ale także wsparcie
             i stabilność. Skontaktuj się z nami już dziś i przekonaj się, dlaczego warto z nami
             współpracować.
@@ -103,7 +103,7 @@ export default function CarrierContact() {
         />
 
         <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
-          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          Administratorem danych osobowych jest Am Pm sp. z o.o. Dane wpisane w formularzu
           będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
           z{' '}
           <a

@@ -7,15 +7,18 @@ import PageHero from '@/components/shared/PageHero';
 import { Globe, CheckCircle2, Clock, FileText, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Transport Międzynarodowy – Spedycja Europa | AMPM Sp. z o.o.',
+  title: 'Transport Międzynarodowy – Spedycja Europa | Am Pm sp. z o.o.',
   description:
-    'Profesjonalny transport międzynarodowy na terenie całej Europy i poza jej granicami. Pełna obsługa logistyczna, dokumentacja, monitoring przesyłek. Zaufaj doświadczonej firmie spedycyjnej z Lublina.',
+    'Profesjonalny transport międzynarodowy na terenie całej Europy i poza jej granicami. Firma spedycyjna z Lublina obsługująca klientów z Warszawy i całej Polski – pełna obsługa logistyczna, dokumentacja, monitoring przesyłek.',
   keywords: [
     'transport międzynarodowy',
     'spedycja europejska',
     'przewóz towarów Europa',
     'transport UE firma',
     'spedycja międzynarodowa Lublin',
+    'spedycja międzynarodowa Warszawa',
+    'transport międzynarodowy Lublin',
+    'transport międzynarodowy Warszawa',
     'transport towarów Niemcy',
     'transport towarów Francja',
     'transport towarów Czechy',
@@ -26,15 +29,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/uslugi/transport-miedzynarodowy' },
   openGraph: {
-    title: 'Transport Międzynarodowy – AMPM Sp. z o.o.',
+    title: 'Transport Międzynarodowy – Am Pm sp. z o.o.',
     description:
       'Realizujemy transport towarów na terenie całej Europy i poza jej granicami. Stały monitoring, dokumentacja transportowa i dedykowany spedytor.',
     url: '/uslugi/transport-miedzynarodowy',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Międzynarodowy – AMPM Spedition' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Międzynarodowy – Am Pm sp. z o.o.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transport Międzynarodowy – AMPM Sp. z o.o.',
+    title: 'Transport Międzynarodowy – Am Pm sp. z o.o.',
     description: 'Profesjonalny transport towarów na terenie całej Europy. Zaufaj sprawdzonej firmie spedycyjnej.',
     images: ['/og-image.jpg'],
   },
@@ -48,10 +51,14 @@ const serviceJsonLd = {
     'Realizujemy transport towarów na terenie całej Europy oraz poza jej granicami. Zapewniamy pełną obsługę logistyczną, w tym planowanie tras, dokumentację transportową oraz stały monitoring przesyłek.',
   provider: {
     '@type': 'Organization',
-    name: 'AMPM Sp. z o.o.',
+    name: 'Am Pm sp. z o.o.',
     url: 'https://ampm.com.pl',
   },
-  areaServed: { '@type': 'Place', name: 'Europa' },
+  areaServed: [
+    { '@type': 'City', name: 'Lublin' },
+    { '@type': 'City', name: 'Warszawa' },
+    { '@type': 'Place', name: 'Europa' },
+  ],
   serviceType: 'Transport Międzynarodowy',
 };
 
@@ -107,7 +114,7 @@ export default function TransportMiedzynarodowyPage() {
                   Realizujemy transport towarów na terenie całej Europy oraz poza jej granicami. Nasz zespół doświadczonych spedytorów zapewnia pełną obsługę logistyczną – od planowania trasy, przez dokumentację transportową, aż po stały monitoring przesyłki w czasie rzeczywistym.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Nasze rozwiązania pozwalają na szybkie i bezpieczne dostarczanie ładunków między krajami, niezależnie od ich charakteru i gabarytów. Dzięki szerokiej sieci partnerów logistycznych w całej Europie gwarantujemy terminowość i bezpieczeństwo każdego zlecenia.
+                  Nasze rozwiązania pozwalają na szybkie i bezpieczne dostarczanie ładunków między krajami, niezależnie od ich charakteru i gabarytów. Obsługujemy klientów z Lublina, Warszawy i całej Polski – dzięki szerokiej sieci partnerów logistycznych w całej Europie gwarantujemy terminowość i bezpieczeństwo każdego zlecenia.
                 </p>
                 <Link
                   href="/wycena"

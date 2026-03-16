@@ -86,7 +86,7 @@ export default function QuoteInfo() {
             <p className="text-gray-500 mb-6 leading-relaxed">
               Stawiamy na indywidualne podejście i pełną transparentność:
             </p>
-            <ul className="space-y-4" aria-label="Zalety współpracy z AMPM">
+            <ul className="space-y-4" aria-label="Zalety współpracy z Am Pm sp. z o.o.">
               {benefits.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-secondary font-medium">
                   <CheckCircle2 size={20} className="text-primary shrink-0" aria-hidden="true" />

@@ -18,11 +18,11 @@ import CareerJobsSection from '@/components/career/CareerJobsSection';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
+  title: 'Kariera – Dołącz do Zespołu Am Pm sp. z o.o.',
   description:
-    'Szukamy pasjonatów logistyki. Dołącz do zespołu AMPM w Lublinie — spedytorzy, koordynatorzy, kierowcy. Stabilne warunki, system premiowy i realne możliwości rozwoju.',
+    'Szukamy pasjonatów logistyki. Dołącz do zespołu Am Pm sp. z o.o. w Lublinie — spedytorzy, koordynatorzy, kierowcy. Stabilne warunki, system premiowy i realne możliwości rozwoju.',
   keywords: [
-    'praca AMPM Lublin',
+    'praca Am Pm sp. z o.o. Lublin',
     'praca spedytor Lublin',
     'oferty pracy transport logistyka',
     'kariera spedycja',
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     canonical: 'https://ampm.com.pl/kariera',
   },
   openGraph: {
-    title: 'Kariera – AMPM Sp. z o.o.',
+    title: 'Kariera – Am Pm sp. z o.o.',
     description:
-      'Dołącz do dynamicznego zespołu AMPM. Oferujemy stabilne warunki, system premiowy i realne możliwości rozwoju w branży TSL.',
+      'Dołącz do dynamicznego zespołu Am Pm sp. z o.o.. Oferujemy stabilne warunki, system premiowy i realne możliwości rozwoju w branży TSL.',
     url: 'https://ampm.com.pl/kariera',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
+        alt: 'Kariera – Dołącz do Zespołu Am Pm sp. z o.o.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kariera – Dołącz do Zespołu AMPM Sp. z o.o.',
+    title: 'Kariera – Dołącz do Zespołu Am Pm sp. z o.o.',
     description:
       'Szukamy spedytorów, koordynatorów i kierowców w Lublinie. Stabilne warunki, system premiowy i realne możliwości rozwoju.',
     images: ['/og-image.jpg'],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 
 const HIRING_ORG = {
   '@type': 'Organization',
-  name: 'AMPM Sp. z o.o.',
+  name: 'Am Pm sp. z o.o.',
   sameAs: 'https://ampm.com.pl',
   logo: 'https://ampm.com.pl/logo.webp',
 };

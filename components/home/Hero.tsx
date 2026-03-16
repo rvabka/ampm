@@ -103,7 +103,7 @@ export default function Hero() {
         <div className="h-16 w-px bg-white/30 mb-2" aria-hidden="true" />
         <a
           href="https://www.facebook.com/profile.php?id=61586839199138"
-          aria-label="AMPM Spedition na Facebooku"
+          aria-label="Am Pm sp. z o.o. na Facebooku"
           rel="noopener noreferrer"
           target="_blank"
           className="text-white/90 hover:text-white hover:scale-110 transition-all duration-300"
@@ -112,7 +112,7 @@ export default function Hero() {
         </a>
         <a
           href="https://www.linkedin.com/company/ampm-sp-z-o-o/"
-          aria-label="AMPM Spedition na LinkedIn"
+          aria-label="Am Pm sp. z o.o. na LinkedIn"
           rel="noopener noreferrer"
           target="_blank"
           className="text-white/90 hover:text-white hover:scale-110 transition-all duration-300"
@@ -121,7 +121,7 @@ export default function Hero() {
         </a>
         <a
           href="https://www.instagram.com/ampmspzoo/"
-          aria-label="AMPM Spedition na Instagramie"
+          aria-label="Am Pm sp. z o.o. na Instagramie"
           rel="noopener noreferrer"
           target="_blank"
           className="text-white/90 hover:text-white hover:scale-110 transition-all duration-300"

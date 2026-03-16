@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
   ];
 
   await transporter.sendMail({
-    from: `"AMPM – Formularz kontaktowy" <${process.env.SMTP_USER}>`,
+    from: `"Am Pm sp. z o.o. – Formularz kontaktowy" <${process.env.SMTP_USER}>`,
     to: process.env.EMAIL_CONTACT,
     replyTo: email,
     subject: subject ? `Kontakt: ${subject}` : `Nowa wiadomość od ${name}`,

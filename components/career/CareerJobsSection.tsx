@@ -275,7 +275,7 @@ export default function CareerJobsSection({ jobs }: CareerJobsSectionProps) {
             Aktualne ogłoszenia
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-            Dołącz do zespołu AMPM — znajdź ofertę dopasowaną do swoich kompetencji i ambicji.
+            Dołącz do zespołu Am Pm sp. z o.o. — znajdź ofertę dopasowaną do swoich kompetencji i ambicji.
           </p>
         </div>
 

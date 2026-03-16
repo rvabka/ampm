@@ -7,9 +7,9 @@ import PageHero from '@/components/shared/PageHero';
 import { Globe, Truck, Bus, Snowflake, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Usługi Spedycyjne – Transport Krajowy i Międzynarodowy | AMPM Sp. z o.o.',
+  title: 'Usługi Spedycyjne – Transport Krajowy i Międzynarodowy | Am Pm sp. z o.o.',
   description:
-    'Kompleksowe usługi spedycyjne: transport krajowy, międzynarodowy, ekspresowy, chłodniczy i ADR. Doświadczeni spedytorzy, nowoczesna flota i szeroka sieć partnerów. Zaufaj AMPM Sp. z o.o.',
+    'Kompleksowe usługi spedycyjne z Lublina: transport krajowy, międzynarodowy, ekspresowy, chłodniczy i ADR. Obsługujemy klientów z Warszawy, Lublina i całej Polski. Zaufaj Am Pm sp. z o.o.',
   keywords: [
     'usługi spedycyjne',
     'spedycja transport',
@@ -19,22 +19,25 @@ export const metadata: Metadata = {
     'spedycja międzynarodowa',
     'logistyka transport',
     'spedytor Lublin',
+    'spedytor Warszawa',
     'transport drogowy',
     'usługi transportowe',
     'kompleksowa logistyka',
-    'AMPM usługi',
+    'firma transportowa Lublin',
+    'firma transportowa Warszawa',
+    'Am Pm sp. z o.o. usługi',
   ],
   alternates: { canonical: '/uslugi' },
   openGraph: {
-    title: 'Usługi Spedycyjne – AMPM Sp. z o.o.',
+    title: 'Usługi Spedycyjne – Am Pm sp. z o.o.',
     description:
       'Kompleksowa organizacja transportu krajowego i międzynarodowego. Doświadczeni spedytorzy i nowoczesne systemy logistyczne.',
     url: '/uslugi',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Usługi AMPM Spedition' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Usługi Am Pm sp. z o.o.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Usługi Spedycyjne – AMPM Sp. z o.o.',
+    title: 'Usługi Spedycyjne – Am Pm sp. z o.o.',
     description: 'Transport krajowy, międzynarodowy, ekspresowy, chłodniczy i ADR. Profesjonalna spedycja.',
     images: ['/og-image.jpg'],
   },
@@ -114,7 +117,7 @@ export default function UslugiPage() {
                 <span className="text-primary">do Twoich potrzeb</span>
               </h2>
               <p className="text-gray-500 max-w-md text-sm leading-relaxed">
-                Nasz zespół doświadczonych spedytorów planuje, monitoruje i optymalizuje każdy etap przewozu, zapewniając bezpieczeństwo ładunku oraz terminowość dostaw.
+                Nasz zespół doświadczonych spedytorów z Lublina planuje, monitoruje i optymalizuje każdy etap przewozu – obsługujemy klientów z Warszawy, Lublina i całej Polski.
               </p>
             </div>
 

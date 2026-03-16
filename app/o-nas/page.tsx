@@ -13,14 +13,14 @@ import AboutTeam from '@/components/about/AboutTeam';
 export const metadata: Metadata = {
   title: 'O Nas – Firma Spedycyjna z Lublina',
   description:
-    'Poznaj AMPM Sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Dowiedz się, kim jesteśmy i co nas wyróżnia.',
+    'Poznaj Am Pm sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Dowiedz się, kim jesteśmy i co nas wyróżnia.',
   keywords: [
-    'AMPM spedycja',
+    'Am Pm sp. z o.o. spedycja',
     'firma spedycyjna Lublin',
     'transport drogowy Polska UE',
     'spedycja FTL LTL',
     'transport międzynarodowy',
-    'o nas AMPM',
+    'o nas Am Pm sp. z o.o.',
     'spedytor Lublin',
     'przewozy drogowe Europa',
     'transport towarów Niemcy Francja',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     canonical: '/o-nas',
   },
   openGraph: {
-    title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna',
+    title: 'O Nas – Am Pm sp. z o.o. Firma Spedycyjna',
     description:
       'Jesteśmy zespołem specjalistów z Lublina specjalizujących się w transporcie drogowym FTL i LTL na terenie Polski i całej Unii Europejskiej. Poznaj nasze priorytety i sposób pracy.',
     url: '/o-nas',
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna z Lublina',
+        alt: 'O Nas – Am Pm sp. z o.o. Firma Spedycyjna z Lublina',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'O Nas – AMPM Sp. z o.o. Firma Spedycyjna',
+    title: 'O Nas – Am Pm sp. z o.o. Firma Spedycyjna',
     description:
-      'Poznaj AMPM Sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i UE.',
+      'Poznaj Am Pm sp. z o.o. – firmę spedycyjną z Lublina specjalizującą się w transporcie drogowym FTL i LTL na terenie Polski i UE.',
     images: ['/og-image.jpg'],
   },
 };
@@ -75,8 +75,8 @@ const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': 'https://ampm.com.pl/#organization',
-  name: 'AMPM Sp. z o.o.',
-  alternateName: 'AMPM Full Time Spedition',
+  name: 'Am Pm sp. z o.o.',
+  alternateName: 'Am Pm sp. z o.o.',
   url: 'https://ampm.com.pl',
   logo: 'https://ampm.com.pl/logo.png',
   description:

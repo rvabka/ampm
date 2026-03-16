@@ -273,7 +273,7 @@ export default function QuoteForm() {
         </div>
         <p className="text-xs text-gray-400 leading-relaxed">
           <span aria-hidden="true">* </span>Pola wymagane.
-          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          Administratorem danych osobowych jest Am Pm sp. z o.o. Dane wpisane w formularzu
           będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
           z{' '}
           <a

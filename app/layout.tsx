@@ -23,11 +23,11 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://ampm.com.pl'),
   title: {
-    template: '%s | AMPM Spedition',
-    default: 'AMPM Spedition – Transport Drogowy i Logistyka Europejska'
+    template: '%s | Am Pm sp. z o.o.',
+    default: 'Am Pm sp. z o.o. – Transport Drogowy i Logistyka Europejska'
   },
   description:
-    'AMPM Spedition – profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie. Przewozy TIR, transport do 3.5t, magazynowanie i dystrybucja. Zaufaj ekspertom logistyki.',
+    'Am Pm sp. z o.o. – profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie. Przewozy TIR, transport do 3.5t, magazynowanie i dystrybucja. Zaufaj ekspertom logistyki.',
   keywords: [
     'transport drogowy',
     'spedycja',
@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     'magazynowanie',
     'dystrybucja',
     'Europa',
-    'AMPM Spedition'
+    'Am Pm sp. z o.o.'
   ],
-  authors: [{ name: 'AMPM Spedition' }],
-  creator: 'AMPM Spedition',
-  publisher: 'AMPM Full Time Spedition',
+  authors: [{ name: 'Am Pm sp. z o.o.' }],
+  creator: 'Am Pm sp. z o.o.',
+  publisher: 'Am Pm sp. z o.o.',
   robots: {
     index: true,
     follow: true,
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pl_PL',
     url: 'https://ampm.com.pl',
-    siteName: 'AMPM Spedition',
-    title: 'AMPM Spedition – Transport Drogowy i Logistyka Europejska',
+    siteName: 'Am Pm sp. z o.o.',
+    title: 'Am Pm sp. z o.o. – Transport Drogowy i Logistyka Europejska',
     description:
       'Profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie. Przewozy TIR, transport do 3.5t, magazynowanie i dystrybucja.',
     images: [
@@ -65,13 +65,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AMPM Spedition – Transport Drogowy i Logistyka Europejska'
+        alt: 'Am Pm sp. z o.o. – Transport Drogowy i Logistyka Europejska'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AMPM Spedition – Transport Drogowy i Logistyka Europejska',
+    title: 'Am Pm sp. z o.o. – Transport Drogowy i Logistyka Europejska',
     description:
       'Profesjonalny transport drogowy ciężarowy i dostawczy po całej Europie.',
     images: ['/og-image.jpg']
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MovingCompany',
-  name: 'AMPM Full Time Spedition',
+  name: 'Am Pm sp. z o.o.',
   description:
     'Profesjonalne usługi transportu drogowego ciężarowego i dostawczego na terenie całej Europy.',
   url: 'https://ampm.com.pl',

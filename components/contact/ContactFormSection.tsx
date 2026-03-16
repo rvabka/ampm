@@ -61,7 +61,7 @@ export default function ContactFormSection() {
         <ContactForm fields={fields} submitLabel="Wyślij wiadomość" />
 
         <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
-          Administratorem danych osobowych jest AMPM Sp. z o.o. Dane wpisane w formularzu
+          Administratorem danych osobowych jest Am Pm sp. z o.o. Dane wpisane w formularzu
           będą przetwarzane w celu udzielenia odpowiedzi na przesłane zgłoszenie zgodnie
           z{' '}
           <a

@@ -4,9 +4,9 @@ import Footer from '@/components/shared/Footer';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Polityka Prywatności – AMPM Sp. z o.o.',
+  title: 'Polityka Prywatności – Am Pm sp. z o.o.',
   description:
-    'Informacje o przetwarzaniu danych osobowych przez AMPM Sp. z o.o. zgodnie z rozporządzeniem RODO.',
+    'Informacje o przetwarzaniu danych osobowych przez Am Pm sp. z o.o. zgodnie z rozporządzeniem RODO.',
   alternates: {
     canonical: '/polityka-prywatnosci',
   },
@@ -22,7 +22,7 @@ const sections = [
     content: (
       <>
         <p>
-          Administratorem Pani/Pana danych osobowych jest <strong>AMPM Sp. z o.o.</strong> z
+          Administratorem Pani/Pana danych osobowych jest <strong>Am Pm sp. z o.o.</strong> z
           siedzibą w Lublinie, adres: ul. Zemborzycka 53 B, 20-445 Lublin
           („Administrator").
         </p>

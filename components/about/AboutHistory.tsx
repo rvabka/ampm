@@ -32,7 +32,7 @@ export default function AboutHistory() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 Jesteśmy zespołem specjalistów, dla których transport i spedycja
                 to nie tylko branża – to codzienna pasja i zobowiązanie wobec
-                klientów i partnerów. AMPM Sp. z o.o. to firma spedycyjna
+                klientów i partnerów. Am Pm sp. z o.o. to firma spedycyjna
                 specjalizująca się w transporcie drogowym na terenie Polski i
                 całej Unii Europejskiej.
               </p>

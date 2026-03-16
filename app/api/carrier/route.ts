@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
   ];
 
   await transporter.sendMail({
-    from: `"AMPM – Zgłoszenie przewoźnika" <${process.env.SMTP_USER}>`,
+    from: `"Am Pm sp. z o.o. – Zgłoszenie przewoźnika" <${process.env.SMTP_USER}>`,
     to: process.env.EMAIL_SHIPPING,
     replyTo: email,
     subject: `Zgłoszenie przewoźnika – ${name} (${company})`,

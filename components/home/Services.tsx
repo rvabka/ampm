@@ -43,7 +43,7 @@ const services: Service[] = [
     categoryLabel: "Krajowy",
     icon: Truck,
     image: "/image17.webp",
-    imageAlt: "Transport krajowy na terenie Polski – AMPM Sp. z o.o.",
+    imageAlt: "Transport krajowy na terenie Polski – Am Pm sp. z o.o.",
     description:
       "Świadczymy usługi transportu na terenie całej Polski, gwarantując terminowe i bezpieczne dostawy. Dzięki nowoczesnej flocie oraz doświadczonym kierowcom jesteśmy w stanie obsługiwać zarówno pojedyncze zlecenia, jak i stałe kontrakty logistyczne dla firm z różnych branż.",
     href: "/uslugi/transport-krajowy",

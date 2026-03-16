@@ -69,7 +69,7 @@ export default function Fleet() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px]">
             <Image
               src="/image1.webp"
-              alt="Nowoczesna biała ciężarówka AMPM Spedition klasy EURO 6"
+              alt="Nowoczesna biała ciężarówka Am Pm sp. z o.o. klasy EURO 6"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

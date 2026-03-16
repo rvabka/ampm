@@ -10,7 +10,7 @@ import { FAQ_ITEMS } from '@/components/faq/faq-data';
 export const metadata: Metadata = {
   title: 'FAQ – Pytania o Transport i Spedycję',
   description:
-    'Odpowiedzi na najważniejsze pytania dotyczące transportu drogowego, floty EURO 6, ubezpieczenia OCP, dokumentów CMR i warunków płatności w AMPM Spedition.',
+    'Odpowiedzi na najważniejsze pytania dotyczące transportu drogowego, floty EURO 6, ubezpieczenia OCP, dokumentów CMR i warunków płatności w Am Pm sp. z o.o..',
   keywords: [
     'FAQ transport',
     'pytania spedycja',
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     canonical: '/faq',
   },
   openGraph: {
-    title: 'FAQ – AMPM Spedition',
+    title: 'FAQ – Am Pm sp. z o.o.',
     description:
-      'Znajdź odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP i warunki współpracy z AMPM Spedition.',
+      'Znajdź odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP i warunki współpracy z Am Pm sp. z o.o..',
     url: '/faq',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'FAQ – Pytania o Transport i Spedycję – AMPM Spedition',
+        alt: 'FAQ – Pytania o Transport i Spedycję – Am Pm sp. z o.o.',
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FAQ – Pytania o Transport i Spedycję',
     description:
-      'Odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP, dokumenty CMR i warunki współpracy z AMPM Spedition.',
+      'Odpowiedzi na pytania o transport drogowy, flotę EURO 6, ubezpieczenie OCP, dokumenty CMR i warunki współpracy z Am Pm sp. z o.o..',
     images: ['/og-image.jpg'],
   },
 };

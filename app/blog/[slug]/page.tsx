@@ -104,12 +104,12 @@ export default async function PostPage({ params }: PostPageProps) {
       : undefined,
     author: {
       '@type': 'Organization',
-      name: 'AMPM Full Time Spedition',
+      name: 'Am Pm sp. z o.o.',
       url: BASE_URL
     },
     publisher: {
       '@type': 'Organization',
-      name: 'AMPM Full Time Spedition',
+      name: 'Am Pm sp. z o.o.',
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/logo.webp` }
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },

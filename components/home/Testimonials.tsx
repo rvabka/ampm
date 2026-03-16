@@ -18,7 +18,7 @@ export default async function Testimonials() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'AMPM Full Time Spedition',
+    name: 'Am Pm sp. z o.o.',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: avgRating,

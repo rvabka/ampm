@@ -57,7 +57,7 @@ export default function AboutStandards() {
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
             Każde zlecenie realizujemy z myślą o tych pięciu wartościach, które
-            stanowią podstawę każdej współpracy z AMPM.
+            stanowią podstawę każdej współpracy z Am Pm sp. z o.o..
           </p>
         </div>
 

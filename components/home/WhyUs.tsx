@@ -59,7 +59,7 @@ export default function WhyUs() {
             <div className="col-span-1 row-span-2 relative group overflow-hidden rounded-3xl h-[400px]">
               <Image
                 src="/image9.webp"
-                alt="Transport krajowy i międzynarodowy – AMPM Sp. z o.o."
+                alt="Transport krajowy i międzynarodowy – Am Pm sp. z o.o."
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -81,7 +81,7 @@ export default function WhyUs() {
             <div className="col-span-1 h-[190px] relative group overflow-hidden rounded-3xl">
               <Image
                 src="/image7.webp"
-                alt="Ciężarówka AMPM w trasie – transport krajowy i międzynarodowy"
+                alt="Ciężarówka Am Pm sp. z o.o. w trasie – transport krajowy i międzynarodowy"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 20vw"

@@ -12,7 +12,7 @@ import CarrierContact from '@/components/carrier/CarrierContact';
 export const metadata: Metadata = {
   title: 'Dla Przewoźnika – Zlecenia i Współpraca',
   description:
-    'Dołącz do sieci partnerów AMPM Spedition. Oferujemy terminowe płatności (skonto 14 dni), stałe zlecenia w całej Europie, wsparcie spedytora 24/7 i przejrzyste warunki umowy.',
+    'Dołącz do sieci partnerów Am Pm sp. z o.o.. Oferujemy terminowe płatności (skonto 14 dni), stałe zlecenia w całej Europie, wsparcie spedytora 24/7 i przejrzyste warunki umowy.',
   keywords: [
     'praca dla przewoźnika',
     'zlecenia transportowe',
@@ -21,22 +21,22 @@ export const metadata: Metadata = {
     'partner transportowy',
     'zlecenia TIR Europa',
     'skonto przewoźnik',
-    'AMPM Spedition przewoźnik',
+    'Am Pm sp. z o.o. przewoźnik',
   ],
   alternates: {
     canonical: '/dla-przewoznika',
   },
   openGraph: {
-    title: 'Dla Przewoźnika – AMPM Spedition',
+    title: 'Dla Przewoźnika – Am Pm sp. z o.o.',
     description:
-      'Stabilne zlecenia, terminowe płatności i wsparcie 24/7. Zostań partnerem AMPM Spedition i rozwijaj swój biznes transportowy w całej Europie.',
+      'Stabilne zlecenia, terminowe płatności i wsparcie 24/7. Zostań partnerem Am Pm sp. z o.o. i rozwijaj swój biznes transportowy w całej Europie.',
     url: '/dla-przewoznika',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dla Przewoźnika – Zlecenia i Współpraca z AMPM Spedition',
+        alt: 'Dla Przewoźnika – Zlecenia i Współpraca z Am Pm sp. z o.o.',
       },
     ],
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dla Przewoźnika – Zlecenia i Współpraca',
     description:
-      'Dołącz do sieci partnerów AMPM Spedition. Terminowe płatności, stałe zlecenia w całej Europie i wsparcie spedytora 24/7.',
+      'Dołącz do sieci partnerów Am Pm sp. z o.o.. Terminowe płatności, stałe zlecenia w całej Europie i wsparcie spedytora 24/7.',
     images: ['/og-image.jpg'],
   },
 };
@@ -71,12 +71,12 @@ const jsonLd = {
 const serviceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Współpraca z Przewoźnikami – AMPM Spedition',
+  name: 'Współpraca z Przewoźnikami – Am Pm sp. z o.o.',
   description:
     'Program partnerski dla przewoźników drogowych. Stałe zlecenia transportowe, terminowe płatności z opcją skonto, wsparcie spedytora 24/7 i uczciwe warunki współpracy.',
   provider: {
     '@type': 'Organization',
-    name: 'AMPM Full Time Spedition',
+    name: 'Am Pm sp. z o.o.',
     url: 'https://ampm.com.pl',
   },
   areaServed: {

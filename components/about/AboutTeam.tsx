@@ -48,7 +48,7 @@ export default function AboutTeam() {
             Nasz Zespół
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary">
-            Ludzie, którzy napędzają AMPM
+            Ludzie, którzy napędzają Am Pm sp. z o.o.
           </h2>
           <p className="text-gray-500 mt-4 max-w-lg mx-auto">
             Za każdym sprawnie zrealizowanym transportem stoją ludzie z pasją i

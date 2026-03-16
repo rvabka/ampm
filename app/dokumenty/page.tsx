@@ -12,7 +12,7 @@ import type { CompanyDocument } from '../../src/sanity/types';
 export const metadata: Metadata = {
   title: 'Dokumenty – Licencje, Certyfikaty i Polisy',
   description:
-    'Pobierz dokumenty AMPM Spedition: licencja transportowa, certyfikat ISO 9001, normy Euro 6, polisa OCP przewoźnika do 300 000 EUR oraz ubezpieczenie kabotażowe.',
+    'Pobierz dokumenty Am Pm sp. z o.o.: licencja transportowa, certyfikat ISO 9001, normy Euro 6, polisa OCP przewoźnika do 300 000 EUR oraz ubezpieczenie kabotażowe.',
   keywords: [
     'dokumenty transportowe',
     'licencja przewoźnika',
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     canonical: '/dokumenty',
   },
   openGraph: {
-    title: 'Dokumenty – AMPM Spedition',
+    title: 'Dokumenty – Am Pm sp. z o.o.',
     description:
-      'Licencje, certyfikaty i polisy ubezpieczeniowe AMPM Spedition. Transparentność i pełna dokumentacja naszej działalności.',
+      'Licencje, certyfikaty i polisy ubezpieczeniowe Am Pm sp. z o.o.. Transparentność i pełna dokumentacja naszej działalności.',
     url: '/dokumenty',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dokumenty – Licencje, Certyfikaty i Polisy AMPM Spedition',
+        alt: 'Dokumenty – Licencje, Certyfikaty i Polisy Am Pm sp. z o.o.',
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dokumenty – Licencje, Certyfikaty i Polisy',
     description:
-      'Pobierz dokumenty AMPM Spedition: licencja transportowa, certyfikat ISO 9001, normy Euro 6 i polisa OCP do 300 000 EUR.',
+      'Pobierz dokumenty Am Pm sp. z o.o.: licencja transportowa, certyfikat ISO 9001, normy Euro 6 i polisa OCP do 300 000 EUR.',
     images: ['/og-image.jpg'],
   },
 };
@@ -77,7 +77,7 @@ export default async function DocumentsPage() {
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Dokumenty AMPM Spedition',
+    name: 'Dokumenty Am Pm sp. z o.o.',
     description: 'Licencje, certyfikaty i polisy ubezpieczeniowe dostępne do pobrania.',
     numberOfItems: docs.length,
     itemListElement: docs.map((doc, idx) => ({

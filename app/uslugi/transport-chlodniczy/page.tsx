@@ -7,9 +7,9 @@ import PageHero from '@/components/shared/PageHero';
 import { Snowflake, Thermometer, Shield, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Transport Chłodniczy – Przewóz w Kontrolowanej Temperaturze | AMPM Sp. z o.o.',
+  title: 'Transport Chłodniczy – Przewóz w Kontrolowanej Temperaturze | Am Pm sp. z o.o.',
   description:
-    'Specjalistyczny transport chłodniczy dla żywności, leków i produktów farmaceutycznych. Kontrolowana temperatura przez cały czas przewozu, certyfikowane pojazdy chłodnicze. Sprawdź naszą ofertę.',
+    'Specjalistyczny transport chłodniczy dla żywności, leków i produktów farmaceutycznych. Obsługujemy klientów z Lublina, Warszawy i całej Polski. Kontrolowana temperatura przez cały czas przewozu, certyfikowane pojazdy chłodnicze.',
   keywords: [
     'transport chłodniczy',
     'przewóz w kontrolowanej temperaturze',
@@ -23,18 +23,22 @@ export const metadata: Metadata = {
     'flota chłodnicza',
     'HACCP transport',
     'transport temperaturowy',
+    'transport chłodniczy Lublin',
+    'transport chłodniczy Warszawa',
+    'logistyka chłodnicza Lublin',
+    'logistyka chłodnicza Warszawa',
   ],
   alternates: { canonical: '/uslugi/transport-chlodniczy' },
   openGraph: {
-    title: 'Transport Chłodniczy – AMPM Sp. z o.o.',
+    title: 'Transport Chłodniczy – Am Pm sp. z o.o.',
     description:
       'Specjalistyczny transport towarów wymagających kontrolowanej temperatury. Żywność, leki, produkty chemiczne – dostarczamy bezpiecznie i zgodnie z normami.',
     url: '/uslugi/transport-chlodniczy',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Chłodniczy – AMPM Spedition' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Chłodniczy – Am Pm sp. z o.o.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transport Chłodniczy – AMPM Sp. z o.o.',
+    title: 'Transport Chłodniczy – Am Pm sp. z o.o.',
     description: 'Kontrolowana temperatura przez cały czas przewozu. Specjalistyczna logistyka dla wymagających ładunków.',
     images: ['/og-image.jpg'],
   },
@@ -46,7 +50,7 @@ const serviceJsonLd = {
   name: 'Transport Chłodniczy',
   description:
     'Zapewniamy specjalistyczny transport towarów wymagających kontrolowanej temperatury, takich jak żywność, produkty farmaceutyczne czy chemiczne. Nasze pojazdy chłodnicze wyposażone są w nowoczesne systemy utrzymujące stałą temperaturę podczas całego transportu.',
-  provider: { '@type': 'Organization', name: 'AMPM Sp. z o.o.', url: 'https://ampm.com.pl' },
+  provider: { '@type': 'Organization', name: 'Am Pm sp. z o.o.', url: 'https://ampm.com.pl' },
   serviceType: 'Transport Chłodniczy',
 };
 
@@ -102,7 +106,7 @@ export default function TransportChlodniczyPage() {
                   Zapewniamy specjalistyczny transport towarów wymagających kontrolowanej temperatury, takich jak żywność, produkty farmaceutyczne czy chemiczne. Nasze pojazdy chłodnicze wyposażone są w nowoczesne systemy utrzymujące stałą temperaturę podczas całego transportu.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Realizujemy przewozy zarówno na terenie Polski, jak i za granicą. Dbamy o zachowanie ciągłości łańcucha chłodniczego, co jest kluczowe dla bezpieczeństwa i jakości transportowanych towarów. Nasi kierowcy posiadają stosowne szkolenia z zakresu obsługi ładunków wrażliwych temperaturowo.
+                  Realizujemy przewozy zarówno na terenie Polski, jak i za granicą – obsługujemy klientów z Lublina, Warszawy i całego kraju. Dbamy o zachowanie ciągłości łańcucha chłodniczego, co jest kluczowe dla bezpieczeństwa i jakości transportowanych towarów. Nasi kierowcy posiadają stosowne szkolenia z zakresu obsługi ładunków wrażliwych temperaturowo.
                 </p>
                 <Link
                   href="/wycena"

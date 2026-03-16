@@ -7,7 +7,7 @@ export default function DocumentsHero() {
       titleHighlight="Dokumenty"
       titleBreak
       description="Licencje, certyfikaty i polisy ubezpieczeniowe dostępne do pobrania. Transparentność i pełna dokumentacja naszej działalności."
-      eyebrow="AMPM Spedition"
+      eyebrow="Am Pm sp. z o.o."
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },
         { label: 'Dokumenty' },

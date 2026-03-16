@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
   }
 
   await transporter.sendMail({
-    from: `"AMPM – Zapytanie o wycenę" <${process.env.SMTP_USER}>`,
+    from: `"Am Pm sp. z o.o. – Zapytanie o wycenę" <${process.env.SMTP_USER}>`,
     to: process.env.EMAIL_OFFER,
     replyTo: email,
     subject: `Zapytanie o wycenę – ${firstname} ${lastname} (${company})`,

@@ -27,7 +27,7 @@ const BASE_URL = 'https://ampm.com.pl';
 
 const BASE_TITLE = 'Blog i Aktualności – TSL, Logistyka, Transport';
 const BASE_DESCRIPTION =
-  'Ekspercka wiedza z branży TSL. Aktualności o transporcie drogowym, logistyce europejskiej, regulacjach i trendach rynkowych. Czytaj blog AMPM Spedition.';
+  'Ekspercka wiedza z branży TSL. Aktualności o transporcie drogowym, logistyce europejskiej, regulacjach i trendach rynkowych. Czytaj blog Am Pm sp. z o.o..';
 
 export async function generateMetadata({ searchParams }: BlogPageProps): Promise<Metadata> {
   const { category, page: pageParam, sort: sortParam } = await searchParams;
@@ -66,9 +66,9 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
       canonical,
     },
     openGraph: {
-      title: 'Blog i Aktualności – AMPM Spedition',
+      title: 'Blog i Aktualności – Am Pm sp. z o.o.',
       description:
-        'Ekspercka wiedza z branży TSL: transport drogowy, logistyka europejska, regulacje, trendy rynkowe. Czytaj blog AMPM Spedition.',
+        'Ekspercka wiedza z branży TSL: transport drogowy, logistyka europejska, regulacje, trendy rynkowe. Czytaj blog Am Pm sp. z o.o..',
       url: canonical,
       type: 'website',
       images: [
@@ -76,13 +76,13 @@ export async function generateMetadata({ searchParams }: BlogPageProps): Promise
           url: `${BASE_URL}/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: 'Blog AMPM Spedition – TSL, Logistyka, Transport',
+          alt: 'Blog Am Pm sp. z o.o. – TSL, Logistyka, Transport',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Blog i Aktualności – AMPM Spedition',
+      title: 'Blog i Aktualności – Am Pm sp. z o.o.',
       description:
         'Ekspercka wiedza z branży TSL: transport drogowy, logistyka europejska, regulacje i trendy.',
       images: [`${BASE_URL}/og-image.jpg`],
@@ -112,12 +112,12 @@ const breadcrumbJsonLd = {
 const blogJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
-  name: 'Blog AMPM Spedition',
+  name: 'Blog Am Pm sp. z o.o.',
   description: 'Aktualności z branży TSL, ekspercka wiedza o logistyce i życiu w trasie.',
   url: 'https://ampm.com.pl/blog',
   publisher: {
     '@type': 'Organization',
-    name: 'AMPM Full Time Spedition',
+    name: 'Am Pm sp. z o.o.',
     logo: { '@type': 'ImageObject', url: 'https://ampm.com.pl/logo.webp' },
   },
 };

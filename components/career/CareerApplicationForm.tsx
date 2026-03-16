@@ -487,7 +487,7 @@ export default function CareerApplicationForm() {
                     <textarea
                       id="career-cover-letter"
                       name="cover-letter"
-                      placeholder="Dlaczego chcesz pracować w AMPM?"
+                      placeholder="Dlaczego chcesz pracować w Am Pm sp. z o.o.?"
                       rows={4}
                       className={`${inputBase} resize-none`}
                     />
@@ -518,7 +518,7 @@ export default function CareerApplicationForm() {
                 </div>
 
                 <p className="text-xs text-gray-400 text-center mt-4 leading-relaxed">
-                  Administratorem danych osobowych jest AMPM Sp. z o.o. Dane
+                  Administratorem danych osobowych jest Am Pm sp. z o.o. Dane
                   wpisane w formularzu będą przetwarzane w celu udzielenia
                   odpowiedzi na przesłane zgłoszenie zgodnie z{' '}
                   <a

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 const stats = [
-  { value: '100+', label: 'Zaufanych Partnerów' },
-  { value: '14 dni', label: 'Szybka Płatność (skonto)' },
-  { value: 'EU', label: 'Obsługa Całej Europy' },
+  { value: '6%', label: 'Skonto — termin 14 dni' },
+  { value: '7%', label: 'Skonto — termin 7 dni' },
+  { value: '8%', label: 'Skonto — termin 3 dni' },
 ];
 
 export default function CarrierStats() {

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: '/wycena',
   },
   openGraph: {
-    title: 'Wycena Transportu – AMPM Spedition',
+    title: 'Wycena Transportu – Am Pm sp. z o.o.',
     description:
       'Bezpłatne zapytanie ofertowe o transport drogowy. Opisz trasę i ładunek — przygotujemy indywidualną ofertę.',
     url: '/wycena',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Wycena Transportu – Bezpłatna Oferta AMPM Spedition',
+        alt: 'Wycena Transportu – Bezpłatna Oferta Am Pm sp. z o.o.',
       },
     ],
   },
@@ -74,7 +74,7 @@ const serviceJsonLd = {
     'Bezpłatna wycena transportu drogowego krajowego i międzynarodowego. Oferujemy przewozy FTL, LTL, express oraz transport specjalistyczny ADR.',
   provider: {
     '@type': 'Organization',
-    name: 'AMPM Full Time Spedition',
+    name: 'Am Pm sp. z o.o.',
     url: 'https://ampm.com.pl',
   },
   areaServed: { '@type': 'Place', name: 'Europa' },

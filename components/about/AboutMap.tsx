@@ -168,7 +168,7 @@ export default function AboutMap() {
             <svg
               viewBox={`0 0 ${SVG_W} ${SVG_H}`}
               className="w-full h-full relative z-10"
-              aria-label="Animowana mapa Europy z trasami transportowymi AMPM"
+              aria-label="Animowana mapa Europy z trasami transportowymi Am Pm sp. z o.o."
               role="img"
             >
               {countries?.features.map((feat, idx) => {

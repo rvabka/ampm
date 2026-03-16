@@ -74,7 +74,7 @@ export default function CareerCulture() {
         >
           <Image
             src="/image6.webp"
-            alt="Zespół pracowników AMPM podczas spotkania biznesowego"
+            alt="Zespół pracowników Am Pm sp. z o.o. podczas spotkania biznesowego"
             fill
             className="object-cover object-bottom"
             sizes="(max-width: 768px) 100vw, 33vw"

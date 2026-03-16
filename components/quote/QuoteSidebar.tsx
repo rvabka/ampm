@@ -71,7 +71,7 @@ export default function QuoteSidebar() {
             <a
               href="tel:+48570112512"
               className="inline-flex items-center gap-2 text-primary hover:text-white text-xl font-black transition-colors"
-              aria-label="Skontaktuj się z AMPM: +48 570 112 512"
+              aria-label="Skontaktuj się z Am Pm sp. z o.o.: +48 570 112 512"
             >
               +48 570 112 512
             </a>

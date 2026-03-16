@@ -7,7 +7,7 @@ export default function FaqHero() {
       titleHighlight="Najczęstsze Pytania"
       titleBreak
       description="Tutaj znajdziesz odpowiedzi na najważniejsze pytania dotyczące współpracy, transportu i płatności."
-      eyebrow="AMPM Spedition"
+      eyebrow="Am Pm sp. z o.o."
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },
         { label: 'FAQ' },

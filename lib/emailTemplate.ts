@@ -54,7 +54,7 @@ export function buildEmail({ category, title, subtitle, fields, message }: Email
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>AMPM</title>
+  <title>Am Pm sp. z o.o.</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f8fafc;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8fafc;padding:40px 16px;">
@@ -68,7 +68,7 @@ export function buildEmail({ category, title, subtitle, fields, message }: Email
               <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td>
-                    <span style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">AMPM</span>
+                    <span style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">Am Pm sp. z o.o.</span>
                   </td>
                   <td align="right">
                     <span style="font-size:10px;color:#00aeef;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">${esc(category)}</span>
@@ -107,7 +107,7 @@ export function buildEmail({ category, title, subtitle, fields, message }: Email
               <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td>
-                    <p style="margin:0;font-size:12px;color:#94a3b8;">AMPM Sp. z o.o. · ampm.com.pl</p>
+                    <p style="margin:0;font-size:12px;color:#94a3b8;">Am Pm sp. z o.o. · ampm.com.pl</p>
                     <p style="margin:3px 0 0;font-size:11px;color:#cbd5e1;">Wiadomość wygenerowana automatycznie z formularza kontaktowego.</p>
                   </td>
                   <td align="right" style="vertical-align:middle;">

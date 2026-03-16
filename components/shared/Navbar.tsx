@@ -100,12 +100,12 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            aria-label="AMPM Spedition – strona główna"
+            aria-label="Am Pm sp. z o.o. – strona główna"
             className="shrink-0 bg-white rounded-full flex items-center justify-center transition-all duration-500"
           >
             <Image
               src="/logo.webp"
-              alt="AMPM Spedition"
+              alt="Am Pm sp. z o.o."
               width={1140}
               height={601}
               className="object-contain h-16 w-16 lg:h-18 lg:w-18"
@@ -231,7 +231,7 @@ export default function Navbar() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-100 -skew-x-12 transform translate-x-20 z-0 pointer-events-none" />
 
         <div className="relative z-10 flex items-center justify-between px-6 py-1 border-b border-gray-100">
-          <Image src="/logo.webp" alt="AMPM Spedition" width={1140} height={601} className="h-20 w-auto" />
+          <Image src="/logo.webp" alt="Am Pm sp. z o.o." width={1140} height={601} className="h-20 w-auto" />
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Zamknij menu"

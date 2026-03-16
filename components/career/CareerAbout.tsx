@@ -14,7 +14,7 @@ export default function CareerAbout() {
         >
           <Image
             src="/image4.webp"
-            alt="Zespół pracowników AMPM podczas spotkania biznesowego"
+            alt="Zespół pracowników Am Pm sp. z o.o. podczas spotkania biznesowego"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 33vw"
@@ -25,7 +25,7 @@ export default function CareerAbout() {
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px w-10 bg-primary" aria-hidden="true" />
             <span className="text-primary font-semibold tracking-wider uppercase text-xs">
-              O pracy w AMPM
+              O pracy w Am Pm sp. z o.o.
             </span>
           </div>
           <h2

@@ -54,17 +54,17 @@ const serviceLinks = [
 const socialLinks: { href: string; label: string; icon: ComponentType<{ className?: string }> }[] = [
   {
     href: 'https://www.facebook.com/profile.php?id=61586839199138',
-    label: 'AMPM Spedition na Facebooku',
+    label: 'Am Pm sp. z o.o. na Facebooku',
     icon: FacebookIcon
   },
   {
     href: 'https://www.linkedin.com/company/ampm-sp-z-o-o/',
-    label: 'AMPM Spedition na LinkedIn',
+    label: 'Am Pm sp. z o.o. na LinkedIn',
     icon: LinkedinIcon
   },
   {
     href: 'https://www.instagram.com/ampmspzoo/',
-    label: 'AMPM Spedition na Instagramie',
+    label: 'Am Pm sp. z o.o. na Instagramie',
     icon: InstagramIcon
   }
 ];
@@ -81,12 +81,12 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link
               href="/"
-              aria-label="AMPM Spedition – strona główna"
+              aria-label="Am Pm sp. z o.o. – strona główna"
               className="inline-block mb-6 bg-white rounded-full"
             >
               <Image
                 src="/logo.webp"
-                alt="AMPM Spedition"
+                alt="Am Pm sp. z o.o."
                 width={1140}
                 height={601}
                 className="h-20 w-20"

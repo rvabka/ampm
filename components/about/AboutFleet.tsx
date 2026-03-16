@@ -10,7 +10,7 @@ import "swiper/css";
 
 const vehicles = Array.from({ length: 11 }, (_, i) => ({
   image: `/${i + 1}.webp`,
-  alt: `Pojazd floty AMPM nr ${i + 1}`,
+  alt: `Pojazd floty Am Pm sp. z o.o. nr ${i + 1}`,
 }));
 
 const SLIDES_PER_VIEW = 3;

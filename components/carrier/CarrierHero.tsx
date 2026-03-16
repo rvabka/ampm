@@ -6,7 +6,7 @@ export default function CarrierHero() {
       titleFirst="Dla"
       titleHighlight="Przewoźnika"
       titleBreak
-      description="Stabilna współpraca. Jasne zasady. Terminowe płatności. W AMPM budujemy długofalowe relacje z przewoźnikami oparte na partnerstwie i wzajemnym szacunku."
+      description="Stabilna współpraca. Jasne zasady. Terminowe płatności. W Am Pm sp. z o.o. budujemy długofalowe relacje z przewoźnikami oparte na partnerstwie i wzajemnym szacunku."
       eyebrow="Dla Przewoźnika"
       breadcrumb={[
         { label: 'Strona Główna', href: '/' },

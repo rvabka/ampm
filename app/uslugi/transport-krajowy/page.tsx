@@ -7,9 +7,9 @@ import PageHero from '@/components/shared/PageHero';
 import { Truck, CheckCircle2, Clock, Users, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Transport Krajowy – Przewóz Towarów Polska | AMPM Sp. z o.o.',
+  title: 'Transport Krajowy – Przewóz Towarów Polska | Am Pm sp. z o.o.',
   description:
-    'Profesjonalny transport krajowy na terenie całej Polski. Terminowe i bezpieczne dostawy dla firm z każdej branży. Obsługujemy zlecenia jednorazowe i stałe kontrakty logistyczne.',
+    'Profesjonalny transport krajowy na terenie całej Polski. Firma spedycyjna z Lublina – obsługujemy klientów z Warszawy, Lublina i całych Polski. Terminowe dostawy i stałe kontrakty logistyczne.',
   keywords: [
     'transport krajowy',
     'przewóz towarów Polska',
@@ -22,19 +22,24 @@ export const metadata: Metadata = {
     'logistyka krajowa',
     'transport FTL LTL Polska',
     'firma transportowa Lublin',
+    'firma transportowa Warszawa',
+    'transport krajowy Warszawa',
+    'transport krajowy Lublin',
+    'spedycja Lublin',
+    'spedycja Warszawa',
     'transport dla firm',
   ],
   alternates: { canonical: '/uslugi/transport-krajowy' },
   openGraph: {
-    title: 'Transport Krajowy – AMPM Sp. z o.o.',
+    title: 'Transport Krajowy – Am Pm sp. z o.o.',
     description:
       'Świadczymy usługi transportu na terenie całej Polski. Terminowe dostawy, nowoczesna flota i elastyczna obsługa stałych kontraktów logistycznych.',
     url: '/uslugi/transport-krajowy',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Krajowy – AMPM Spedition' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Transport Krajowy – Am Pm sp. z o.o.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transport Krajowy – AMPM Sp. z o.o.',
+    title: 'Transport Krajowy – Am Pm sp. z o.o.',
     description: 'Profesjonalny transport towarów na terenie całej Polski. Terminowość i bezpieczeństwo gwarantowane.',
     images: ['/og-image.jpg'],
   },
@@ -46,8 +51,12 @@ const serviceJsonLd = {
   name: 'Transport Krajowy',
   description:
     'Świadczymy usługi transportu na terenie całej Polski, gwarantując terminowe i bezpieczne dostawy. Obsługujemy zarówno pojedyncze zlecenia, jak i stałe kontrakty logistyczne dla firm z różnych branż.',
-  provider: { '@type': 'Organization', name: 'AMPM Sp. z o.o.', url: 'https://ampm.com.pl' },
-  areaServed: { '@type': 'Place', name: 'Polska' },
+  provider: { '@type': 'Organization', name: 'Am Pm sp. z o.o.', url: 'https://ampm.com.pl' },
+  areaServed: [
+    { '@type': 'City', name: 'Lublin' },
+    { '@type': 'City', name: 'Warszawa' },
+    { '@type': 'Place', name: 'Polska' },
+  ],
   serviceType: 'Transport Krajowy',
 };
 
@@ -100,7 +109,7 @@ export default function TransportKrajowyPage() {
                   <span className="text-primary">w każdy zakątek Polski</span>
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Świadczymy usługi transportu na terenie całej Polski, gwarantując terminowe i bezpieczne dostawy. Dzięki nowoczesnej flocie oraz doświadczonym kierowcom jesteśmy w stanie obsługiwać zarówno pojedyncze zlecenia, jak i stałe kontrakty logistyczne dla firm z różnych branż.
+                  Świadczymy usługi transportu na terenie całej Polski – obsługujemy firmy z Lublina, Warszawy i całego kraju, gwarantując terminowe i bezpieczne dostawy. Dzięki nowoczesnej flocie oraz doświadczonym kierowcom jesteśmy w stanie obsługiwać zarówno pojedyncze zlecenia, jak i stałe kontrakty logistyczne dla firm z różnych branż.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   Niezależnie od tego, czy potrzebujesz przewieźć jedną paletę, czy pełny zestaw ciężarowy, dopasowujemy rozwiązanie do Twoich potrzeb. Oferujemy elastyczne podejście do harmonogramów dostaw oraz stały kontakt ze spedytorem na każdym etapie realizacji.

@@ -25,7 +25,7 @@ export default function FaqContact() {
           <a
             href="tel:+48570112512"
             className="group flex items-center gap-3 px-6 py-4 rounded-xl border border-gray-200 hover:border-primary/40 hover:bg-primary/5 transition-all"
-            aria-label="Zadzwoń do AMPM Spedition: +48 570 112 512"
+            aria-label="Zadzwoń do Am Pm sp. z o.o.: +48 570 112 512"
           >
             <Phone size={18} className="text-primary shrink-0" aria-hidden="true" />
             <div className="text-left">
@@ -39,7 +39,7 @@ export default function FaqContact() {
           <a
             href="mailto:biuro@ampm.com.pl"
             className="group flex items-center gap-3 px-6 py-4 rounded-xl border border-gray-200 hover:border-primary/40 hover:bg-primary/5 transition-all"
-            aria-label="Napisz do AMPM Spedition: biuro@ampm.com.pl"
+            aria-label="Napisz do Am Pm sp. z o.o.: biuro@ampm.com.pl"
           >
             <Mail size={18} className="text-primary shrink-0" aria-hidden="true" />
             <div className="text-left">

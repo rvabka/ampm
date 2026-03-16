@@ -79,9 +79,9 @@ const contactBlocks = [
 ];
 
 const socialLinks = [
-  { href: 'https://www.facebook.com/profile.php?id=61586839199138', label: 'AMPM Spedition na Facebooku', Icon: FacebookIcon },
-  { href: 'https://www.linkedin.com/company/ampm-sp-z-o-o/', label: 'AMPM Spedition na LinkedIn', Icon: LinkedInIcon },
-  { href: 'https://www.instagram.com/ampmspzoo/', label: 'AMPM Spedition na Instagramie', Icon: InstagramIcon },
+  { href: 'https://www.facebook.com/profile.php?id=61586839199138', label: 'Am Pm sp. z o.o. na Facebooku', Icon: FacebookIcon },
+  { href: 'https://www.linkedin.com/company/ampm-sp-z-o-o/', label: 'Am Pm sp. z o.o. na LinkedIn', Icon: LinkedInIcon },
+  { href: 'https://www.instagram.com/ampmspzoo/', label: 'Am Pm sp. z o.o. na Instagramie', Icon: InstagramIcon },
 ];
 
 export default function ContactInfo() {
