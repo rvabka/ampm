@@ -98,37 +98,33 @@ export default function Fleet() {
             {fleetItems.map((item) => (
               <div
                 key={item.title}
-                className={`p-6 rounded-2xl flex items-start gap-4 hover:shadow-lg transition cursor-pointer group ${
+                className={`p-6 rounded-2xl flex items-start gap-4 shadow-md hover:shadow-xl transition cursor-pointer group ${
                   item.featured
-                    ? "bg-gray-50 border border-transparent hover:border-gray-300"
-                    : "bg-white border border-gray-100"
+                    ? "bg-white border border-gray-200"
+                    : "bg-white border border-gray-200"
                 }`}
               >
                 <div
                   className={`p-3 rounded-xl shrink-0 transition-colors ${
                     item.featured
-                      ? "bg-secondary text-white group-hover:bg-primary"
-                      : "bg-gray-100 text-gray-600 group-hover:text-primary"
+                      ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white"
+                      : "bg-gray-100 text-secondary group-hover:bg-primary/10 group-hover:text-primary"
                   }`}
                 >
-                  <item.icon size={28} aria-hidden="true" />
+                  <item.icon size={32} aria-hidden="true" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-1 text-secondary">
+                  <h4 className="text-xl font-bold mb-1.5 text-secondary">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-500 mb-3">
+                  <p className="text-sm mb-3 text-gray-600 leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="flex flex-wrap gap-4 text-xs font-mono text-gray-600">
+                  <div className="flex flex-wrap gap-2 text-xs font-semibold">
                     {item.specs.map((spec) => (
                       <span
                         key={spec}
-                        className={`px-2 py-1 rounded border ${
-                          item.featured
-                            ? "bg-white border-gray-200"
-                            : "bg-gray-50 border-gray-200"
-                        }`}
+                        className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
                       >
                         {spec}
                       </span>

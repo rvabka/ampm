@@ -42,7 +42,7 @@ export default function CarrierFleet() {
             className="w-full lg:w-1/2 shrink-0"
             aria-hidden="true"
           >
-            <div className="relative grid grid-cols-2 gap-4">
+            <div className="relative grid grid-cols-2 gap-4 items-stretch">
               <div className="space-y-4 mt-12">
                 <div className="bg-secondary rounded-2xl p-8 flex flex-col justify-end h-56">
                   <span className="text-5xl font-extrabold text-white leading-none">100+</span>
@@ -53,14 +53,10 @@ export default function CarrierFleet() {
                   <span className="text-gray-400 text-sm mt-2">Wsparcie spedytora</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="bg-white border border-gray-100 rounded-2xl p-6 h-40 flex flex-col justify-center shadow-sm">
-                  <span className="text-4xl font-extrabold text-secondary leading-none">EU</span>
-                  <span className="text-gray-400 text-sm mt-2">Zasięg całej Europy</span>
-                </div>
-                <div className="bg-primary rounded-2xl p-8 flex flex-col justify-end h-56">
-                  <span className="text-5xl font-extrabold text-white leading-none">14 dni</span>
-                  <span className="text-white/80 text-sm font-semibold mt-2 uppercase tracking-wider">Szybka płatność</span>
+              <div className="flex flex-col justify-center">
+                <div className="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col justify-end shadow-sm h-56">
+                  <span className="text-6xl font-extrabold text-secondary leading-none">EU</span>
+                  <span className="text-gray-400 text-sm mt-3">Zasięg całej Europy</span>
                 </div>
               </div>
               <div className="absolute -z-10 inset-0 bg-primary/5 rounded-3xl blur-3xl scale-110" />
