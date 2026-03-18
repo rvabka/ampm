@@ -41,6 +41,11 @@ export const metadata: Metadata = {
     'Europa',
     'Am Pm sp. z o.o.'
   ],
+  icons: {
+    icon: [{ url: '/icon.png', type: 'image/png' }],
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
   authors: [{ name: 'Am Pm sp. z o.o.' }],
   creator: 'Am Pm sp. z o.o.',
   publisher: 'Am Pm sp. z o.o.',

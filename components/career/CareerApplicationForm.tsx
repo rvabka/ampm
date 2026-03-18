@@ -87,6 +87,16 @@ export default function CareerApplicationForm() {
     cvFile !== null;
 
   useEffect(() => {
+    if (prefillPosition) {
+      setValues(prev => ({
+        ...prev,
+        position: prefillPosition,
+        region: prefillRegion || prev.region,
+      }));
+    }
+  }, [prefillPosition, prefillRegion]);
+
+  useEffect(() => {
     if (prefillPosition && sectionRef.current) {
       const top =
         sectionRef.current.getBoundingClientRect().top + window.scrollY - 96;
